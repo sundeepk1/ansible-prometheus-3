@@ -1,0 +1,41 @@
+---
+# Installs promrun script for monitoring the running of commands
+
+- name: Install GNU time packages
+  become: true
+  package:
+    name: '{{ prometheus_gnu_time_packages }}'
+    state: present
+  register: prometheus_gnu_time_package_install
+  retries: 2
+  delay: 10
+  until: prometheus_gnu_time_package_install is succeeded
+  ignore_errors: true
+  when:
+    - prometheus_gnu_time_packages is defined and prometheus_gnu_time_packages | length > 0
+    # Older versions of Alpine don't have time
+    - not (ansible_os_family == 'Alpine' and ansible_distribution_version is version('3.10', '>='))
+
+- name: Include task to check if "time" is installed and in PATH
+  include_tasks: _check_time_installed.yml
+
+- name: Install promrun script to {{ prometheus_script_directory }}/promrun
+  become: true
+  template:
+    dest: '{{ prometheus_script_directory }}/promrun'
+    src: templates/promrun.sh.j2
+    owner: root
+    group: root
+    mode: 0555
+  vars:
+    prometheus_promrun_ansible_managed: true
+
+- name: Symlink {{ prometheus_script_directory }}/promrun to {{ prometheus_script_promrun_link_dir }}/promrun
+  become: true
+  file:
+    src: '{{ prometheus_script_directory }}/promrun'
+    dest: '{{ prometheus_script_promrun_link_dir }}/promrun'
+    owner: root
+    group: root
+    state: link
+    force: true

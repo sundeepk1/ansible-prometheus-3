@@ -9,6 +9,7 @@
       file_type: any
       recurse: false
       excludes:
+        - active
         - '{{ prometheus_software_version }}'
         - '{{ prometheus_software_version }}__go-{{ prometheus_go_version }}'
     register: present_paths
@@ -22,7 +23,7 @@
     with_items: '{{ present_paths.files }}'
     loop_control:
       loop_var: prometheus_cleanup_item
-    when: present_paths.files
+    when: present_paths.files | length > 0
   when: prometheus_purge_orphans | bool
 
 - name: Unset {{ prometheus_software_name }} specific facts
@@ -32,14 +33,31 @@
     # Additional tgroup labels, usually defined for an exporter that
     # isn't managed by this role
     prometheus_additional_tgroup_labels: {}
+    # Used when testing, specifies if source code builds are permitted while testing
+    prometheus_software_allow_build_test: false
     # Boolean that specifies if software is a Prometheus exporter
     prometheus_exporter: false
+    # User to install scripts for (defaults to root unless overridden for each
+    # script
+    prometheus_script_cron_user: root
+    # Reset cron timing defaults
+    prometheus_script_cron_minute: '*'
+    # Name of cron file to use for script installation
+    prometheus_script_cron_file: ''
+    # Software's architecture formatted correctly for project
+    # (AMD vs amd, dashes vs underscores, etc)
+    prometheus_software_architecture: ''
+    # Author's name. In the case of github projects, the author of fstab/grok_exporter is "fstab"
+    prometheus_software_author: ''
     prometheus_software_binary: ''
+    # Basename of the Prometheus software binary
     prometheus_software_binary_name: ''
     # Hash of additional directories to copy from build's source directory
     # to the installation directory. Only applicable to builds, not binary
     # installs
     prometheus_software_build_copy_dirs: {}
+    # Software repositories and packages needed to build a specific software
+    prometheus_software_build_prerequisites: ''
     # Hash of files with a list of capabilities to apply
     prometheus_software_capabilities: {}
     prometheus_software_files: []
@@ -47,18 +65,16 @@
     prometheus_software_config_file: ''
     prometheus_software_config_name: ''
     prometheus_software_command_args: []
-    prometheus_software_dependencies: []
     prometheus_software_description: ''
     # Link to documentation about the software. This variable is inserted
     # in the service init/systemd file:
     prometheus_software_documentation: ''
-    # A software download has occured, this is the registered result of that action
+    # A software download has occurred, this is the registered result of that action
     prometheus_software_download: ''
     # Environmental variables to pass to software via init/systemd script
     prometheus_software_env_vars: {}
     prometheus_software_extra_opts: ''
     prometheus_software_fallback_to_build: '{{ prometheus_fallback_to_build }}'
-    prometheus_software_filename: ''
     # The IP/s the software listens on
     prometheus_software_host: ''
     prometheus_software_install_dir: ''
@@ -81,36 +97,40 @@
     # The port the software listens on
     prometheus_software_port: ''
     prometheus_software_root_dir: ''
-    # Cause a restart of the software currently being installed/managed
-    prometheus_software_restart: false
     # User to run software as
     prometheus_software_runas: ''
     prometheus_software_src_path: ''
     prometheus_software_service_name: ''
-    # URL where a software's archived binary can be downloaded
-    prometheus_software_bin_url: ''
-    # URL where a software's binary can be downloaded, not an archive file
-    prometheus_software_file_url: ''
+    # Metadata dictionary representing a binaries name, URL, checksum, etc
+    prometheus_software_metadata: ''
+    # Software specific options for a specific OS/distro
+    prometheus_software_os_options: ''
+    # Software specific options for a specific OS/distro, prioritized list of
+    # all options that have been found
+    prometheus_software_os_options_list: []
+    # URL where a software's installation binary tarball or single file
+    # can be found
+    prometheus_software_url: ''
     # Command to run the {{ prometheus_software_binary }} via. Generally
     # needed for java jars:
     prometheus_software_prefix_command: []
+    # Dictionary of Prometheus software's release information. Release
+    # information is pulled from software's var files
+    prometheus_software_release: ''
     # Should service's status and port be tested following the start of the
     # service? This option exists as some exporters (ie: mysqld_exporter)
     # require a working service (ie: MySQL) in order to run. These exporters
     # cannot be fully tested and thus the Ansible tests can be selectively
     # disabled
     prometheus_software_service_test: true
-    prometheus_software_shortname: ''
     prometheus_software_src_dir: ''
     prometheus_software_src_dir_suffix: ''
     # URL where a software's source code can be downloaded from a VCS
     prometheus_software_src_url: ''
-    # Version of the software's source to checkout
-    prometheus_software_src_version: ''
+    # Allow use of prerelease versions
+    prometheus_software_use_prerelease: false
     # Version of Prometheus software to install
     prometheus_software_version: ''
-    # Extra options to give 'unarchive' when decompressing binary file
-    prometheus_software_binary_unarchive_opts: '{{ prometheus_default_binary_unarchive_opts }}'
     # Extra options to give 'unarchive' when decompressing source file
     prometheus_software_src_unarchive_opts: '{{ prometheus_default_src_unarchive_opts }}'
     # Software supports a kill -HUP to force a reload

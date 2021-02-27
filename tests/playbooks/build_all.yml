@@ -6,8 +6,8 @@
     - name: Include test installation variables
       include_vars: ../vars/install.yml
 
-    - name: Include install tasks
-      include_tasks: ../playbooks/install_common.yml
+    - name: Include pre-install tasks
+      include_tasks: ../playbooks/install_common_pre.yml
 
     - name: Install Prometheus tasks
       include_role:
@@ -17,4 +17,10 @@
         loop_var: prometheus_component
       with_items: "{{ tasks.files | sort(attribute='path') }}"
       # Cannot be built from source:
-      when: prometheus_component.path | regex_replace("\.yml$", "") | basename not in ['grok_exporter_fstab']
+      when:
+        - prometheus_component.path | regex_replace("\.yml$", "") | basename not in ['grok_exporter_fstab']
+        - prometheus_install_only | length == 0 or prometheus_component.path | basename in prometheus_install_only
+        - prometheus_install_skip | length == 0 or prometheus_component.path | basename not in prometheus_install_skip
+
+    - name: Include post-install tasks
+      include_tasks: ../playbooks/install_common_post.yml

@@ -74,27 +74,17 @@ describe file('/opt/prometheus/prometheus/active/prometheus') do
     its('group') { should eq 'prometheus' }
 end
 
-describe command('/opt/prometheus/prometheus/active/promtool check config /opt/prometheus/etc/prometheus.yml') do
+describe command('sudo /opt/prometheus/prometheus/active/promtool check config /opt/prometheus/etc/prometheus.yml') do
   its('exit_status') { should eq 0 }
 end
 
-describe command('/opt/prometheus/prometheus/active/promtool check config /etc/prometheus/prometheus.yml') do
-  its('exit_status') { should eq 0 }
-end
-
-# Verify the 'prometheus' service is running
-control '01' do
-  impact 1.0
-  title 'Verify prometheus service'
-  desc 'Ensures prometheus service is up and running'
-  describe service('prometheus') do
+describe service('prometheus') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
-describe processes(Regexp.new("^/opt/prometheus/prometheus/([0-9.]+|[0-9.]+__go-[0-9.]+)/prometheus")) do
+describe processes(Regexp.new("^/opt/prometheus/prometheus/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/prometheus")) do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }

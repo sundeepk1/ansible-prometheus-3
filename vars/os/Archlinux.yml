@@ -1,6 +1,9 @@
 ---
 prometheus_shell: /usr/bin/nologin
+prometheus_gnu_time_packages:
+ - time
 prometheus_go_compile_tools:
+ - awk
  - curl
  - gcc
  - git
@@ -11,11 +14,11 @@ prometheus_java_packages:
 prometheus_prerequisite_packages:
  - tar
  - unzip
+ - which
 prometheus_sponge_packages:
- - moreutils  # For 'sponge'
+ - moreutils
 prometheus_testing_packages:
- - ceph
+ - cronie
  - net-tools
  - procps-ng
- - which
 prometheus_ceph_exporter_digitalocean_install_test: true

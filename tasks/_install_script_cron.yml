@@ -1,0 +1,85 @@
+---
+- name: Check for sponge in PATH
+  include_tasks: _check_for_sponge.yml
+  when: prometheus_sponge_is_installed is undefined
+
+- name: Include task to create textfiles directory
+  include_tasks: _create_textfiles_directory.yml
+  # prometheus_create_textfile_directory is defined as last step, this
+  # variable ensures the job isn't run twice
+  when:
+    - prometheus_create_textfile_directory is undefined
+
+- name: Ensure required variables are defined and not empty
+  assert:
+    that:
+      - '"name" in prometheus_script_cron_job'
+      - '"script" in prometheus_script_cron_job'
+      - prometheus_script_cron_job.name
+      - prometheus_script_cron_job.script
+  loop_control:
+    loop_var: prometheus_script_cron_job
+  with_items: '{{ prometheus_setup_script_crons }}'
+
+- block:
+    - name: Find existing Prometheus cron files prefixed with "prometheus_script" in {{ prometheus_script_cron_directory }}
+      become: true
+      find:
+        paths: '{{ prometheus_script_cron_directory }}'
+        patterns: 'prometheus_script_*'
+      register: prometheus_script_crons_found
+
+    - name: Set Prometheus script cron files facts
+      set_fact:
+        prometheus_script_cron_names: '{{ prometheus_setup_script_crons | map(attribute="name") | map("regex_replace", "\ ", "_") | sort | list }}'
+        prometheus_script_crons_names_found: '{{ prometheus_script_crons_found.files | map(attribute="path") | map("regex_replace", "\ ", "_") | sort | list }}'
+      when:
+        - prometheus_script_crons_found.matched > 0
+
+    - name: Purge unreferenced cron files in {{ prometheus_script_cron_directory }}
+      become: true
+      file:
+        path: '{{ prometheus_script_cron_path }}'
+        state: absent
+      loop_control:
+        loop_var: prometheus_script_cron_path
+      with_items: '{{ prometheus_script_crons_names_found }}'
+      when:
+        - prometheus_script_crons_found.matched > 0
+        - prometheus_script_cron_path | basename | regex_replace('^prometheus_script_', '') not in prometheus_script_cron_names
+
+    - name: Setup PATH variable for cronjobs
+      become: true
+      cron:
+        cron_file: >-
+            {% if prometheus_script_use_cron_files %}prometheus_script_{{ prometheus_script_cron_job.name | replace(" ", "_") }}{% else %}{{ omit }}{% endif %}
+        user: '{{ prometheus_script_cron_job.user | default("root") }}'
+        name: PATH
+        env: true
+        job: '{{ prometheus_script_env_path | join(":") }}'
+      loop_control:
+        loop_var: prometheus_script_cron_job
+      with_items: '{{ prometheus_setup_script_crons }}'
+  when:
+    - prometheus_script_use_cron_files
+    # The following don't support cron directories
+    - ansible_os_family not in ['Alpine']
+
+- name: Setup script cronjobs
+  become: true
+  cron:
+    name: 'Run Prometheus script {{ prometheus_script_cron_job.name }}'
+    cron_file: >-
+        {% if prometheus_script_use_cron_files %}prometheus_script_{{ prometheus_script_cron_job.name | replace(" ", "_") }}{% else %}{{ omit }}{% endif %}
+    user: '{{ prometheus_script_cron_job.user | default("root") }}'
+    day: '{{ prometheus_script_cron_job.day | default("*") }}'
+    hour: '{{ prometheus_script_cron_job.hour | default("*") }}'
+    month: '{{ prometheus_script_cron_job.month | default("*") }}'
+    weekday: '{{ prometheus_script_cron_job.weekday | default("*") }}'
+    minute: '{{ prometheus_script_cron_job.minute | default("*") }}'
+    job: |-
+        {{ prometheus_script_directory }}/{{ prometheus_script_cron_job.script }} {% if prometheus_sponge_is_installed | bool -%}
+        | sponge{% else %}>{% endif %} {{ prometheus_node_exporter_textfiles_dir }}/{{ prometheus_script_cron_job.name | replace(" ", "_") }}.prom
+  loop_control:
+    loop_var: prometheus_script_cron_job
+  with_items: '{{ prometheus_setup_script_crons }}'

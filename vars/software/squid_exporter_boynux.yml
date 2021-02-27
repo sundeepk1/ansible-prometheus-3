@@ -1,0 +1,214 @@
+---
+defaults:
+  port: 9301
+  tgroup: squid
+software:
+  name: boynux/squid-exporter
+  release: v1.9.2
+  prerelease: null
+  url: https://github.com/boynux/squid-exporter
+  source: https://github.com/boynux/squid-exporter.git
+  updated: '2020-12-08T06:16:40.408052'
+  master:
+    commit:
+      sha: cce5832d86863ee4749c050f572a003ffa47626a
+      timestamp: '2020-12-05T19:22:34'
+    files: []
+  releases:
+    - name: v1.9.2
+      commit: null
+      timestamp: '2020-09-29T08:29:15'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 14119886
+          sha256: sha256:c6b0204615a8f2f589f2f3b6f1ad24ec887d692521a70a6b368ab534462207df
+          url: https://github.com/boynux/squid-exporter/releases/download/v1.9.2/squid-exporter
+    - name: v1.9.1
+      commit: null
+      timestamp: '2020-08-12T07:30:07'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 12027111
+          sha256: sha256:508f29a1976e717a4cc96560373bad5a3263e9f575a1f2f29517a7eea2465203
+          url: https://github.com/boynux/squid-exporter/releases/download/v1.9.1/squid-exporter
+    - name: 1.9.0
+      commit:
+        sha: 7e669c3e2372661f286fbc36e03e656637312d87
+        timestamp: '2020-08-08T11:40:15'
+      timestamp: '2020-08-08T11:40:15'
+      prerelease: false
+      files: []
+    - name: v1.9.0
+      commit: null
+      timestamp: '2020-08-12T07:29:09'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 12026945
+          sha256: sha256:ca2434f6eccafa92976ae6604077421e0aaaa4b732587e644b3e8c2e9869c508
+          url: https://github.com/boynux/squid-exporter/releases/download/v1.9.0/squid-exporter
+    - name: 1.8.3
+      commit: null
+      timestamp: '2020-03-10T21:33:30'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 12009066
+          sha256: sha256:ce95916a09bbf7c1ad7ddf7388716213251071598a2040bec2b8cf35d6330705
+          url: https://github.com/boynux/squid-exporter/releases/download/1.8.3/squid-exporter
+    - name: v1.8.3
+      commit: null
+      timestamp: '2020-08-12T07:29:20'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 12009066
+          sha256: sha256:b1f4a06874f7d89b0d540793116c38465ce7a33002d92398bab382644eea32df
+          url: https://github.com/boynux/squid-exporter/releases/download/v1.8.3/squid-exporter
+    - name: v1.8.2
+      commit: null
+      timestamp: '2019-12-30T13:22:46'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 11089816
+          sha256: sha256:0adb8722bfefbe1e51258bef3e28bac90dec5aac191282261c24d5074ec7fb99
+          url: https://github.com/boynux/squid-exporter/releases/download/v1.8.2/squid-exporter
+    - name: v1.8.1
+      commit: null
+      timestamp: '2019-09-09T13:15:18'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 11089816
+          sha256: sha256:344c48c2c1e8dc038d44498fb37fd17b63c666ed4d0b954990068545b7d93c2b
+          url: https://github.com/boynux/squid-exporter/releases/download/v1.8.1/squid-exporter
+    - name: v1.8
+      commit: null
+      timestamp: '2019-05-18T04:40:07'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 10140008
+          sha256: sha256:705cbee9983bd36712123028d62281a594d56d5f0515fed97a15169bd8525bbb
+          url: https://github.com/boynux/squid-exporter/releases/download/v1.8/squid-exporter
+    - name: v1.7
+      commit: null
+      timestamp: '2019-05-02T16:31:08'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 10140008
+          sha256: sha256:5c4ff32bd84f15aecee23197d2a9b2d0e282a0a2a71a9c8b589ac98ff617a102
+          url: https://github.com/boynux/squid-exporter/releases/download/v1.7/squid-exporter
+    - name: v1.6
+      commit: null
+      timestamp: '2019-03-17T14:02:24'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 10140008
+          sha256: sha256:b95231c4731f01f156d475db3f1a5fa7d3cf04b41f703f498f00651515bf8e4d
+          url: https://github.com/boynux/squid-exporter/releases/download/v1.6/squid-exporter
+    - name: v1.5
+      commit: null
+      timestamp: '2019-03-10T14:00:09'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 10139671
+          sha256: sha256:2cd663e2964f94ecd99a948f259a11e3edf24d07c4b89eb55bb866c4ded0d505
+          url: https://github.com/boynux/squid-exporter/releases/download/v1.5/squid-exporter
+    - name: v1.4
+      commit: null
+      timestamp: '2018-11-05T19:45:44'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 10142039
+          sha256: sha256:8b870946877ca83fa0960e2f6c3490ad93965c39d854335fb62154066f188072
+          url: https://github.com/boynux/squid-exporter/releases/download/v1.4/squid-exporter
+    - name: v1.3
+      commit: null
+      timestamp: '2018-11-02T19:26:56'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 9786526
+          sha256: sha256:553b12f52922b7bc8ef69e542e45d60ced6b273647e961419ecaab19e8dc3ddb
+          url: https://github.com/boynux/squid-exporter/releases/download/v1.3/squid-exporter
+    - name: v1.2
+      commit: null
+      timestamp: '2018-10-28T08:52:17'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 9786526
+          sha256: sha256:e135bb0de416e99392a8b07905446c8b730fb1bfc4a32fc538765b8f19e39a57
+          url: https://github.com/boynux/squid-exporter/releases/download/v1.2/squid-exporter
+    - name: v1.1
+      commit: null
+      timestamp: '2018-09-24T18:55:25'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 9786279
+          sha256: sha256:d412efaa6118840b12976b807da5e3e965d6f3a0ca151e1f66de889d999deef6
+          url: https://github.com/boynux/squid-exporter/releases/download/v1.1/squid-exporter
+    - name: v1.0
+      commit: null
+      timestamp: '2018-08-31T10:05:07'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 9786279
+          sha256: sha256:fb5818a508d80afd65241611f6f7b57b2bea17fa4ecbf909fac5389615f4eb88
+          url: https://github.com/boynux/squid-exporter/releases/download/v1.0/squid-exporter
+    - name: v0.5
+      commit: null
+      timestamp: '2018-08-06T14:19:43'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 9854227
+          sha256: sha256:144417441336b57f928e4595985098fd643cdd0f8c03f0bf286a3bb8af9d74cf
+          url: https://github.com/boynux/squid-exporter/releases/download/v0.5/squid-exporter
+    - name: v0.4
+      commit: null
+      timestamp: '2018-07-30T14:16:52'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 9854227
+          sha256: sha256:144417441336b57f928e4595985098fd643cdd0f8c03f0bf286a3bb8af9d74cf
+          url: https://github.com/boynux/squid-exporter/releases/download/v0.4/squid-exporter
+    - name: v0.3
+      commit: null
+      timestamp: '2018-01-09T10:16:13'
+      prerelease: false
+      files:
+        - name: squid-exporter
+          commit: null
+          size: 9241770
+          sha256: sha256:fa9a4f69d32ffe31ed270c4e8fc525295000087c88fa49ae4ad38a2732c2afe7
+          url: https://github.com/boynux/squid-exporter/releases/download/v0.3/squid-exporter

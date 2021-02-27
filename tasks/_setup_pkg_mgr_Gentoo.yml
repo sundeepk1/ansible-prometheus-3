@@ -1,11 +1,15 @@
 ---
-- name: Check portage manifest present
+- name: Check portage skel.ebuild file present
   stat:
-    path: /usr/portage/Manifest
-  register: portage_manifest
+    path: /usr/portage/skel.ebuild
+  register: portage_skel_file
 
 - name: Run the equivalent of 'emerge-webrsync'
   become: true
   portage:
     sync: web
-  when: not portage_manifest.stat.exists
+  register: prometheus_emerge_update
+  retries: 5
+  delay: 10
+  until: prometheus_emerge_update is succeeded
+  when: not portage_skel_file.stat.exists

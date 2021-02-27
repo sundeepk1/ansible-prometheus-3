@@ -3,7 +3,13 @@
     - name: Ensure at least one prometheus component has been specified for {{ inventory_hostname_short }}
       fail:
         msg: "No 'prometheus_components' variable (array) has been specified for {{ inventory_hostname_short }}"
-      when: prometheus_components is not defined or not prometheus_components
+      when: prometheus_components is undefined or not prometheus_components
+
+    - name: Setup Prometheus ulimits
+      include_role:
+        name: mesaguy.prometheus
+        tasks_from: _ulimits.yml
+      when: prometheus_configure_ulimits | bool
 
     - name: Run prometheus component installation and setup tasks
       include_role:
@@ -17,16 +23,16 @@
       include_role:
         name: mesaguy.prometheus
         tasks_from: _install_additional_exporters.yml
-      when: prometheus_additional_exporters is defined and prometheus_additional_exporters|length >= 1
+      when: prometheus_additional_exporters is defined and prometheus_additional_exporters | length >= 1
 
     - name: Setup log rotation
       become: true
       template:
         dest: '{{ prometheus_logrotate_dir }}/prometheus'
-        src: ../templates/logrotate.j2
+        src: templates/logrotate.j2
         owner: root
         group: root
-        mode: '0444'
+        mode: 0444
       when: prometheus_logrotate | bool
 
   when:
@@ -38,3 +44,15 @@
     name: mesaguy.prometheus
     tasks_from: _setup_server_tgroups.yml
   when: prometheus_manage_server_tgroups | bool
+
+- name: Install mesaguy scripts
+  include_role:
+    name: mesaguy.prometheus
+    tasks_from: '{{ prometheus_mesaguy_script }}'
+  loop_control:
+    loop_var: prometheus_mesaguy_script
+  with_items:
+    - promcron
+    - promrun
+    - sssd_check
+  when: lookup('vars', 'prometheus_script_' + prometheus_mesaguy_script) | bool

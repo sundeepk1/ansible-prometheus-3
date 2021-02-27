@@ -1,0 +1,99 @@
+---
+defaults:
+  port: 9128
+  tgroup: ceph
+os_options:
+  Archlinux:
+    build_prerequisites:
+      packages:
+        - ceph
+software:
+  name: digitalocean/ceph_exporter
+  release: 2.0.0
+  prerelease: 2.0.7-luminous
+  url: https://github.com/digitalocean/ceph_exporter
+  source: https://github.com/digitalocean/ceph_exporter.git
+  updated: '2021-01-16T03:58:08.586269'
+  master:
+    commit:
+      sha: 0b2266af78dba6819f4e056ae2c8dc05077a1843
+      timestamp: '2021-01-14T17:17:52'
+    files: []
+  releases:
+    - name: 2.0.6-luminous
+      commit:
+        sha: ea07889f212c766019df515cc202895c4a2f30e5
+        timestamp: '2019-07-22T23:52:59'
+      timestamp: '2019-07-22T23:52:59'
+      prerelease: true
+      files: []
+    - name: 2.0.5-luminous
+      commit:
+        sha: 41bf098e2bf890123093f417e4a8a779dd87d74d
+        timestamp: '2019-06-20T19:59:38'
+      timestamp: '2019-06-20T19:59:38'
+      prerelease: true
+      files: []
+    - name: 2.0.4-luminous
+      commit:
+        sha: 281d25ba3a00c5c61582eea4af377bc4ddb0d909
+        timestamp: '2019-05-28T16:37:50'
+      timestamp: '2019-05-28T16:37:50'
+      prerelease: true
+      files: []
+    - name: 2.0.3-luminous
+      commit:
+        sha: 4b623629420cfef3e976b81ad8534986b45a4934
+        timestamp: '2019-05-23T17:02:12'
+      timestamp: '2019-05-23T17:02:12'
+      prerelease: true
+      files: []
+    - name: 2.0.2-luminous
+      commit:
+        sha: 8cc817b251af4249ed3d80018698c6b702d8c363
+        timestamp: '2019-05-17T18:08:59'
+      timestamp: '2019-05-17T18:08:59'
+      prerelease: true
+      files: []
+    - name: 2.0.1-luminous
+      commit:
+        sha: 415d296c31ef1e6fd8dac6dfecfb952ec0e36870
+        timestamp: '2018-08-10T19:43:02'
+      timestamp: '2018-08-10T19:43:02'
+      prerelease: true
+      files: []
+    - name: 2.0.0-luminous
+      commit:
+        sha: cd84a7b9db9d3a28751242c54f76572164c21257
+        timestamp: '2018-06-25T14:47:19'
+      timestamp: '2018-06-25T14:47:19'
+      prerelease: true
+      files: []
+    - name: 2.0.0
+      commit:
+        sha: afd5a2c4bf3daf11a4bbe2a25e18da0005d0ac52
+        timestamp: '2018-01-23T15:34:24'
+      timestamp: '2018-01-23T15:34:48'
+      prerelease: false
+      files: []
+    - name: 2.0.0-jewel
+      commit:
+        sha: 16c9efbe2cbb198da4a426f36d73c72a72aa086a
+        timestamp: '2017-12-16T02:26:13'
+      timestamp: '2017-12-16T02:26:13'
+      prerelease: true
+      files: []
+    - name: 1.1.0
+      commit:
+        sha: 80aa3ff0d00ea4b74a60f5abdd64464596398d98
+        timestamp: '2017-05-02T16:03:24'
+      timestamp: '2017-05-02T16:03:24'
+      prerelease: false
+      files: []
+    - name: 2.0.7-luminous
+      commit:
+        sha: 3dce1cf69c1b9d4146319102daf17ead00d73901
+        timestamp: '2020-06-17T14:11:36'
+      timestamp: '2020-06-17T14:11:36'
+      prerelease: true
+      files: []

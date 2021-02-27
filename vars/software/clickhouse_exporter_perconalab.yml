@@ -1,0 +1,24 @@
+---
+defaults:
+  port: 9363
+  tgroup: clickhouse
+software:
+  name: Percona-Lab/clickhouse_exporter
+  release: v0.1.0
+  prerelease: null
+  url: https://github.com/Percona-Lab/clickhouse_exporter
+  source: https://github.com/Percona-Lab/clickhouse_exporter.git
+  updated: '2020-10-16T23:49:10.264456'
+  master:
+    commit:
+      sha: d36c73f148b0d9f030fdc26cca6480fdf989b085
+      timestamp: '2020-10-16T10:26:26'
+    files: []
+  releases:
+    - name: v0.1.0
+      commit:
+        sha: fa3006c3b7f5d1f2cc9ac0d8302d67f8bafd6e1b
+        timestamp: '2019-12-15T08:42:19'
+      timestamp: '2019-12-15T08:49:43'
+      prerelease: false
+      files: []

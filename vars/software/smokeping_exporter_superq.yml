@@ -1,0 +1,839 @@
+---
+defaults:
+  port: 9374
+  tgroup: smokeping
+software:
+  name: SuperQ/smokeping_prober
+  release: v0.4.1
+  prerelease: null
+  url: https://github.com/SuperQ/smokeping_prober
+  source: https://github.com/SuperQ/smokeping_prober.git
+  updated: '2021-02-07T17:07:04.287057'
+  master:
+    commit:
+      sha: 0f5c156caa5dc80fd54181d6e8740f0719fd1da0
+      timestamp: '2021-02-02T20:16:12'
+    files: []
+  releases:
+    - name: v0.3.0
+      commit: null
+      timestamp: '2019-06-25T14:25:28'
+      prerelease: false
+      files:
+        - name: sha256sums.txt
+          commit: null
+          size: 2938
+          sha256: sha256:421e5ab7361abb74101bc5b89e6184967fa2f648677bb12bf356f6c61626fc12
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/sha256sums.txt
+        - name: smokeping_prober-0.3.0.darwin-386.tar.gz
+          commit: null
+          size: 6844763
+          sha256: sha256:fc11f76917af08371614714234a0d22147d44838a0417fcb812f741ec2214332
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.darwin-386.tar.gz
+        - name: smokeping_prober-0.3.0.darwin-amd64.tar.gz
+          commit: null
+          size: 6998394
+          sha256: sha256:0533b1793da37248fcd018ddfa7c0a87a728f474efc71a3067518f70d76930bd
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.darwin-amd64.tar.gz
+        - name: smokeping_prober-0.3.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 6948861
+          sha256: sha256:b108aec98b1afb8e3a20b8e2b62627d508750b3e8de6e47c22763f1aecef5a47
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.dragonfly-amd64.tar.gz
+        - name: smokeping_prober-0.3.0.freebsd-386.tar.gz
+          commit: null
+          size: 6769670
+          sha256: sha256:fca4541188495d2549f22739ec5c3f5dcc80906e9b46413c03e608fb00984622
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.freebsd-386.tar.gz
+        - name: smokeping_prober-0.3.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 6985210
+          sha256: sha256:a8707925aaa4abc76229cd293fbd8f6a95765610fc952fa9c3141111ca48fa55
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.freebsd-amd64.tar.gz
+        - name: smokeping_prober-0.3.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 6495691
+          sha256: sha256:d282887da71062facb7301f57f5b164f1694ef33c9822d94a339c33d444c2447
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.freebsd-armv6.tar.gz
+        - name: smokeping_prober-0.3.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 6491009
+          sha256: sha256:e6a4678afb4d1fc99da5d95cd35fbe5a2e83057342052ed52a10ba6485b6455e
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.freebsd-armv7.tar.gz
+        - name: smokeping_prober-0.3.0.linux-386.tar.gz
+          commit: null
+          size: 6775643
+          sha256: sha256:ce76fd4b561dc2effa45992d0e3c9c77bb587524c2ce4711ab75fa168c1a4167
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.linux-386.tar.gz
+        - name: smokeping_prober-0.3.0.linux-amd64.tar.gz
+          commit: null
+          size: 6981641
+          sha256: sha256:3ff505954e48979289732327e0f33703a6c02ee331e97fe958b52b8faf0ae6d8
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.linux-amd64.tar.gz
+        - name: smokeping_prober-0.3.0.linux-arm64.tar.gz
+          commit: null
+          size: 6518080
+          sha256: sha256:3dde35ec12f2b80c43ef295acdf05c244466c44e2af98f078e25061481e771d0
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.linux-arm64.tar.gz
+        - name: smokeping_prober-0.3.0.linux-armv5.tar.gz
+          commit: null
+          size: 6508173
+          sha256: sha256:ea446cd2fd218aabf3ab34fe863c267a900dc074c13a42924b4b617941264779
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.linux-armv5.tar.gz
+        - name: smokeping_prober-0.3.0.linux-armv6.tar.gz
+          commit: null
+          size: 6496143
+          sha256: sha256:5ab454113ef9ee94b2aaf9277e331d88bc0b533f32ca4b07aa9abfcd5bb8149b
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.linux-armv6.tar.gz
+        - name: smokeping_prober-0.3.0.linux-armv7.tar.gz
+          commit: null
+          size: 6491115
+          sha256: sha256:dd30dd7ec30d6cf9bacc0438fd6cd7c189a9dc9e6f2c7b66c5eb383b42282451
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.linux-armv7.tar.gz
+        - name: smokeping_prober-0.3.0.linux-mips64.tar.gz
+          commit: null
+          size: 6614150
+          sha256: sha256:373a1cde6be3646a09ec04d967d6e3a9c17c1a4635c0ec3c8ab980c5ca5e58a7
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.linux-mips64.tar.gz
+        - name: smokeping_prober-0.3.0.linux-mips64le.tar.gz
+          commit: null
+          size: 6412655
+          sha256: sha256:5a3b5105773985308e18cdc720841b44ef168b35b770f10306db9d143e095107
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.linux-mips64le.tar.gz
+        - name: smokeping_prober-0.3.0.linux-ppc64.tar.gz
+          commit: null
+          size: 6678364
+          sha256: sha256:982b76b153081f6de896d804ef3884d9780cceef2f113de04cd3c30984cd7f66
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.linux-ppc64.tar.gz
+        - name: smokeping_prober-0.3.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 6499051
+          sha256: sha256:629927517737c5c415142217cfe0c59374d21a4ad0e1c1bc00966228c4177018
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.linux-ppc64le.tar.gz
+        - name: smokeping_prober-0.3.0.linux-s390x.tar.gz
+          commit: null
+          size: 7085755
+          sha256: sha256:71eebc6ba6fb2c926faddb84a2194fcf1825ae6e9395998a902f1d23b7f17ee5
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.linux-s390x.tar.gz
+        - name: smokeping_prober-0.3.0.netbsd-386.tar.gz
+          commit: null
+          size: 6737609
+          sha256: sha256:f6d8c15579aa12c698b6153dfc16159bd9eac8585e19134e0c797e384ac383c7
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.netbsd-386.tar.gz
+        - name: smokeping_prober-0.3.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 6947324
+          sha256: sha256:52ae2de3ee7cab29e2aa914a5515c64e1c25b3dda6e66d8ee4b8328b46941b69
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.netbsd-amd64.tar.gz
+        - name: smokeping_prober-0.3.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 6463208
+          sha256: sha256:b1d231cf3c144d74576c854606cf0e140a12d96769c626479d36efaee1c99374
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.netbsd-armv6.tar.gz
+        - name: smokeping_prober-0.3.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 6460877
+          sha256: sha256:62162ddfbc79db5ff1e0465f3290328f5b36d4bffd05e13cd6ac1910cd86d3c4
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.netbsd-armv7.tar.gz
+        - name: smokeping_prober-0.3.0.openbsd-386.tar.gz
+          commit: null
+          size: 6738335
+          sha256: sha256:e9de6cdd4dbc3fd70fd8786f429efa83a894991d49fe4523b0953ef23b78a019
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.openbsd-386.tar.gz
+        - name: smokeping_prober-0.3.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 6950927
+          sha256: sha256:1ff837bb93ebfb563e0b46fe02ff960521be0da410671f9caad2f83c899b639d
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.openbsd-amd64.tar.gz
+        - name: smokeping_prober-0.3.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 6460908
+          sha256: sha256:f6ce0bbcc54f5bcc50afc0fbb2da1517e300d91670fdd370a2f7e72d6aeaba58
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.openbsd-armv7.tar.gz
+        - name: smokeping_prober-0.3.0.windows-386.tar.gz
+          commit: null
+          size: 6557058
+          sha256: sha256:26e28d104b3de265a1eeb5b826ef40676f6b3a6d93e34a951fb1312688a52540
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.windows-386.tar.gz
+        - name: smokeping_prober-0.3.0.windows-amd64.tar.gz
+          commit: null
+          size: 6769741
+          sha256: sha256:49386efdccb5a04dc41afdf411edb91b3adaca18c4baf5ef25666d50cf70f7d3
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.3.0/smokeping_prober-0.3.0.windows-amd64.tar.gz
+    - name: v0.2.0
+      commit: null
+      timestamp: '2019-05-14T20:57:45'
+      prerelease: false
+      files:
+        - name: sha256sums.txt
+          commit: null
+          size: 3154
+          sha256: sha256:5857c3ed4a5d584f769fff492317f3ea179377a1c6c76f6ffab7abd21f19d183
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/sha256sums.txt
+        - name: smokeping_prober-0.2.0.darwin-386.tar.gz
+          commit: null
+          size: 6583462
+          sha256: sha256:8e9add1309bc63c88f5e842e38c07a555d65abcdfacfbe396991882338260e7a
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.darwin-386.tar.gz
+        - name: smokeping_prober-0.2.0.darwin-amd64.tar.gz
+          commit: null
+          size: 6729214
+          sha256: sha256:9373310ee0539048fb08e525955a80e8a02e2cdea5206ef38cfd647a141d928c
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.darwin-amd64.tar.gz
+        - name: smokeping_prober-0.2.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 6674648
+          sha256: sha256:5928a8d9600bf95ef34f579142f532de446f0dc1ccad1e8e1ff490858a07b183
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.dragonfly-amd64.tar.gz
+        - name: smokeping_prober-0.2.0.freebsd-386.tar.gz
+          commit: null
+          size: 6502127
+          sha256: sha256:6deaa5470d20c751a9208988689607bdf361a98337a91efd140f9db78e4cc2ff
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.freebsd-386.tar.gz
+        - name: smokeping_prober-0.2.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 6702647
+          sha256: sha256:eec7ea756192d904ff8c3e949b8edf376d3700983bcc2dd2a28aaec68a2fec0a
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.freebsd-amd64.tar.gz
+        - name: smokeping_prober-0.2.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 6234606
+          sha256: sha256:1eb345d04033a1c63870864a9ad64a57073d5cc5b2d7dbd74e5397303f1cfdc2
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.freebsd-armv6.tar.gz
+        - name: smokeping_prober-0.2.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 6230821
+          sha256: sha256:c944be623a9f8e369f62b6037ae035ea120241cac436176a5426e6ffc2f5d531
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.freebsd-armv7.tar.gz
+        - name: smokeping_prober-0.2.0.linux-386.tar.gz
+          commit: null
+          size: 6501914
+          sha256: sha256:213794406736efcbc3377330929f68df0869e24fb5bd793927f6640296c3e3a1
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.linux-386.tar.gz
+        - name: smokeping_prober-0.2.0.linux-amd64.tar.gz
+          commit: null
+          size: 6694704
+          sha256: sha256:50f44fb6fa02a4dc95255b55f64385214af6b32c7e3e1ccfb88dd086ab15e187
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.linux-amd64.tar.gz
+        - name: smokeping_prober-0.2.0.linux-arm64.tar.gz
+          commit: null
+          size: 6250800
+          sha256: sha256:cb228c6dd609929ce777f0f7175a0f5fa3969e6dac0427b77bf2d3a570822df7
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.linux-arm64.tar.gz
+        - name: smokeping_prober-0.2.0.linux-armv5.tar.gz
+          commit: null
+          size: 6240024
+          sha256: sha256:343c049fbb39bef53ebff47f27a81465306e90f17014e8622374566094708f9a
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.linux-armv5.tar.gz
+        - name: smokeping_prober-0.2.0.linux-armv6.tar.gz
+          commit: null
+          size: 6228626
+          sha256: sha256:0ebdfc0f187b2d89ebbb549d9cb1c84d9ffb1aad5709ea284e0271de58054ff9
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.linux-armv6.tar.gz
+        - name: smokeping_prober-0.2.0.linux-armv7.tar.gz
+          commit: null
+          size: 6223344
+          sha256: sha256:59faab40c03b86f432081a5430178f2206889846e6f31e636ba1b6d5863cd443
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.linux-armv7.tar.gz
+        - name: smokeping_prober-0.2.0.linux-mips.tar.gz
+          commit: null
+          size: 6197276
+          sha256: sha256:5f96a1a53fc0adeecf8e7d3a6dfd4bffefdda210050adde77139a1a81d714a85
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.linux-mips.tar.gz
+        - name: smokeping_prober-0.2.0.linux-mips64.tar.gz
+          commit: null
+          size: 6332968
+          sha256: sha256:9d31128ea0c48969eaeba9f888e66f2a6b6bb6914a352204658693c2580f0f1a
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.linux-mips64.tar.gz
+        - name: smokeping_prober-0.2.0.linux-mips64le.tar.gz
+          commit: null
+          size: 6154769
+          sha256: sha256:2136bfcf5f3c956b12d35ed920f593cc87aa53567d1178baa539f4e8b809c808
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.linux-mips64le.tar.gz
+        - name: smokeping_prober-0.2.0.linux-mipsle.tar.gz
+          commit: null
+          size: 6063302
+          sha256: sha256:51203e4f600736e929642bba639aff95b9dd575d07a4b21fe71a2d88214c0696
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.linux-mipsle.tar.gz
+        - name: smokeping_prober-0.2.0.linux-ppc64.tar.gz
+          commit: null
+          size: 6413798
+          sha256: sha256:9ee1d372be58df7cbcc2c0580252d72b8f3c39bf9f7b9587321da5fffc69dda0
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.linux-ppc64.tar.gz
+        - name: smokeping_prober-0.2.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 6240341
+          sha256: sha256:a70970dcb270d8c629d9b75f3794e4561c711455097b55217de2618dbef11e54
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.linux-ppc64le.tar.gz
+        - name: smokeping_prober-0.2.0.linux-s390x.tar.gz
+          commit: null
+          size: 6796779
+          sha256: sha256:0446446fbb4f85a7e1073c9cf0521762bebd074c189edf92c064fd1886604484
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.linux-s390x.tar.gz
+        - name: smokeping_prober-0.2.0.netbsd-386.tar.gz
+          commit: null
+          size: 6468701
+          sha256: sha256:599caae8f9c52e56ee13918fa1e5275deb47fbea58a55e184e9867379ab7937a
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.netbsd-386.tar.gz
+        - name: smokeping_prober-0.2.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 6671180
+          sha256: sha256:d7787041be338a9348b09d32ec3cb625558cd0fda3af14daa92042ae4314a6eb
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.netbsd-amd64.tar.gz
+        - name: smokeping_prober-0.2.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 6202761
+          sha256: sha256:646d0a4ecb48e5225b76fdb432c31689e7d64faabdf72c7726f160c960bb9e51
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.netbsd-armv6.tar.gz
+        - name: smokeping_prober-0.2.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 6198142
+          sha256: sha256:6b6308a0b6bb4240122dfabebbf8643016421ea8f75c6aec3033803472c1c39f
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.netbsd-armv7.tar.gz
+        - name: smokeping_prober-0.2.0.openbsd-386.tar.gz
+          commit: null
+          size: 6471512
+          sha256: sha256:666dd05dfe70eb79c53b15a2b6cd1fdd11f776e5fcc126b74e9464a8f64342a3
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.openbsd-386.tar.gz
+        - name: smokeping_prober-0.2.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 6671949
+          sha256: sha256:8706e3350cb4121e343177489d2899d5611b4bae93ff1a9034c2e8ad7bb93316
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.openbsd-amd64.tar.gz
+        - name: smokeping_prober-0.2.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 6198312
+          sha256: sha256:7890a9939c63b7d9437f482f557af9d38bc4ea9464c0dda950ae90e8383b862d
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.openbsd-armv7.tar.gz
+        - name: smokeping_prober-0.2.0.windows-386.tar.gz
+          commit: null
+          size: 6318808
+          sha256: sha256:ec539b36254548373bec9b0583316e952c09246785aa41b188d8abb8ea6fb1c0
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.windows-386.tar.gz
+        - name: smokeping_prober-0.2.0.windows-amd64.tar.gz
+          commit: null
+          size: 6529671
+          sha256: sha256:b03da0401ddfecd19fd4a39cfb35c6f3b1fe295db92ee9c505820ab57cf287f9
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.2.0/smokeping_prober-0.2.0.windows-amd64.tar.gz
+    - name: v0.1.0
+      commit: null
+      timestamp: '2018-11-08T10:36:32'
+      prerelease: false
+      files:
+        - name: sha256sums.txt
+          commit: null
+          size: 3154
+          sha256: sha256:1b11fee92e5a509311dca3c4b2bf8f1cfa3a3b65336f51137e3478f02736f556
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/sha256sums.txt
+        - name: smokeping_prober-0.1.0.darwin-386.tar.gz
+          commit: null
+          size: 5826828
+          sha256: sha256:dac53236cd7976f813fcb88da7da8423d0777b187cbd631ec22ffae3cc56a3c7
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.darwin-386.tar.gz
+        - name: smokeping_prober-0.1.0.darwin-amd64.tar.gz
+          commit: null
+          size: 5986398
+          sha256: sha256:5e98d4bf81c74fbde2c9f9c5443a09c1c334e698a485f9c4ae4f81c113c8e4a3
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.darwin-amd64.tar.gz
+        - name: smokeping_prober-0.1.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 5940681
+          sha256: sha256:c9c12d399cdeedbbc72f3077ec1506ab3ff9446125013b5b7553ddcd2737f7bf
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.dragonfly-amd64.tar.gz
+        - name: smokeping_prober-0.1.0.freebsd-386.tar.gz
+          commit: null
+          size: 5764381
+          sha256: sha256:acb06e958851abae4d813604abd2ab877ee720095c3ee5cb6fce47d0652cb32c
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.freebsd-386.tar.gz
+        - name: smokeping_prober-0.1.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 5967566
+          sha256: sha256:1d5b9d5454576aca590258b647e39995285b24f6d1b3ce43cb185579bfcb0974
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.freebsd-amd64.tar.gz
+        - name: smokeping_prober-0.1.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 5508881
+          sha256: sha256:0b8d644a0fa7e9cb39fa1097608465dfb4572caa03d146d330d8080fc04f217e
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.freebsd-armv6.tar.gz
+        - name: smokeping_prober-0.1.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 5504943
+          sha256: sha256:7bb8c7b9cb05604eec686ec4f57a962af17003603d8393b7bf9cce588802cbc0
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.freebsd-armv7.tar.gz
+        - name: smokeping_prober-0.1.0.linux-386.tar.gz
+          commit: null
+          size: 5773999
+          sha256: sha256:2981bec59d21d38781b64ad81b9421b42bce0fd13ee6d05df61dfbafd764ad9b
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.linux-386.tar.gz
+        - name: smokeping_prober-0.1.0.linux-amd64.tar.gz
+          commit: null
+          size: 5967862
+          sha256: sha256:513a33725d0708dd5a0a9ff3f9ef0211fabb40a4c586a9f19e153aa56d6661ee
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.linux-amd64.tar.gz
+        - name: smokeping_prober-0.1.0.linux-arm64.tar.gz
+          commit: null
+          size: 5531930
+          sha256: sha256:c6a28fd71a2f1ecec68f061d4ed71bab4a5b96fe5db3c2f08526b1814235e495
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.linux-arm64.tar.gz
+        - name: smokeping_prober-0.1.0.linux-armv5.tar.gz
+          commit: null
+          size: 5521481
+          sha256: sha256:fe66b5f41c4692216bfea06a71cb951aa7cacec03903062475b6328a511a0df2
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.linux-armv5.tar.gz
+        - name: smokeping_prober-0.1.0.linux-armv6.tar.gz
+          commit: null
+          size: 5514227
+          sha256: sha256:663fd200035d44de3f9138421468e7e0c34e71a2c6cf49c8e947bac0cc51b20a
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.linux-armv6.tar.gz
+        - name: smokeping_prober-0.1.0.linux-armv7.tar.gz
+          commit: null
+          size: 5509271
+          sha256: sha256:d5616582fb691b55eff4924b7c9e393e4029d5808206117ef5b4789edfdfdc1b
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.linux-armv7.tar.gz
+        - name: smokeping_prober-0.1.0.linux-mips.tar.gz
+          commit: null
+          size: 5505188
+          sha256: sha256:957c13fff546d5fb048e0f5e77e6e4057751a6155fa1e4464b22956383fbd672
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.linux-mips.tar.gz
+        - name: smokeping_prober-0.1.0.linux-mips64.tar.gz
+          commit: null
+          size: 5622719
+          sha256: sha256:48c8e712ace081f9b8fcfdf42ecb38fa1c6a5699547e7f384f67a417670144d4
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.linux-mips64.tar.gz
+        - name: smokeping_prober-0.1.0.linux-mips64le.tar.gz
+          commit: null
+          size: 5448497
+          sha256: sha256:7ab962f40d08fbd522618e207e6c2f67449b02b43521b28486dc75b7ff0098f3
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.linux-mips64le.tar.gz
+        - name: smokeping_prober-0.1.0.linux-mipsle.tar.gz
+          commit: null
+          size: 5376127
+          sha256: sha256:2fabe77623dd2cc7127f1d4d48ac74f278aa040866ea6c9d594426a1188f5c2c
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.linux-mipsle.tar.gz
+        - name: smokeping_prober-0.1.0.linux-ppc64.tar.gz
+          commit: null
+          size: 5696305
+          sha256: sha256:90da4180ed99b8eee2215882e42ddfbe8bb4ae5fcf65c8e107e2928737b142e7
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.linux-ppc64.tar.gz
+        - name: smokeping_prober-0.1.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 5537422
+          sha256: sha256:a4b465fcb0a9e43dcde4b9035e66ad05d1dc303a5db6c12575c1374937b83e8e
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.linux-ppc64le.tar.gz
+        - name: smokeping_prober-0.1.0.linux-s390x.tar.gz
+          commit: null
+          size: 6032975
+          sha256: sha256:b8cfdac993febe16071576c585249901f0535a2b707d03a3096da81569123fbb
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.linux-s390x.tar.gz
+        - name: smokeping_prober-0.1.0.netbsd-386.tar.gz
+          commit: null
+          size: 5741759
+          sha256: sha256:fa47f815847cb4a8ffc7336c38ebed5750374366c6e8e847b914cc05b74569fe
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.netbsd-386.tar.gz
+        - name: smokeping_prober-0.1.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 5943257
+          sha256: sha256:ce360d23a3979a5e64cb63f83635b07649e4bb5bf12a838736622bea9f819a41
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.netbsd-amd64.tar.gz
+        - name: smokeping_prober-0.1.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 5488097
+          sha256: sha256:490baa37b7b45b6defaa5716bc3b322917ad3a78b28ef788f1b385c062ad56fc
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.netbsd-armv6.tar.gz
+        - name: smokeping_prober-0.1.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 5483412
+          sha256: sha256:0307af1ac6519e6de568d421281877f72efdedb12b3a99d3e8224b67a7c793b8
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.netbsd-armv7.tar.gz
+        - name: smokeping_prober-0.1.0.openbsd-386.tar.gz
+          commit: null
+          size: 5744394
+          sha256: sha256:9b98124ff3d9be5a79e3d33a81bee73eb2815efcacbb13108527e36c747e2535
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.openbsd-386.tar.gz
+        - name: smokeping_prober-0.1.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 5941457
+          sha256: sha256:979e59867bc704caf17170c831a01a9b6be86cd74a930855a065d3c1a26fcc51
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.openbsd-amd64.tar.gz
+        - name: smokeping_prober-0.1.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 5481927
+          sha256: sha256:a8b3cbd7a295fddbb747f8725f55a2747b199b25394c99742cdf90fa662bb460
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.openbsd-armv7.tar.gz
+        - name: smokeping_prober-0.1.0.windows-386.tar.gz
+          commit: null
+          size: 5601570
+          sha256: sha256:7a10acc81424da50e0dcdf3b8e06e1c8e68e9974d862e5515db56a50f5238e64
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.windows-386.tar.gz
+        - name: smokeping_prober-0.1.0.windows-amd64.tar.gz
+          commit: null
+          size: 5809051
+          sha256: sha256:97f958eb8609d6050b4046a90c090bd38aa8d9406b2586e6fc8cc76d81028ce8
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.1.0/smokeping_prober-0.1.0.windows-amd64.tar.gz
+    - name: v0.3.1
+      commit:
+        sha: fae4d103370a612d794ac135a74c45a3e56f676d
+        timestamp: '2020-06-04T17:24:55'
+      timestamp: '2020-06-04T17:25:09'
+      prerelease: false
+      files: []
+    - name: v0.4.1
+      commit: null
+      timestamp: '2021-02-02T22:05:22'
+      prerelease: false
+      files:
+        - name: sha256sums.txt
+          commit: null
+          size: 3694
+          sha256: sha256:d4e75de90ebb650e959546c1c18692372ef0715306c408115ce40a99a3dc0bd9
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/sha256sums.txt
+        - name: smokeping_prober-0.4.1.aix-ppc64.tar.gz
+          commit: null
+          size: 6639926
+          sha256: sha256:b9ec270ec7b9c033c6b17c8c5f7be58001c6fb3d996b1d3304642098af640adb
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.aix-ppc64.tar.gz
+        - name: smokeping_prober-0.4.1.darwin-amd64.tar.gz
+          commit: null
+          size: 7030761
+          sha256: sha256:710208c716350cb6c6d5b758f1eec1edb481ebd6f12212715aebe7c14f80e853
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.darwin-amd64.tar.gz
+        - name: smokeping_prober-0.4.1.dragonfly-amd64.tar.gz
+          commit: null
+          size: 7094469
+          sha256: sha256:37ac1a7cd201ffad0ccd9a7a34a51b793d69bb52828e905317e1a5932567cc54
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.dragonfly-amd64.tar.gz
+        - name: smokeping_prober-0.4.1.freebsd-386.tar.gz
+          commit: null
+          size: 6913252
+          sha256: sha256:9dcc611880f1dcb123f3c931eb7da82a26e2f7052f9e8a925b5c104e2f5fd321
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.freebsd-386.tar.gz
+        - name: smokeping_prober-0.4.1.freebsd-amd64.tar.gz
+          commit: null
+          size: 7128190
+          sha256: sha256:14e107b2089f8c81e16b25e37c9621e5be7b5ce6123767bb775a11f8bc7e1cd5
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.freebsd-amd64.tar.gz
+        - name: smokeping_prober-0.4.1.freebsd-arm64.tar.gz
+          commit: null
+          size: 6608650
+          sha256: sha256:95dd74b4780c68233ad1553e01f5aa6ee2f3a976e6565842b94264b3a48a128c
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.freebsd-arm64.tar.gz
+        - name: smokeping_prober-0.4.1.freebsd-armv6.tar.gz
+          commit: null
+          size: 6614003
+          sha256: sha256:c786b2687d3b66e3ed7c905d42df525956db444004758fd4a57d5949b58847b5
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.freebsd-armv6.tar.gz
+        - name: smokeping_prober-0.4.1.freebsd-armv7.tar.gz
+          commit: null
+          size: 6608758
+          sha256: sha256:fa94390a0d62742c5eac4382fca142202b6b687629bebbfeacd2847c848479aa
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.freebsd-armv7.tar.gz
+        - name: smokeping_prober-0.4.1.linux-386.tar.gz
+          commit: null
+          size: 6943699
+          sha256: sha256:6d106a4bd82f40fbbdbdc6d168bc200f2403cc52f5b45bdb109e48bf823b90f6
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.linux-386.tar.gz
+        - name: smokeping_prober-0.4.1.linux-amd64.tar.gz
+          commit: null
+          size: 7151098
+          sha256: sha256:2dbd35c7884ec8917bfe71ef6d64d295186898a632f4ae8bb822318010ddbee9
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.linux-amd64.tar.gz
+        - name: smokeping_prober-0.4.1.linux-arm64.tar.gz
+          commit: null
+          size: 6662767
+          sha256: sha256:5de0e8531b47c4196918764aeaff392703905a3061a4b6786ac938e5c805fc30
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.linux-arm64.tar.gz
+        - name: smokeping_prober-0.4.1.linux-armv5.tar.gz
+          commit: null
+          size: 6635248
+          sha256: sha256:c929aa0d0e133cc6583d6002627c540d8d3fbf71ccaf3f6bd3052bed21f6a5af
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.linux-armv5.tar.gz
+        - name: smokeping_prober-0.4.1.linux-armv6.tar.gz
+          commit: null
+          size: 6636120
+          sha256: sha256:a5fea8bfd8ec83c1a1e3c9792409adbc080cb9312d3eb68f085bacb146c83a71
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.linux-armv6.tar.gz
+        - name: smokeping_prober-0.4.1.linux-armv7.tar.gz
+          commit: null
+          size: 6629424
+          sha256: sha256:392e58a22421984756cf070dfaadc24bf5acf1a0ecd8d92bb4e7e7670f1ced95
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.linux-armv7.tar.gz
+        - name: smokeping_prober-0.4.1.linux-mips.tar.gz
+          commit: null
+          size: 6634110
+          sha256: sha256:d5f0235ff2a0fabe73d67c7bcd9e0059bfa3af2ab050265e620d82ce37212255
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.linux-mips.tar.gz
+        - name: smokeping_prober-0.4.1.linux-mips64.tar.gz
+          commit: null
+          size: 6759135
+          sha256: sha256:1557376193b3a27e8ee0601345dfc190abba70e5d46983aa68614e9a5f0af1d1
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.linux-mips64.tar.gz
+        - name: smokeping_prober-0.4.1.linux-mips64le.tar.gz
+          commit: null
+          size: 6545864
+          sha256: sha256:95c860c054ce839a41f3fe3aa11c2163c187d51d28d83acba586224c4d2072fc
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.linux-mips64le.tar.gz
+        - name: smokeping_prober-0.4.1.linux-mipsle.tar.gz
+          commit: null
+          size: 6476790
+          sha256: sha256:0f5a7a5342d72860b34788acb5baaf1eb14bd4d229f0e1d269efa01074ccff04
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.linux-mipsle.tar.gz
+        - name: smokeping_prober-0.4.1.linux-ppc64.tar.gz
+          commit: null
+          size: 6784858
+          sha256: sha256:c2c1b239abd790b569486f086b6379f4882adb8c8277a7fd61008a01069f3c97
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.linux-ppc64.tar.gz
+        - name: smokeping_prober-0.4.1.linux-ppc64le.tar.gz
+          commit: null
+          size: 6590282
+          sha256: sha256:1a552d98a5dd10b2f5ec6a5099a93934d78496323d318e5cf3115673d0b5899f
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.linux-ppc64le.tar.gz
+        - name: smokeping_prober-0.4.1.linux-s390x.tar.gz
+          commit: null
+          size: 7169691
+          sha256: sha256:ee692bbcdca9d50ef21a340a7c980d2af18eb20d90538aad9efea37361ffae54
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.linux-s390x.tar.gz
+        - name: smokeping_prober-0.4.1.netbsd-386.tar.gz
+          commit: null
+          size: 6881837
+          sha256: sha256:46f3bc3fc8d42a8b1c69da9ca9e0b0c7ab182781c11123040a252b9b9297436f
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.netbsd-386.tar.gz
+        - name: smokeping_prober-0.4.1.netbsd-amd64.tar.gz
+          commit: null
+          size: 7091854
+          sha256: sha256:5826f76e5b08a3219a0942bd1e0d6c00a463bf2c2f82ef43fa127e223d709ddc
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.netbsd-amd64.tar.gz
+        - name: smokeping_prober-0.4.1.netbsd-arm64.tar.gz
+          commit: null
+          size: 6576898
+          sha256: sha256:75dd4408254b6f6a7b6445c62ec7ba1e7f077886c4e0c4c543a53789779d3bd7
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.netbsd-arm64.tar.gz
+        - name: smokeping_prober-0.4.1.netbsd-armv6.tar.gz
+          commit: null
+          size: 6583004
+          sha256: sha256:af5cd9bee70b33e84feea2c207034806dea3eb45eb6a012d5d097f7e92dae29c
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.netbsd-armv6.tar.gz
+        - name: smokeping_prober-0.4.1.netbsd-armv7.tar.gz
+          commit: null
+          size: 6577665
+          sha256: sha256:3a58454eda1bfeec5b4d5231b5f19a6d6d15bd4382a942ea3edd519bd364a911
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.netbsd-armv7.tar.gz
+        - name: smokeping_prober-0.4.1.openbsd-386.tar.gz
+          commit: null
+          size: 6881034
+          sha256: sha256:c09701425df9b69cdb44ff27c3a3fdb8fcebbd82c91aadacf3a5cad721d390fe
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.openbsd-386.tar.gz
+        - name: smokeping_prober-0.4.1.openbsd-amd64.tar.gz
+          commit: null
+          size: 7093917
+          sha256: sha256:08cd635307dad71a65bde23b72f3a2d2013cb68ecbaac5c1a7da22fb62171201
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.openbsd-amd64.tar.gz
+        - name: smokeping_prober-0.4.1.openbsd-arm64.tar.gz
+          commit: null
+          size: 6577769
+          sha256: sha256:ef22421ab39dc16fec420bf26d9f5320b5468aa64df3045f63ac876ed2ce0ad1
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.openbsd-arm64.tar.gz
+        - name: smokeping_prober-0.4.1.openbsd-armv7.tar.gz
+          commit: null
+          size: 6577236
+          sha256: sha256:69982acd0443a641b80632d6db8492c99d92a1c4cabc83400c54ff1f24694607
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.openbsd-armv7.tar.gz
+        - name: smokeping_prober-0.4.1.windows-386.tar.gz
+          commit: null
+          size: 6964515
+          sha256: sha256:acd93fe46da0d684bf153d32007c75905f05f02d11aab4d357b126496a981781
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.windows-386.tar.gz
+        - name: smokeping_prober-0.4.1.windows-386.zip
+          commit: null
+          size: 7085499
+          sha256: sha256:562b128b5e3329965445d0eb1f2aec66660c351acd807cea3c1290d5ead5d625
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.windows-386.zip
+        - name: smokeping_prober-0.4.1.windows-amd64.tar.gz
+          commit: null
+          size: 7088176
+          sha256: sha256:4fe31f4737e5748a77ca05076cc340e54efe506d6caa198fc3d90c7ef11c9a6b
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.windows-amd64.tar.gz
+        - name: smokeping_prober-0.4.1.windows-amd64.zip
+          commit: null
+          size: 7175329
+          sha256: sha256:7ea664ec246d1f38738b83836590daacfacfe955687ea2ccdf38bd2fe6ec59a6
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.1/smokeping_prober-0.4.1.windows-amd64.zip
+    - name: v0.4.0
+      commit: null
+      timestamp: '2021-01-31T16:23:49'
+      prerelease: false
+      files:
+        - name: sha256sums.txt
+          commit: null
+          size: 3694
+          sha256: sha256:5f3017ae5342a44917f54466ed1314fac1a6b58c03eb58c47d795b9a6f540c25
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/sha256sums.txt
+        - name: smokeping_prober-0.4.0.aix-ppc64.tar.gz
+          commit: null
+          size: 6637903
+          sha256: sha256:5cc6607bcb134dcb4aaebde5c1992c07eb9541df8e789a66ee67f7534194fa8e
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.aix-ppc64.tar.gz
+        - name: smokeping_prober-0.4.0.darwin-amd64.tar.gz
+          commit: null
+          size: 7029283
+          sha256: sha256:0974b5b45f8bf908575ec1ce646581d87ecab5f263654324d415587d692844d4
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.darwin-amd64.tar.gz
+        - name: smokeping_prober-0.4.0.dragonfly-amd64.tar.gz
+          commit: null
+          size: 7092364
+          sha256: sha256:3cf426ea810131b71efcf1fcff738ea34fd89ac99e25a1d61377a7a66292fad9
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.dragonfly-amd64.tar.gz
+        - name: smokeping_prober-0.4.0.freebsd-386.tar.gz
+          commit: null
+          size: 6910878
+          sha256: sha256:42dc27cd83531995c2869ec76a3d6353601733fabf7772288ced9a0d9b37eaf2
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.freebsd-386.tar.gz
+        - name: smokeping_prober-0.4.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 7127586
+          sha256: sha256:3bd6ba11e6262cd963718a7e02e832f94813d3f3ca3af8d20f28cf731ef73e58
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.freebsd-amd64.tar.gz
+        - name: smokeping_prober-0.4.0.freebsd-arm64.tar.gz
+          commit: null
+          size: 6601254
+          sha256: sha256:a64b33cdab70e05651a7b0087a0253d0914b59c7dd474e0a013fd27969887783
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.freebsd-arm64.tar.gz
+        - name: smokeping_prober-0.4.0.freebsd-armv6.tar.gz
+          commit: null
+          size: 6612877
+          sha256: sha256:040d6439973a1ced87d3efb9babedf6681681894725e026c69f298265f19e127
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.freebsd-armv6.tar.gz
+        - name: smokeping_prober-0.4.0.freebsd-armv7.tar.gz
+          commit: null
+          size: 6606295
+          sha256: sha256:54db8adc0c850067a74ae7eddafc57e05d8703ae46074b273cbe64f9d4a6763a
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.freebsd-armv7.tar.gz
+        - name: smokeping_prober-0.4.0.linux-386.tar.gz
+          commit: null
+          size: 6942087
+          sha256: sha256:02f45732fa1827dfdb8f227069ff78ce97bfd0212d93d423d86e53a1c4435335
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.linux-386.tar.gz
+        - name: smokeping_prober-0.4.0.linux-amd64.tar.gz
+          commit: null
+          size: 7151410
+          sha256: sha256:98ed94656721381ad0b50892f827aedae4b994ca48e40e891297dbaebf49e879
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.linux-amd64.tar.gz
+        - name: smokeping_prober-0.4.0.linux-arm64.tar.gz
+          commit: null
+          size: 6660550
+          sha256: sha256:23d718b30cabae027d77e48b3ba386ba713ebed6458f4ed99e18dd10b2b45403
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.linux-arm64.tar.gz
+        - name: smokeping_prober-0.4.0.linux-armv5.tar.gz
+          commit: null
+          size: 6634022
+          sha256: sha256:229c0a4a326481d9ad32a67e5631792653b932d32438fd05fce5c6f68f49acf2
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.linux-armv5.tar.gz
+        - name: smokeping_prober-0.4.0.linux-armv6.tar.gz
+          commit: null
+          size: 6634348
+          sha256: sha256:f263610d1455f83f1c0ff1529accee40af6b7b326925bacd7a7c1de322276fda
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.linux-armv6.tar.gz
+        - name: smokeping_prober-0.4.0.linux-armv7.tar.gz
+          commit: null
+          size: 6627807
+          sha256: sha256:e85a422770d37eb0fd39f4acfa74f28873fdf0cc99c188293d7e95422d0a00e9
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.linux-armv7.tar.gz
+        - name: smokeping_prober-0.4.0.linux-mips.tar.gz
+          commit: null
+          size: 6630694
+          sha256: sha256:e7f907bc064de90660ba71fdd293318aee93eb7b2c7795dc7854f25c37a2094e
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.linux-mips.tar.gz
+        - name: smokeping_prober-0.4.0.linux-mips64.tar.gz
+          commit: null
+          size: 6757974
+          sha256: sha256:e5f77fb6a888319f28a8b786f033fb710e7421a78ba64e84842d21dca79907f7
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.linux-mips64.tar.gz
+        - name: smokeping_prober-0.4.0.linux-mips64le.tar.gz
+          commit: null
+          size: 6542597
+          sha256: sha256:d1ef63d44816b5afed819ababf9b2c0cca0988860a8813606ff2ed31269cf177
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.linux-mips64le.tar.gz
+        - name: smokeping_prober-0.4.0.linux-mipsle.tar.gz
+          commit: null
+          size: 6475246
+          sha256: sha256:2f523318feb3428c438cedcf8ef288a92a78d4559019212de262c39d3143f318
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.linux-mipsle.tar.gz
+        - name: smokeping_prober-0.4.0.linux-ppc64.tar.gz
+          commit: null
+          size: 6782900
+          sha256: sha256:2f45f53bf83b000f50e6e98779126892952f79574ed54e186f0d110ed91354c6
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.linux-ppc64.tar.gz
+        - name: smokeping_prober-0.4.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 6584324
+          sha256: sha256:aa145f7f954ed7ed7a94eb0509456df6330c85f4931a5e6f6c1e8fc69eb503ab
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.linux-ppc64le.tar.gz
+        - name: smokeping_prober-0.4.0.linux-s390x.tar.gz
+          commit: null
+          size: 7168451
+          sha256: sha256:8fc802f1cac949e0b4824d50dd09cac7732f94aecb5f4afe165f42835baa733f
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.linux-s390x.tar.gz
+        - name: smokeping_prober-0.4.0.netbsd-386.tar.gz
+          commit: null
+          size: 6880155
+          sha256: sha256:30f2e159100ae5ebfbacf40add192342d0bcd1c4a94b5b5a072fe0746fe9542f
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.netbsd-386.tar.gz
+        - name: smokeping_prober-0.4.0.netbsd-amd64.tar.gz
+          commit: null
+          size: 7089768
+          sha256: sha256:9720ddec1cfe6b4b34607a0dd4ba82e2ae82670ad7f7bfdded08b3aa8e301463
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.netbsd-amd64.tar.gz
+        - name: smokeping_prober-0.4.0.netbsd-arm64.tar.gz
+          commit: null
+          size: 6573041
+          sha256: sha256:194fab793611673b66acf165850d0612f012310e42bf7b738c6d872604b3136d
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.netbsd-arm64.tar.gz
+        - name: smokeping_prober-0.4.0.netbsd-armv6.tar.gz
+          commit: null
+          size: 6580053
+          sha256: sha256:24fc70a606dae3db380d2f75d4b0013fd27288139b161ddec46df15ac332d1c0
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.netbsd-armv6.tar.gz
+        - name: smokeping_prober-0.4.0.netbsd-armv7.tar.gz
+          commit: null
+          size: 6575702
+          sha256: sha256:0e7b0d5a9c0b8eaa9b5e654e1c8aa8c586646dd66cf5489fc9ef7eb207e95667
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.netbsd-armv7.tar.gz
+        - name: smokeping_prober-0.4.0.openbsd-386.tar.gz
+          commit: null
+          size: 6880594
+          sha256: sha256:44d66b1653c3eedcd7c0714712e0533b74f9f49d988c8498e7743c68daf68e54
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.openbsd-386.tar.gz
+        - name: smokeping_prober-0.4.0.openbsd-amd64.tar.gz
+          commit: null
+          size: 7091735
+          sha256: sha256:58c7e9f92cfcd5802374b06d743c10ce4881f1a6a75d8eff27eca254c0493e67
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.openbsd-amd64.tar.gz
+        - name: smokeping_prober-0.4.0.openbsd-arm64.tar.gz
+          commit: null
+          size: 6576082
+          sha256: sha256:fcee69587358d8e982f24616bad3a29e4c760af7e82094dd6175c47fbc5f0592
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.openbsd-arm64.tar.gz
+        - name: smokeping_prober-0.4.0.openbsd-armv7.tar.gz
+          commit: null
+          size: 6575013
+          sha256: sha256:70dda33870868602112947826232d27c2472baf04c4ae9c5030842acd2b9d8b8
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.openbsd-armv7.tar.gz
+        - name: smokeping_prober-0.4.0.windows-386.tar.gz
+          commit: null
+          size: 6962818
+          sha256: sha256:1c7dfb10e3810b90ee3caf55e6c39c1ab3ca5970b36b9428d4645662fd85e7ce
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.windows-386.tar.gz
+        - name: smokeping_prober-0.4.0.windows-386.zip
+          commit: null
+          size: 7083781
+          sha256: sha256:4286a8a2d1905e4a08f4098fae19a4c71015105c9daa6b26b01f47d065a6917a
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.windows-386.zip
+        - name: smokeping_prober-0.4.0.windows-amd64.tar.gz
+          commit: null
+          size: 7087758
+          sha256: sha256:9797164868d4050c33fb28b075305035aef1765dc9a22a8f151e1fcb33a5e228
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.windows-amd64.tar.gz
+        - name: smokeping_prober-0.4.0.windows-amd64.zip
+          commit: null
+          size: 7171775
+          sha256: sha256:f77d51dc7d6b1f10da86b23c8663e25cbcdb33e8a2d8e4c2166b7b83676ce83b
+          url: https://github.com/SuperQ/smokeping_prober/releases/download/v0.4.0/smokeping_prober-0.4.0.windows-amd64.zip

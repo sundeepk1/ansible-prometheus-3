@@ -1,15 +1,17 @@
-# Prometheus
-[![Build Status](https://api.travis-ci.org/mesaguy/ansible-prometheus.svg?branch=master)](https://travis-ci.org/mesaguy/ansible-prometheus)
+# Ansible Prometheus
+[![Build Status](https://api.travis-ci.org/mesaguy/ansible-prometheus.svg?branch=master)](https://travis-ci.org/mesaguy/ansible-prometheus) ![Latest tag](https://img.shields.io/github/v/tag/mesaguy/ansible-prometheus) ![Ansible Galaxy](https://img.shields.io/badge/ansible%20galaxy-mesaguy.prometheus-blue.svg?style=flat) ![MIT License](https://img.shields.io/github/license/mesaguy/ansible-prometheus)
 
-Installs and manages [Prometheus server](https://prometheus.io), [Alertmanager](https://prometheus.io/docs/alerting/overview/), [PushGateway](https://github.com/prometheus/pushgateway/blob/master/README.md), and numerous [Prometheus exporters](https://prometheus.io/docs/instrumenting/exporters/)
+
+Installs and manages [Prometheus server](https://prometheus.io), [Alertmanager](https://prometheus.io/docs/alerting/latest/overview/), [PushGateway](https://github.com/prometheus/pushgateway/blob/master/README.md), and numerous [Prometheus exporters](https://prometheus.io/docs/instrumenting/exporters/)
 
 This role was designed to allow adding new exporters with ease. Regular releases ensure it always provides the latest Prometheus software.
 
 This role can register client exporters with the Prometheus server/s automatically (see tgroup management below).
 
 ## Requirements
- - Ansible >= 2.5.1
- - Facts must be gathered (gather_facts: true)
+
+- Ansible >= 2.8.0
+- Facts must be gathered (gather_facts: true)
 
 ## Supported Software and Operating Systems
 ### Supported Operating Systems, Distributions, and Architectures
@@ -28,88 +30,105 @@ This module is intended to support as many distributions and architectures as po
 |Oracle Linux    |6, 7, 8                                  | x86_64 (amd64)    |
 |Ubuntu          |16.04 through 20.04                      | x86_64 (amd64)    |
 
-### Supported Prometheus software
+### Managed Prometheus software
 The following core Prometheus software is supported in addition to the list of exporters below. This software is fully tested on all supported OS, distributions, and architectures.
 
 | Prometheus software                                       | Usage                                     | Author     | CI tested |
 |-----------------------------------------------------------|:-----------------------------------------:|:----------:|:---------:|
 |[prometheus](https://github.com/prometheus/prometheus)     | [usage](#prometheus-server-configuration) | prometheus | Yes       |
-|[alertmanager](https://github.com/prometheus/alertmanager) | [usage](#alertmanager-configuration)      | prometheus | Yes       |
-|[push_gateway](https://github.com/prometheus/pushgateway)  | [usage](#pushgateway-configuration)       | prometheus | Yes       |
+|[alertmanager](https://github.com/prometheus/alertmanager) | [usage](docs/alertmanager.md)             | prometheus | Yes       |
+|[push_gateway](https://github.com/prometheus/pushgateway)  | [usage](docs/pushgateway.md)              | prometheus | Yes       |
 
-### Supported exporters
-All exporters are verified to install. Currently select modules receive testing via CI (Continuous Integration) and [Inspec](https://www.inspec.io)
+### Managed exporters
+All exporters are verified to install. Currently select modules receive testing via CI (Continuous Integration) and [Inspec](https://github.com/inspec/inspec)
 
-| Exporter                                                                                      | Usage                                                       | Author               | CI tested |
-|-----------------------------------------------------------------------------------------------|:-----------------------------------------------------------:|:--------------------:|:---------:|
-|[389ds_exporter_terrycain](https://github.com/terrycain/389ds_exporter)                        | [usage](#389-exporter-terrycain-configuration)              | terrycain            | Yes       |
-|[apache_exporter_lusitaniae](https://github.com/Lusitaniae/apache_exporter)                    | [usage](#apache-exporter-lusitaniae-configuration)          | Lusitaniae           | Yes       |
-|[bigip_exporter_expressenab](https://github.com/ExpressenAB/bigip_exporter)                    | [usage](#bigip-exporter-expressenab-configuration)          | ExpressenAB          | Yes       |
-|[bind_exporter_prometheus_community](https://github.com/prometheus-community/bind_exporter)    | [usage](#bind-exporter-prometheus-community-onfiguration)   | prometheus-community | Yes       |
-|[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)                           | [usage](#blackbox-exporter-configuration)                   | prometheus           | Yes       |
-|[ceph_exporter](https://github.com/digitalocean/ceph_exporter)                                 | [usage](#ceph-exporter-configuration)                       | digitalocean         | Partly    |
-|[cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter)                       | [usage](#cloudwatch-exporter-configuration)                 | prometheus           | Yes       |
-|[collectd_exporter](https://github.com/prometheus/collectd_exporter)                           | [usage](#collectd-exporter-configuration)                   | prometheus           | Yes       |
-|[consul_exporter](https://github.com/prometheus/consul_exporter)                               | [usage](#consul-exporter-configuration)                     | prometheus           | Yes       |
-|[couchbase_exporter_blakelead](https://github.com/blakelead/couchbase_exporter)                | [usage](#couchbase-exporter-leansys-team-configuration)     | leansys-team         | Yes       |
-|[couchdb_exporter_gesellix](https://github.com/gesellix/couchdb-prometheus-exporter)           | [usage](#couchdb-exporter-gesellix-configuration)           | gesellix             | Yes       |
-|[digitalocean_exporter_metalmatze](https://github.com/metalmatze/digitalocean_exporter)        | [usage](#digitalocean-exporter-metalmatze-configuration)    | metalmatze           | Yes       |
-|[elasticsearch_exporter_justwatchcom](https://github.com/justwatchcom/elasticsearch_exporter)  | [usage](#elasticsearch-exporter-justwatchcom-configuration) | justwatchcom         | Yes       |
-|[gluster_exporter_ofesseler](https://github.com/ofesseler/gluster_exporter)                    | [usage](#gluster-exporter-ofesseler-configuration)          | ofesseler            | Yes       |
-|[graphite_exporter](https://github.com/prometheus/graphite_exporter)                           | [usage](#graphite-exporter-configuration)                   | prometheus           | Yes       |
-|[grok_exporter_fstab](https://github.com/fstab/grok_exporter)                                  | [usage](#grok-exporter-fstab-configuration)                 | fstab                | Yes       |
-|[haproxy_exporter](https://github.com/prometheus/haproxy_exporter)                             | [usage](#haproxy-exporter-configuration)                    | prometheus           | Yes       |
-|[influxdb_exporter](https://github.com/prometheus/influxdb_exporter)                           | [usage](#influxdb-exporter-configuration)                   | prometheus           | Yes       |
-|[iptables_exporter_retailnext](https://github.com/retailnext/iptables_exporter)                | [usage](#iptables-exporter-retailnext-configuration)        | retailnext           | Yes       |
-|[jmx_exporter](https://github.com/prometheus/jmx_exporter)                                     | [usage](#jmx-exporter-configuration)                        | prometheus           | No        |
-|[kafka_exporter_danielqsj](https://github.com/danielqsj/kafka_exporter)                        | [usage](#kafka-exporter-danielqsj-configuration)            | danielqsj            | Yes       |
-|[memcached_exporter](https://github.com/prometheus/memcached_exporter)                         | [usage](#memcached-exporter-configuration)                  | prometheus           | Yes       |
-|[mysqld_exporter](https://github.com/prometheus/mysqld_exporter)                               | [usage](#mysqld-exporter-configuration)                     | prometheus           | Yes       |
-|[node_exporter](https://github.com/prometheus/node_exporter)                                   | [usage](#node-exporter-configuration)                       | prometheus           | Yes       |
-|[ntp_exporter_sapcc](https://github.com/sapcc/ntp_exporter)                                    | [usage](#ntp-exporter-sapcc-configuration)                  | sapcc                | Yes       |
-|[nvidia_exporter_bugroger](https://github.com/BugRoger/nvidia-exporter)                        | [usage](#nvidia-cpu-exporter-bugroger-configuration)        | BugRoger             | Yes       |
-|[nvidia_gpu_exporter_mindprince](https://github.com/mindprince/nvidia_gpu_prometheus_exporter) | [usage](#nvidia-gpu-exporter-mindprince-configuration)      | mindprince           | Yes       |
-|[openldap_exporter_tomcz](https://github.com/tomcz/openldap_exporter)                          | [usage](#openldap-exporter-tomcz-configuration)             | tomcz                | Yes       |
-|[openvpn_exporter_kumina](https://github.com/kumina/openvpn_exporter)                          | [usage](#openvpn-exporter-kumina-configuration)             | kumina               | Yes       |
-|[ping_exporter_czerwonk](https://github.com/czerwonk/ping_exporter)                            | [usage](#ping-exporter-czerwonk-configuration)              | czerwonk             | Yes       |
-|[postgres_exporter_wrouesnel](https://github.com/wrouesnel/postgres_exporter)                  | [usage](#proxysql-exporter-percona-configuration)           | wrouesnel            | Yes       |
-|[powerdns_exporter_ledgr](https://github.com/ledgr/powerdns_exporter)                          | [usage](#powerdns-exporter-ledgr-configuration)             | ledgr                | Partly    |
-|[process_exporter_ncabatoff](https://github.com/ncabatoff/process-exporter)                    | [usage](#process-exporter-ncabatoff-configuration)          | ncabatoff            | Yes       |
-|[proxysql_exporter_percona](https://github.com/percona/proxysql_exporter)                      | [usage](#proxysql-exporter-percona-configuration)           | percona              | Yes       |
-|[rabbitmq_exporter_kbudde](https://github.com/kbudde/rabbitmq_exporter)                        | [usage](#rabbitmq-exporter-kbudde-configuration)            | kbudde               | Yes       |
-|[redis_exporter_oliver006](https://github.com/oliver006/redis_exporter)                        | [usage](#redis-exporter-kbudde-configuration)               | oliver006            | Yes       |
-|[script_exporter_adhocteam](https://github.com/adhocteam/script_exporter)                      | [usage](#script-exporter-adhocteam-configuration)           | adhocteam            | Yes       |
-|[smokeping_exporter_superq](https://github.com/SuperQ/smokeping_prober)                        | [usage](#smokeping-exporter-SuperQ-configuration)           | SuperQ               | Yes       |
-|[snmp_exporter](https://github.com/prometheus/snmp_exporter)                                   | [usage](#snmp-exporter-configuration)                       | prometheus           | Yes       |
-|[sql_exporter_free](https://github.com/free/sql_exporter)                                      | [usage](#sql-exporter-free-configuration)                   | free                 | Yes       |
-|[squid_exporter_boynux](https://github.com/boynux/squid-exporter)                              | [usage](#squid-exporter-boynux-configuration)               | boynux               | Yes       |
-|[ssl_exporter_ribbybibby](https://github.com/ribbybibby/ssl_exporter)                          | [usage](#ssl-exporter-ribbybibby-configuration)             | ribbybibby           | Yes       |
-|[statsd_exporter](https://github.com/prometheus/statsd_exporter)                               | [usage](#statsd-exporter-configuration)                     | prometheus           | Yes       |
-|[zookeeper_exporter_infonova](https://github.com/infonova/zookeeper_exporter)                  | [usage](#zookeeper-exporter-infonova-configuration)         | infonova             | Yes       |
+See each exporter's usage page for more details:
 
-### Supported node_exporter textfiles scripts
+| Exporter                                                                                            | Usage                                                       | Author               | CI tested |
+|-----------------------------------------------------------------------------------------------------|:-----------------------------------------------------------:|:--------------------:|:---------:|
+|[389ds_exporter_terrycain](https://github.com/terrycain/389ds_exporter)                              | [usage](docs/389ds_exporter_terrycain.md)                   | terrycain            | Yes       |
+|[apache_exporter_lusitaniae](https://github.com/Lusitaniae/apache_exporter)                          | [usage](docs/apache_exporter_lusitaniae.md)                 | Lusitaniae           | Yes       |
+|[aerospike_exporter_alicebob](https://github.com/alicebob/asprom)                                    | [usage](docs/aerospike_exporter_alicebob.md)                | alicebob             | Yes       |
+|[bigip_exporter_expressenab](https://github.com/ExpressenAB/bigip_exporter)                          | [usage](docs/bigip_exporter_expressenab.md)                 | ExpressenAB          | Yes       |
+|[bind_exporter_prometheus_community](https://github.com/prometheus-community/bind_exporter)          | [usage](docs/bind_exporter_prometheus_community.md)         | prometheus-community | Partial   |
+|[blackbox_exporter](https://github.com/prometheus/blackbox_exporter)                                 | [usage](docs/blackbox_exporter.md)                          | prometheus           | Yes       |
+|[ceph_exporter_digitalocean](https://github.com/digitalocean/ceph_exporter)                          | [usage](docs/ceph_exporter_digitalocean.md)                 | digitalocean         | Partial   |
+|[clickhouse_exporter_perconalab](https://github.com/Percona-Lab/clickhouse_exporter)                 | [usage](docs/clickhouse_exporter_perconalab.md)             | perconalab           | Yes       |
+|[cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter)                             | [usage](docs/cloudwatch_exporter.md)                        | prometheus           | Partial   |
+|[collectd_exporter](https://github.com/prometheus/collectd_exporter)                                 | [usage](docs/collectd_exporter.md)                          | prometheus           | Yes       |
+|[consul_exporter](https://github.com/prometheus/consul_exporter)                                     | [usage](docs/consul_exporter.md)                            | prometheus           | Yes       |
+|[couchbase_exporter_blakelead](https://github.com/blakelead/couchbase_exporter)                      | [usage](docs/couchbase_exporter_blakelead.md)               | leansys-team         | Yes       |
+|[couchdb_exporter_gesellix](https://github.com/gesellix/couchdb-prometheus-exporter)                 | [usage](docs/couchdb_exporter_gesellix.md)                  | gesellix             | Yes       |
+|[digitalocean_exporter_metalmatze](https://github.com/metalmatze/digitalocean_exporter)              | [usage](docs/digitalocean_exporter_metalmatze.md)           | metalmatze           | Yes       |
+|[dockerhub_exporter_promhippie](https://github.com/promhippie/dockerhub_exporter)                    | [usage](docs/dockerhub_exporter_promhippie.md)              | promhippie           | Yes       |
+|[elasticsearch_exporter_justwatchcom](https://github.com/justwatchcom/elasticsearch_exporter)        | [usage](docs/elasticsearch_exporter_justwatchcom.md)        | justwatchcom         | Yes       |
+|[fping_exporter_schweikert](https://github.com/schweikert/fping-exporter)                            | [usage](docs/fping_exporter_schweikert.md)                  | schweikert           | Yes       |
+|[gluster_exporter_ofesseler](https://github.com/ofesseler/gluster_exporter)                          | [usage](docs/gluster_exporter_ofesseler.md)                 | ofesseler            | Yes       |
+|[graphite_exporter](https://github.com/prometheus/graphite_exporter)                                 | [usage](docs/graphite_exporter.md)                          | prometheus           | Yes       |
+|[grok_exporter_fstab](https://github.com/fstab/grok_exporter)                                        | [usage](docs/grok_exporter_fstab.md)                        | fstab                | Yes       |
+|[haproxy_exporter](https://github.com/prometheus/haproxy_exporter)                                   | [usage](docs/haproxy_exporter.md)                           | prometheus           | Yes       |
+|[influxdb_exporter](https://github.com/prometheus/influxdb_exporter)                                 | [usage](docs/influxdb_exporter.md)                          | prometheus           | Yes       |
+|[ipmi_exporter_soundcloud](https://github.com/soundcloud/ipmi_exporter)                              | [usage](docs/ipmi_exporter_soundcloud.md)                   | soundcloud           | Yes       |
+|[iperf3_exporter_edgard](https://github.com/edgard/iperf3_exporter)                                  | [usage](docs/iperf3_exporter_edgard)                        | edgard               | Yes       |
+|[iptables_exporter_retailnext](https://github.com/retailnext/iptables_exporter)                      | [usage](docs/iptables_exporter_retailnext.md)               | retailnext           | Yes       |
+|[jmx_exporter](https://github.com/prometheus/jmx_exporter)                                           | [usage](docs/jmx_exporter.md)                               | prometheus           | No        |
+|[kafka_exporter_danielqsj](https://github.com/danielqsj/kafka_exporter)                              | [usage](docs/kafka_exporter_danielqsj.md)                   | danielqsj            | Partial   |
+|[keepalived_exporter_gen2brain](https://github.com/gen2brain/keepalived_exporter)                    | [usage](docs/keepalived_exporter_gen2brain.md)              | gen2brain            | Yes       |
+|[memcached_exporter](https://github.com/prometheus/memcached_exporter)                               | [usage](docs/memcached_exporter.md)                         | prometheus           | Yes       |
+|[mongodb_exporter_percona](https://github.com/percona/mongodb_exporter)                              | [usage](docs/mongodb_exporter_percona.md)                   | percona              | Yes       |
+|[mysqld_exporter](https://github.com/prometheus/mysqld_exporter)                                     | [usage](docs/mysqld_exporter.md)                            | prometheus           | Partial   |
+|[nginx_exporter_nginxinc](https://github.com/nginxinc/nginx-prometheus-exporter)                     | [usage](docs/nginx_exporter_nginxinc.md)                    | nginxinc             | Partial   |
+|[node_exporter](https://github.com/prometheus/node_exporter)                                         | [usage](docs/node_exporter.md)                              | prometheus           | Yes       |
+|[ntp_exporter_sapcc](https://github.com/sapcc/ntp_exporter)                                          | [usage](docs/ntp_exporter_sapcc.md)                         | sapcc                | Yes       |
+|[nvidia_exporter_bugroger](https://github.com/BugRoger/nvidia-exporter)                              | [usage](docs/nvidia_exporter_bugroger.md)                   | BugRoger             | Partial   |
+|[nvidia_gpu_exporter_mindprince](https://github.com/mindprince/nvidia_gpu_prometheus_exporter)       | [usage](docs/nvidia_gpu_exporter_mindprince.md)             | mindprince           | Partial   |
+|[openldap_exporter_tomcz](https://github.com/tomcz/openldap_exporter)                                | [usage](docs/openldap_exporter_tomcz.md)                    | tomcz                | Yes       |
+|[openvpn_exporter_kumina](https://github.com/kumina/openvpn_exporter)                                | [usage](docs/openvpn_exporter_kumina.md)                    | kumina               | Partial   |
+|[phpfpm_exporter_hipages](https://github.com/hipages/php-fpm_exporter)                               | [usage](docs/phpfpm_exporter_hipages.md)                    | hipages              | Yes       |
+|[ping_exporter_czerwonk](https://github.com/czerwonk/ping_exporter)                                  | [usage](docs/ping_exporter_czerwonk.md)                     | czerwonk             | Yes       |
+|[postgres_exporter_prometheus_community ](https://github.com/prometheus-community/postgres_exporter) | [usage](docs/postgres_exporter_prometheus_community.md)     | prometheus-community | Yes       |
+|[powerdns_exporter_ledgr](https://github.com/ledgr/powerdns_exporter)                                | [usage](docs/powerdns_exporter_ledgr.md)                    | ledgr                | Partial   |
+|[process_exporter_ncabatoff](https://github.com/ncabatoff/process-exporter)                          | [usage](docs/process_exporter_ncabatoff.md)                 | ncabatoff            | Yes       |
+|[proxysql_exporter_percona](https://github.com/percona/proxysql_exporter)                            | [usage](docs/proxysql_exporter_percona.md)                  | percona              | Yes       |
+|[rabbitmq_exporter_kbudde](https://github.com/kbudde/rabbitmq_exporter)                              | [usage](docs/rabbitmq_exporter_kbudde.md)                   | kbudde               | Yes       |
+|[redis_exporter_oliver006](https://github.com/oliver006/redis_exporter)                              | [usage](docs/redis_exporter_oliver006.md)                   | oliver006            | Yes       |
+|[script_exporter_adhocteam](https://github.com/adhocteam/script_exporter)                            | [usage](docs/script_exporter_adhocteam.md)                  | adhocteam            | Yes       |
+|[smokeping_exporter_superq](https://github.com/SuperQ/smokeping_prober)                              | [usage](docs/smokeping_exporter_superq.md)                  | SuperQ               | Yes       |
+|[snmp_exporter](https://github.com/prometheus/snmp_exporter)                                         | [usage](docs/snmp_exporter.md)                              | prometheus           | Yes       |
+|[sql_exporter_free](https://github.com/free/sql_exporter)                                            | [usage](docs/sql_exporter_free.md)                          | free                 | Yes       |
+|[squid_exporter_boynux](https://github.com/boynux/squid-exporter)                                    | [usage](docs/squid_exporter_boynux.md)                      | boynux               | Yes       |
+|[ssl_exporter_ribbybibby](https://github.com/ribbybibby/ssl_exporter)                                | [usage](docs/ssl_exporter_ribbybibby.md)                    | ribbybibby           | Yes       |
+|[statsd_exporter](https://github.com/prometheus/statsd_exporter)                                     | [usage](docs/statsd_exporter.md)                            | prometheus           | Yes       |
+|[wireguard_exporter_mdlayher](https://github.com/mdlayher/wireguard_exporter)                        | [usage](docs/wireguard_exporter_mdlayher.md)                | mdlayher             | Partial   |
+|[zookeeper_exporter_infonova](https://github.com/infonova/zookeeper_exporter)                        | [usage](docs/zookeeper_exporter_infonova.md)                | infonova             | Yes       |
+
+### Managed node_exporter textfiles scripts
 Numerous node_exporter textfiles scripts are supported and can be installed via the following variables. These scripts are installed under '/opt/prometheus/scripts' by default:
 
-| node_exporter textfiles script                                                                                                           | Source                 | Enable variable                           |
-|------------------------------------------------------------------------------------------------------------------------------------------|------------------------|-------------------------------------------|
-|[apt.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/apt.sh)                             | node_exporter examples | prometheus_script_apt: true               |
-|[btrfs_stats.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/btrfs_stats.py)             | node_exporter examples | prometheus_script_btrfs_stats: true       |
-|[deleted_libraries.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/deleted_libraries.py) | node_exporter examples | prometheus_script_deleted_libraries: true |
-|[directory-size.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/directory-size.sh)       | node_exporter examples | prometheus_script_directory_size: true    |
-|[inotify-instances](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/inotify-instances)       | node_exporter examples | prometheus_script_inotify_instances: true |
-|[ipmitool](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/ipmitool)                         | node_exporter examples | prometheus_script_ipmitool: true          |
-|[md_info.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/md_info.sh)                     | node_exporter examples | prometheus_script_md_info: true           |
-|[md_info_detail.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/md_info_detail.sh)       | node_exporter examples | prometheus_script_md_info_detail: true    |
-|[mellanox_hca_temp](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/mellanox_hca_temp)       | node_exporter examples | prometheus_script_mellanox_hca_temp: true |
-|[multipathd_info](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/multipathd_info)           | node_exporter examples | prometheus_script_multipathd_info: true   |
-|[ntpd_metrics.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/ntpd_metrics.py)           | node_exporter examples | prometheus_script_ntpd_metrics: true      |
-|[nvme_metrics.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/nvme_metrics.sh)           | node_exporter examples | prometheus_script_nvme_metrics: true      |
-|[pacman.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/pacman.sh)                       | node_exporter examples | prometheus_script_pacman: true            |
-|[smartmon.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.py)                   | node_exporter examples | prometheus_script_smartmon_python: true   |
-|[smartmon.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.sh)                   | node_exporter examples | prometheus_script_smartmon: true          |
-|[storcli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/storcli.py)                     | node_exporter examples | prometheus_script_storcli: true           |
-|[tw_cli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/tw_cli.py)                       | node_exporter examples | prometheus_script_tw_cli: true            |
-|[yum.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/yum.sh)                             | node_exporter examples | prometheus_script_yum: true               |
+| node_exporter textfiles script                                                                                                           | Source                     | Enable variable                           |
+|------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|--------------------------------------------|
+|[apt.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/apt.sh)                             | node_exporter examples     | prometheus_script_apt: true                |
+|[btrfs_stats.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/btrfs_stats.py)             | node_exporter examples     | prometheus_script_btrfs_stats: true        |
+|[deleted_libraries.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/deleted_libraries.py) | node_exporter examples     | prometheus_script_deleted_libraries: true  |
+|[directory-size.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/directory-size.sh)       | node_exporter examples     | prometheus_script_directory_size: true     |
+|[inotify-instances](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/inotify-instances)       | node_exporter examples     | prometheus_script_inotify_instances: true  |
+|[ipmitool](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/ipmitool)                         | node_exporter examples     | prometheus_script_ipmitool: true           |
+|[lvm-prom-collector](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/lvm-prom-collector)     | node_exporter examples     | prometheus_script_lvm_prom_collector: true |
+|[md_info.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/md_info.sh)                     | node_exporter examples     | prometheus_script_md_info: true            |
+|[md_info_detail.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/md_info_detail.sh)       | node_exporter examples     | prometheus_script_md_info_detail: true     |
+|[mellanox_hca_temp](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/mellanox_hca_temp)       | node_exporter examples     | prometheus_script_mellanox_hca_temp: true  |
+|[multipathd_info](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/multipathd_info)           | node_exporter examples     | prometheus_script_multipathd_info: true    |
+|[ntpd_metrics.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/ntpd_metrics.py)           | node_exporter examples     | prometheus_script_ntpd_metrics: true       |
+|[nvme_metrics.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/nvme_metrics.sh)           | node_exporter examples     | prometheus_script_nvme_metrics: true       |
+|[pacman.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/pacman.sh)                       | node_exporter examples     | prometheus_script_pacman: true             |
+|[promcron.sh](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promcron.sh)                                              | mesaguy/ansible-prometheus | prometheus_script_promcron: true           |
+|[promrun.sh](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/promrun.sh)                                                | mesaguy/ansible-prometheus | prometheus_script_promrun: true            |
+|[smartmon.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.py)                   | node_exporter examples     | prometheus_script_smartmon_python: true    |
+|[smartmon.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/smartmon.sh)                   | node_exporter examples     | prometheus_script_smartmon: true           |
+|[sssd_check.sh](https://github.com/mesaguy/ansible-prometheus/blob/master/scripts/sssd_check.sh)                                          | mesaguy/ansible-prometheus | prometheus_script_sssd_check: true         |
+|[storcli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/storcli.py)                     | node_exporter examples     | prometheus_script_storcli: true            |
+|[tw_cli.py](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/tw_cli.py)                       | node_exporter examples     | prometheus_script_tw_cli: true             |
+|[yum.sh](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/yum.sh)                             | node_exporter examples     | prometheus_script_yum: true                |
 
 ## Role Variables
 A 'prometheus_components' array variable is used to specify the Prometheus software to install. This example installs all supported prometheus_components:
@@ -124,35 +143,44 @@ prometheus_components:
  # Exporters
  - 389ds_exporter_terrycain
  - apache_exporter_lusitaniae
+ - aerospike_exporter_alicebob
  - bigip_exporter_expressenab
  - bind_exporter_prometheus_community
  - blackbox_exporter
  - ceph_exporter_digitalocean
+ - clickhouse_exporter_perconalab
  - cloudwatch_exporter
  - collectd_exporter
  - consul_exporter
  - couchbase_exporter_blakelead
  - couchdb_exporter_gesellix
  - digitalocean_exporter_metalmatze
+ - dockerhub_exporter_promhippie
  - elasticsearch_exporter_justwatchcom
+ - fping_exporter_schweikert
  - gluster exporter_ofesseler
  - graphite_exporter
  - grok_exporter_fstab
  - haproxy_exporter
  - influxdb_exporter
+ - iperf3_exporter_edgard
+ - ipmi_exporter_soundcloud
  - iptables_exporter_retailnext
  - jmx_exporter
  - kafka_exporter_danielqsj
+ - keepalived_exporter_gen2brain
  - memcached_exporter
  - mysqld_exporter
+ - nginx_exporter_nginxinc
  - node_exporter
  - ntp_exporter_sapcc
  - nvidia_exporter_bugroger
  - nvidia_gpu_exporter_mindprince
  - openldap_exporter_tomcz
  - openvpn_exporter_kumina
+ - phpfpm_exporter_hipages
  - ping_exporter_czerwonk
- - postgres_exporter_wrouesnel
+ - postgres_exporter_prometheus_community
  - powerdns_exporter_ledgr
  - process_exporter_ncabatoff
  - proxysql_exporter_percona
@@ -165,8 +193,15 @@ prometheus_components:
  - squid_exporter_boynux
  - ssl_exporter_ribbybibby
  - statsd_exporter
+ - wireguard_exporter_mdlayher
  - zookeeper_exporter_infonova
 ```
+
+### Mesaguy script documentation
+
+- [promcron](https://github.com/mesaguy/ansible-prometheus/blob/master/docs/promcron.md) for monitoring the execution of cron jobs
+- [promrun](https://github.com/mesaguy/ansible-prometheus/blob/master/docs/promrun.md) for monitoring the execution of commands
+- [sssd_check](https://github.com/mesaguy/ansible-prometheus/blob/master/docs/sssd_check.md) for monitoring the status of SSSD
 
 ### Common variables
 
@@ -178,7 +213,6 @@ All daemon installer tasks have a 'runas' parameter to specify which user the da
 
     prometheus_blackbox_exporter_runas: test
 
-
 ### Global variables
 
 Link the Prometheus etc directory to '/etc/prometheus'. The Prometheus etc directory defaults to '/opt/prometheus/etc':
@@ -189,13 +223,18 @@ Attempt to force the etc directory symlink referenced above:
 
     prometheus_link_etc_force: false
 
-Install the 'sponge' utility. [Recommended by the Prometheus project](https://github.com/prometheus/node_exporter/tree/master/text_collector_examples) when writing to node_exporter's textfile directory. The EPEL repository is required if installing on a Red Hat Enterprise Linux derivative:
+Install the 'sponge' utility. [Recommended by the Prometheus project](https://github.com/prometheus/node_exporter/tree/master/text_collector_examples) when writing to node_exporter's textfile directory. The EPEL repository is required if installing on a Red Hat Enterprise Linux derivative. CentOS 8.x requires the 'CentOS-PowerTools' yum repository, OracleLinux 7 requires the 'ol7_optional_archive' repository,  and Red Hat Enterprise Linux 8 requires the 'Red Hat CodeReady Linux Builder' yum repository be enabled:
 
     prometheus_install_sponge: false
 
 Purge old and now orphaned versions of software:
 
     prometheus_purge_orphans: false
+
+Purge backups of prometheus configuration files from the prometheus 'etc' directory files after 'prometheus_etc_backup_max_age' days (Default: 31d). Option 'prometheus_etc_purge_backups' defaults to 'false':
+
+    prometheus_etc_purge_backups: true
+    prometheus_etc_backup_max_age: 31d
 
 Root directory to install Prometheus software:
 
@@ -215,13 +254,24 @@ Name of the Prometheus service and group:
     prometheus_group: prometheus
     prometheus_user: prometheus
 
+Create the Prometheus user and group as system accounts, defaults to 'false':
+
+    prometheus_group_is_system: true
+    prometheus_user_is_system: true
+
+Configure ulimits for 'prometheus' user:
+
+    prometheus_configure_ulimits: false
+    prometheus_ulimit_hard_nofile: 8192
+    prometheus_ulimit_soft_nofile: 4096
+
 If installing a Prometheus application binary fails, fall back to installing the Prometheus software via source. Installation from source generally requires installing compilers. It is also possible to enable 'fallback_to_build' on a case-by-case basis (ie: prometheus_blackbox_exporter_fallback_to_build: true):
 
     prometheus_fallback_to_build: false
 
 Go version to use when building Prometheus software:
 
-    prometheus_go_version: 1.13.5
+    prometheus_go_version: 1.13.10
 
 The Prometheus etc directory, defaults to '/opt/prometheus/etc':
 
@@ -250,6 +300,39 @@ The directory to use when storing persistent Prometheus data (ie: The Prometheus
 Optionally disable symlink of tool applications (amtool, promtool, etc) to /usr/local/bin. Defaults to 'true':
 
     prometheus_symlink_tools: false
+
+Cache downloaded software on the Ansible host and push cached software to the remote hosts Ansible is configuring. Defaults to disabled via 'false':
+
+    prometheus_local_archive: true
+    prometheus_local_archive_dir: ../archive/prometheus
+
+### Prometheus rule management variables
+
+Enable management of Prometheus 'rules':
+
+    prometheus_manage_rules: true
+
+Local location to find rules files, defaults to empty (disabled):
+
+    prometheus_rules_source_dirs:
+     - ../files/prometheus/rules
+     - ../files/prometheus/additional_rules
+
+Ownership and permissions of rules files, defaults:
+
+    prometheus_rules_dir_mode: 0755
+    prometheus_rules_file_mode: 0644
+    prometheus_rules_group: '{{ prometheus_group }}' # prometheus
+    prometheus_rules_owner: '{{ prometheus_user }}'  # prometheus
+
+Purge backups of rules files after 'prometheus_rules_backup_max_age' days (Default: 90d). Option 'prometheus_rules_purge_backups' defaults to 'false':
+
+    prometheus_rules_purge_backups: true
+    prometheus_rules_backup_max_age: 90d
+
+Purge undefined (orphaned) rules from Prometheus servers. Defaults to 'false':
+
+    prometheus_rules_purge_orphans: true
 
 ### Prometheus log rotation variables
 
@@ -305,7 +388,7 @@ If [iptables_raw](https://github.com/Nordeus/ansible_iptables_raw) has been inst
 
     prometheus_manage_client_iptables_raw: true
 
-This role can manage your Prometheus server 'target groups' (tgroups) automatically, dynamically creating tgroup files in a specified directory (/etc/prometheus/tgroups by default) for each client exporter.
+This role can manage your Prometheus server 'target groups' (tgroups) automatically, dynamically creating tgroup files in a specified directory (/opt/prometheus/etc/tgroups by default) for each client exporter.
 
 Automatic tgroup file management can be enabled for client side operation, server side operation, or both. In client mode, client's exporters are registered automatically on the Prometheus server specified in a 'prometheus_servers' array. In server mode, the inventory is parsed to determine which exporters are available on each host and *all* clients are registered with the server's specified in each client's 'prometheus_servers' array.
 
@@ -313,14 +396,14 @@ By default, client and server tgroups use 'inventory_hostname' (fqdn) and 'inven
 
     prometheus_tgroup_use_facts: true
 
-To enable automatic tgroup file generation on the client side, you must define 'prometheus_manage_client_tgroups' as true and list your Prometheus servers in a 'prometheus_servers' variable in your Ansible variables or inventory. The following will create tgroup files in /etc/prometheus/ansible_tgroups:
+To enable automatic tgroup file generation on the client side, you must define 'prometheus_manage_client_tgroups' as true and list your Prometheus servers in a 'prometheus_servers' variable in your Ansible variables or inventory. The following will create tgroup files in /opt/prometheus/etc/ansible_tgroups:
 
     prometheus_manage_client_tgroups: true
     prometheus_servers:
      - 'prometheus1'
      - 'prometheus2'
-    # Optional, defaults to /etc/prometheus/tgroups:
-    prometheus_managed_tgroup_dir: '/etc/prometheus/ansible_tgroups'
+    # Optional, defaults to /opt/prometheus/etc/tgroups:
+    prometheus_managed_tgroup_dir: '/opt/prometheus/etc/ansible_tgroups'
 
 If this role is managing your tgroup files, you can apply labels to your exporter/s using the 'prometheus_tgroup_labels' variable:
 
@@ -357,7 +440,7 @@ Exporters that aren't managed by this role can be specified using a 'prometheus_
          department: IT
 
 
-To enable automatic tgroup file generation on the server side, you must define 'prometheus_manage_server_tgroups' as true and list your Prometheus servers in a 'prometheus_servers' variable in your Ansible variables or inventory. The following will create tgroup files in /etc/prometheus/ansible_tgroups for *all* clients that have 'prometheus_compenents' and/or 'prometheus_additional_exporters', clients must also have 'prometheus_servers' array configured:
+To enable automatic tgroup file generation on the server side, you must define 'prometheus_manage_server_tgroups' as true and list your Prometheus servers in a 'prometheus_servers' variable in your Ansible variables or inventory. The following will create tgroup files in /opt/prometheus/etc/ansible_tgroups for *all* clients that have 'prometheus_compenents' and/or 'prometheus_additional_exporters', clients must also have 'prometheus_servers' array configured:
 
     prometheus_manage_server_tgroups: true
 
@@ -374,6 +457,10 @@ To only configure server tgroups and perform no role tasks, enable 'prometheus_m
 Purge undefined (orphaned) exporters. When run in client mode, this option only effects client's orphaned files. When run in server mode this affects all tgroup files:
 
     prometheus_tgroup_dir_purge_orphans: true
+
+Specify a FQDN for a host when the FQDN isn't in Ansible's inventory and isn't the host's official FQDN. This option should be generally avoided, fixing DNS or Ansible's inventory is a better option:
+
+    prometheus_override_fqdn: weird-hostname.example.org
 
 ### Prometheus server configuration
 
@@ -413,10 +500,13 @@ An array of additional flags to pass to the prometheus daemon:
 
     prometheus_extra_opts: []
 
-The version of Prometheus to install. The source version defines the version as specified in version control:
+The version of Prometheus to install. The default version can be found in the [prometheus variables file](../vars/software/prometheus.yml) and the default version can be overridden using the following variable:
 
-    prometheus_version: "2.15.1"
-    prometheus_src_version: "v2.15.1"
+    prometheus_version: "v1.0.0"
+
+Allow the use of prerelease versions (beta, test, development, etc versions), defaults to 'false':
+
+    prometheus_use_prerelease: true
 
 Where to store Prometheus's database, defaults to /opt/prometheus/var/prometheus
 
@@ -431,1130 +521,6 @@ Port and IP to listen on. Defaults to listening on all available IPs on port 909
 
     prometheus_host: "0.0.0.0"
     prometheus_port: 9090
-
-### Alertmanager configuration
-
-To enable [alertmanager](https://github.com/prometheus/alertmanager) include role task: alertmanager
-
-Alertmanager configuration files are validated using 'amtool' before Alertmanager is restarted.
-
-The configuration content. The example below utilizes a file named 'alertmanager.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
-
-    prometheus_alertmanager_cfg: '{{ lookup("file", "../files/alertmanager.yml") | from_yaml }}'
-
-An array of additional flags to pass to the alertmanager daemon:
-
-    prometheus_alertmanager_extra_opts: []
-
-The version of Alertmanager to install. The source version defines the version as specified in version control:
-
-    prometheus_alertmanager_version: "0.20.0"
-    prometheus_alertmanager_version_src_version: "v0.20.0"
-
-Where to store Alertmanager's data, defaults to /opt/prometheus/var/alertmanager
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9093:
-
-    prometheus_alertmanager_host: "0.0.0.0"
-    prometheus_alertmanager_port: 9093
-
-### Pushgateway configuration
-
-To enable [alertmanager](https://github.com/prometheus/pushgateway) include role task: pushgateway
-
-An array of additional flags to pass to the pushgateway daemon:
-
-    prometheus_pushgateway_extra_opts: []
-
-The version of Pushgateway to install. The source version defines the version as specified in version control:
-
-    prometheus_pushgateway_version: "1.0.1"
-    prometheus_pushgateway_src_version: "v1.0.1"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9091:
-
-    prometheus_pushgateway_host: "0.0.0.0"
-    prometheus_pushgateway_port: 9091
-
-### 389ds exporter (terrycain) configuration
-
-To enable [389ds_exporter by terrycain](https://github.com/terrycain/389ds_exporter) include role task: 389ds_exporter_terrycain
-
-:warning: Your LDAP password is given to the exporter as a command line argument and is visible to all via 'ps', etc. This exporter does not support storing the LDAP password in a configuration file. If access to the 389ds server is sufficiently limited, then this security exposure is reduced, but still present.
-
-An array of additional flags to pass to the 389ds_exporter daemon (ie):
-
-    prometheus_389ds_exporter_terrycain_extra_opts:
-     - '-ldap.pass=test'
-     - '-ipa-domain=test'
-
-The version of 389ds_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_389ds_exporter_terrycain_version: "0.1.2"
-    prometheus_389ds_exporter_terrycain_src_version: "v0.1.2"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9496:
-
-    prometheus_389ds_exporter_terrycain_host: "0.0.0.0"
-    prometheus_389ds_exporter_terrycain_port: 9496
-
-### Apache exporter (Lusitaniae) configuration
-
-To enable [apache_exporter by Lusitaniae](https://github.com/Lusitaniae/apache_exporter) include role task: apache_exporter_lusitaniae
-
-An array of additional flags to pass to the apache_exporter daemon (ie):
-
-    prometheus_apache_exporter_lusitaniae_extra_opts:
-      - '-scrape_uri=http://localhost/server-status/?auto'
-
-The version of apache_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_apache_exporter_lusitaniae_version: "0.7.0"
-    prometheus_apache_exporter_lusitaniae_src_version: "v0.7.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9117:
-
-    prometheus_apache_exporter_lusitaniae_host: "0.0.0.0"
-    prometheus_apache_exporter_lusitaniae_port: 9117
-
-### BigIP exporter (ExpressenAB) configuration
-
-To enable [bigip_exporter by ExpressenAB](https://github.com/ExpressenAB/bigip_exporter) include role task: bigip_exporter_expressenab
-
-An array of additional flags to pass to the bigip_exporter daemon (ie):
-
-    prometheus_bigip_exporter_expressenab_extra_opts: []
-     - '--bigip.host 1.1.1.1'
-     - '--bigip.port 443'
-     - '--exporter.config my_config_file.yml'
-
-Environmental variables can also be used to configure the bigip_exporter daemon:
-
-    prometheus_consul_exporter_env_vars:
-      BE_BIGIP_HOST: 1.1.1.1
-      BE_BIGIP_PORT: 443
-
-The version of bigip_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_bigip_exporter_expressenab_version: "1.0.0"
-    prometheus_bigip_exporter_expressenab_src_version: "v1.0.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9142:
-
-    prometheus_bigip_exporter_expressenab_host: "0.0.0.0"
-    prometheus_bigip_exporter_expressenab_port: 9142
-
-### BIND exporter (prometheus-community) configuration
-
-To enable [bind_exporter by prometheus-community](https://github.com/prometheus-community/bind_exporter) include role task: bind_exporter_prometheus_community
-
-An array of additional flags to pass to the bind_exporter daemon (ie):
-
-    prometheus_bind_exporter_prometheus_community_extra_opts:
-      - '-bind.stats-url string=http://localhost:8053/'
-
-The version of bind_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_bind_exporter_prometheus_community_src_version: "v0.2.0-dev"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 8053:
-
-    prometheus_bind_exporter_prometheus_community_host: "0.0.0.0"
-    prometheus_bind_exporter_prometheus_community_port: 8053
-
-### Blackbox exporter configuration
-
-To enable [blackbox_exporter](https://github.com/prometheus/blackbox_exporter) include role task: blackbox_exporter
-
-The configuration content. The example below utilizes a file named 'blackbox_exporter.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
-
-    prometheus_blackbox_exporter_cfg: '{{ lookup("file", "../files/blackbox_exporter.yml") | from_yaml }}'
-
-Alternatively, the configuration file can be defined directly:
-
-    prometheus_blackbox_exporter_cfg:
-      http_2xx:
-        http:
-          fail_if_not_ssl: false
-          fail_if_ssl: false
-          method: GET
-          no_follow_redirects: false
-          preferred_ip_protocol: ip4
-          tls_config:
-            insecure_skip_verify: false
-          valid_http_versions:
-          - HTTP/1.1
-          - HTTP/2
-          valid_status_codes:
-          - 200
-
-An array of additional flags to pass to the blackbox_exporter daemon:
-
-    prometheus_blackbox_exporter_extra_opts: []
-
-The version of blackbox_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_blackbox_exporter_version: "0.16.0"
-    prometheus_blackbox_exporter_src_version: "v0.16.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9115:
-
-    prometheus_blackbox_exporter_host: "0.0.0.0"
-    prometheus_blackbox_exporter_port: 9115
-
-### Ceph exporter (digitalocean) configuration
-
-To enable [ceph_exporter by digitalocean](https://github.com/digitalocean/ceph_exporter) include role task: ceph_exporter_digitalocean
-
-Ceph libraries must be installed in order to compile this exporter. This Ansible role does not install the prerequisite Ceph libraries as your source and version may vary.
-
-An array of additional flags to pass to the ceph_exporter daemon (ie):
-
-    prometheus_ceph_exporter_digitalocean_extra_opts:
-      - '--ceph.config=/etc/ceph/ceph.conf'
-      - '--exporter.config=/etc/ceph/exporter.yml'
-
-The version of ceph_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_ceph_exporter_digitalocean_src_version: "2.0.6-luminous"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9128:
-
-    prometheus_ceph_exporter_digitalocean_host: "0.0.0.0"
-    prometheus_ceph_exporter_digitalocean_port: 9128
-
-### CloudWatch exporter configuration
-
-To enable [cloudwatch_exporter](https://github.com/prometheus/cloudwatch_exporter) include role task: cloudwatch_exporter
-
-The configuration content. The example below utilizes a file named 'cloudwatch_exporter.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
-
-    prometheus_cloudwatch_exporter_cfg: '{{ lookup("file", "../files/cloudwatch_exporter.yml") | from_yaml }}'
-
-Alternatively, the configuration file can be defined directly:
-
-    prometheus_cloudwatch_exporter_cfg:
-      region: eu-west-1
-      metrics:
-       - aws_namespace: AWS/ELB
-         aws_metric_name: RequestCount
-         aws_dimensions: [AvailabilityZone, LoadBalancerName]
-         aws_dimension_select:
-           LoadBalancerName: [myLB]
-         aws_statistics: [Sum]
-
-An array of additional flags to pass to the cloudwatch_exporter daemon:
-
-    prometheus_cloudwatch_exporter_extra_opts: []
-
-The version of cloudwatch_exporter to install:
-
-    prometheus_cloudwatch_exporter_version: "0.7.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9106:
-
-    prometheus_cloudwatch_exporter_host: "0.0.0.0"
-    prometheus_cloudwatch_exporter_port: 9106
-
-### Collectd exporter configuration
-
-To enable [collectd_exporter](https://github.com/prometheus/collectd_exporter) include role task: collectd_exporter
-
-An array of additional flags to pass to the collectd_exporter daemon:
-
-    prometheus_collectd_exporter_extra_opts: []
-
-The version of collectd_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_collectd_exporter_version: "0.5.0"
-    prometheus_collectd_exporter_src_version: "v0.5.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9103:
-
-    prometheus_collectd_exporter_host: "0.0.0.0"
-    prometheus_collectd_exporter_port: 9103
-
-### Consul exporter configuration
-
-To enable [consul_exporter](https://github.com/prometheus/consul_exporter) include role task: consul_exporter
-
-Environmental variables to pass to the consul_exporter exporter. These environmental variables are used as a primary method of configuring the exporter:
-
-    prometheus_consul_exporter_env_vars:
-      CONSUL_HTTP_TOKEN: '4391eca7bcd03f45aa43ca26829c386c329097a7'
-      CONSUL_HTTP_SSL_VERIFY: true
-
-An array of additional flags to pass to the consul_exporter daemon:
-
-    prometheus_consul_exporter_extra_opts: []
-
-The version of consul_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_consul_exporter_version: "0.6.0"
-    prometheus_consul_exporter_src_version: "v0.6.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9107:
-
-    prometheus_consul_exporter_host: "0.0.0.0"
-    prometheus_consul_exporter_port: 9107
-
-### Couchbase exporter (leansys-team) configuration
-
-To enable [couchbase_exporter by blakelead](https://github.com/blakelead/couchbase_exporter) include role task: couchbase_exporter_blakelead
-
-Environmental variables to pass to the couchbase_exporter_blakelead exporter. These environmental variables are used as a primary method of configuring the exporter:
-
-    prometheus_couchbase_exporter_blakelead_env_vars:
-      CB_EXPORTER_DB_USER: couchbase
-      CB_EXPORTER_DB_PASSWORD: couchbase
-
-An array of additional flags to pass to the couchbase_exporter daemon:
-
-    prometheus_couchbase_exporter_blakelead_extra_opts: []
-
-The version of couchbase_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_couchbase_exporter_blakelead_version: "0.9.6"
-    prometheus_couchbase_exporter_blakelead_src_version: "0.9.6"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9191:
-
-    prometheus_couchbase_exporter_blakelead_host: "0.0.0.0"
-    prometheus_couchbase_exporter_blakelead_port: 9191
-
-### CouchDB exporter (gesellix) configuration
-
-To enable [couchdb_exporter by gesellix](https://github.com/gesellix/couchdb-prometheus-exporter) include role task: couchdb_exporter_gesellix
-
-An array of additional flags to pass to the couchdb_exporter daemon:
-
-    prometheus_couchdb_exporter_gesellix_extra_opts: []
-
-The version of couchdb_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_couchdb_exporter_gesellix_version: "18"
-    prometheus_couchdb_exporter_gesellix_src_version: "18"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9984:
-
-    prometheus_couchdb_exporter_gesellix_host: "0.0.0.0"
-    prometheus_couchdb_exporter_gesellix_port: 9984
-
-### DigitalOcean exporter (metalmatze) configuration
-
-Environmental variables to pass to the digitalocean_exporter_metalmatze exporter. These environmental variables are used as a primary method of configuring the exporter:
-
-    prometheus_digitalocean_exporter_metalmatze_env_vars:
-      DIGITALOCEAN_TOKEN: 1234567890ABCDEFG
-
-An array of additional flags to pass to the digitalocean_exporter daemon:
-
-    prometheus_digitalocean_exporter_metalmatze_extra_opts: []
-
-The version of digitalocean_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_digitalocean_exporter_metalmatze_version: "0.5"
-    prometheus_digitalocean_exporter_metalmatze_src_version: "v0.5"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9212:
-
-    prometheus_digitalocean_exporter_metalmatze_host: "0.0.0.0"
-    prometheus_digitalocean_exporter_metalmatze_port: 9212
-
-### Elasticsearch exporter (justwatchcom) configuration
-
-An array of additional flags to pass to the elasticsearch_exporter daemon:
-
-    prometheus_elasticsearch_exporter_justwatchcom_extra_opts: []
-
-The version of elasticsearch_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_elasticsearch_exporter_justwatchcom_version: "1.1.0"
-    prometheus_elasticsearch_exporter_justwatchcom_src_version: "v1.1.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9908:
-
-    prometheus_elasticsearch_exporter_justwatchcom_host: "0.0.0.0"
-    prometheus_elasticsearch_exporter_justwatchcom_port: 9908
-
-### Gluster exporter (ofesseler) configuration
-
-To enable [gluster_exporter by ofesseler](https://github.com/ofesseler/gluster_exporter) include role task: gluster_exporter_ofesseler
-
-An array of additional flags to pass to the gluster_exporter daemon:
-
-    prometheus_gluster_exporter_ofesseler_extra_opts: []
-
-The gluster exporter needs to run as root if gluster is running as root:
-
-    prometheus_gluster_exporter_ofesseler_runas: root
-
-The version of gluster_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_gluster_exporter_ofesseler_version: "0.2.7"
-    prometheus_gluster_exporter_ofesseler_src_version: "v0.2.7"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9189:
-
-    prometheus_gluster_exporter_ofesseler_host: "0.0.0.0"
-    prometheus_gluster_exporter_ofesseler_port: 9189
-
-### Graphite exporter configuration
-
-To enable [graphite_exporter](https://github.com/prometheus/graphite_exporter) include role task: graphite_exporter
-
-The configuration content. The example below utilizes a file named 'graphite_exporter.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
-
-    prometheus_graphite_exporter_cfg: '{{ lookup("file", "../files/graphite_exporter.yml") | from_yaml }}'
-
-Alternatively, the configuration file can be defined directly:
-
-    prometheus_graphite_exporter_cfg:
-      - match: test.dispatcher.*.*.*
-        name: dispatcher_events_total
-        labels:
-          action: $2
-          job: test_dispatcher
-          outcome: $3
-          processor: $1
-
-An array of additional flags to pass to the graphite_exporter daemon:
-
-    prometheus_graphite_exporter_extra_opts: []
-
-The version of graphite_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_graphite_exporter_version: "0.6.2"
-    prometheus_graphite_exporter_src_version: "v0.6.2"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9108:
-
-    prometheus_graphite_exporter_host: "0.0.0.0"
-    prometheus_graphite_exporter_port: 9108
-
-### Grok exporter (fstab) configuration
-
-To enable [grok_exporter by fstab](https://github.com/fstab/grok_exporter) include role task: grok_exporter_fstab
-
-The configuration content. The example below utilizes a file named 'grok_exporter_fstab.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
-
-    prometheus_grok_exporter_fstab_cfg: '{{ lookup("file", "../files/grok_exporter_fstab.yml") | from_yaml }}'
-
-Alternatively, the configuration file can be defined directly:
-
-    prometheus_grok_exporter_fstab_cfg:
-      global:
-          config_version: 2
-      input:
-          type: file
-          path: ./example/example.log
-          readall: true
-      grok:
-          patterns_dir: ./logstash-patterns-core/patterns
-      metrics:
-          - type: counter
-            name: grok_example_lines_total
-            help: Counter metric example with labels.
-            match: '%{DATE} %{TIME} %{USER:user} %{NUMBER}'
-            labels:
-                user: '{{.user}}'
-      server:
-          port: 9144
-
-An array of additional flags to pass to the grok_exporter daemon:
-
-    prometheus_grok_exporter_fstab_extra_opts: []
-
-The version of grok_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_grok_exporter_fstab_version: "0.2.8"
-    prometheus_grok_exporter_fstab_src_version: "v0.2.8"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9144:
-
-    prometheus_grok_exporter_fstab_host: "0.0.0.0"
-    prometheus_grok_exporter_fstab_port: 9144
-
-### HAProxy exporter configuration
-
-To enable [haproxy_exporter](https://github.com/prometheus/haproxy_exporter) include role task: haproxy_exporter
-
-An array of additional flags to pass to the haproxy_exporter daemon:
-
-    prometheus_haproxy_exporter_extra_opts: []
-
-The version of haproxy_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_haproxy_exporter_version: "0.10.0"
-    prometheus_haproxy_exporter_src_version: "v0.10.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9101:
-
-    prometheus_haproxy_exporter_host: "0.0.0.0"
-    prometheus_haproxy_exporter_port: 9101
-
-To gather HAProxy stats via a unix socket, specify the path to the unix socket. Collecting HAProxy stats via the http and unix socket methods are mutually exclusive. It may also be necessary to run the haproxy_exporter as the user haproxy is running as:
-
-    prometheus_haproxy_exporter_socket: '/run/haproxy/haproxy.sock'
-    prometheus_haproxy_exporter_runas: haproxy
-
-Enable HAProxy statistics via socket in the HAProxy globals section:
-
-    global
-      stats socket /run/haproxy/haproxy.sock mode 666 level admin
-      # Wait up to 2 minutes for input:
-      stats timeout 2m
-
-### InfluxDB exporter configuration
-
-An array of additional flags to pass to the influxdb_exporter daemon:
-
-    prometheus_influxdb_exporter_extra_opts: []
-
-The version of influxdb_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_influxdb_exporter_version: "0.3.0"
-    prometheus_influxdb_exporter_src_version: "v0.3.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9122:
-
-    prometheus_influxdb_exporter_host: "0.0.0.0"
-    prometheus_influxdb_exporter_port: 9122
-
-### IPTables exporter (retailnext) configuration
-
-To enable [iptables_exporter by retailnext](https://github.com/retailnext/iptables_exporter) include role task: iptables_exporter_retailnext
-
-This exporter must be run as the user 'root' unless you are using systemd:
-
-    prometheus_software_runas: root
-
-An array of additional flags to pass to the iptables_exporter daemon (ie):
-
-    prometheus_iptables_exporter_retailnext_extra_opts: []
-
-The version of iptables_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_iptables_exporter_retailnext_version: "0.1.0"
-    prometheus_iptables_exporter_retailnext_src_version: "v0.1.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9455:
-
-    prometheus_iptables_exporter_retailnext_host: "0.0.0.0"
-    prometheus_iptables_exporter_retailnext_port: 9455
-
-### JMX exporter configuration
-
-To enable [jmx_exporter](https://github.com/prometheus/jmx_exporter) include role task: jmx_exporter
-
-The [jmx_exporter](https://github.com/prometheus/jmx_exporter) is different from most exporters in that it isn't a daemon, it is a library that is included with your java instances.
-
-The configuration content. The example below utilizes a file named 'jmx_exporter.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
-
-``` yaml
-prometheus_jmx_cfgs:
-  elasticsearch: "{{ lookup('file', '../../files/prometheus/jmx.elasticsearch.yml') | from_yaml }}"
-  puppet: "{{ lookup('file', '../../files/prometheus/jmx.puppet.yml') | from_yaml }}"
-```
-
-The version of jmx_exporter to install:
-
-    prometheus_jmx_exporter_version: "0.12.0"
-
-### Kafka exporter (danielqsj) configuration
-
-To enable [kafka_exporter by danielqsj](https://github.com/danielqsj/kafka_exporter) include role task: kafka_exporter_danielqsj
-
-An array of additional flags to pass to the kafka_exporter daemon (ie):
-
-    prometheus_kafka_exporter_danielqsj_extra_opts:
-      - '--kafka.server=127.0.0.1:9092'
-
-The version of kafka_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_kafka_exporter_danielqsj_version: "1.2.0"
-    prometheus_kafka_exporter_danielqsj_src_version: "v1.2.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9308:
-
-    prometheus_kafka_exporter_danielqsj_host: "0.0.0.0"
-    prometheus_kafka_exporter_danielqsj_port: 9308
-
-### Memcached exporter configuration
-
-To enable [memcached_exporter](https://github.com/prometheus/memcached_exporter) include role task: memcached_exporter
-
-An array of additional flags to pass to the memcached_exporter daemon:
-
-    prometheus_memcached_exporter_extra_opts: []
-
-The version of memcached_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_memcached_exporter_version: "0.6.0"
-    prometheus_memcached_exporter_src_version: "v0.6.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9150:
-
-    prometheus_memcached_exporter_host: "0.0.0.0"
-    prometheus_memcached_exporter_port: 9150
-
-### Mysqld exporter configuration
-
-To enable [mysqld_exporter](https://github.com/prometheus/mysqld_exporter) include role task: mysqld_exporter
-
-The [mysqld_exporter](https://github.com/prometheus/mysqld_exporter) requires configuration before use! You must grant permissions for this exporter to read select data from MySQL and you must configure a .my.cnf file with the credentials this module will utilize.
-
-An array of additional flags to pass to the mysqld_exporter daemon:
-
-    prometheus_mysqld_exporter_extra_opts: []
-
-The version of mysqld_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_mysqld_exporter_version: "0.12.1"
-    prometheus_mysqld_exporter_src_version: "v0.12.1"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9104:
-
-    prometheus_mysqld_exporter_host: "0.0.0.0"
-    prometheus_mysqld_exporter_port: 9104
-
-After following the [mysqld_exporter user creation or grant instructions](https://github.com/prometheus/mysqld_exporter), the following variables can be used to define the MySQL username and password mysqld_exporter can utilize to poll MySQL:
-
-    prometheus_mysqld_exporter_username: mysqld_exporter
-    prometheus_mysqld_exporter_password: _password_
-
-### Node exporter configuration
-
-To enable [node_exporter](https://github.com/prometheus/node_exporter) include role task: node_exporter
-
-Numerous [node_exporter textfiles scripts](#supported-node-exporter-textfiles-scripts) can be installed by enabling the specified script specific variables.
-
-The directory node_exporter should poll for text files containing additional information to present. Defaults to '/opt/prometheus/etc/node_exporter_textfiles':
-
-    prometheus_node_exporter_textfiles_directory: '/opt/prometheus/etc/node_exporter_textfiles'
-
-An array of additional flags to pass to the node_exporter daemon. You will likely wish to customize the data collected by [node_exporter](https://github.com/prometheus/node_exporter) by adding flags here:
-
-    prometheus_node_exporter_extra_opts: []
-
-Common node_exporter variables can be defined as follows:
-
-    prometheus_node_exporter_extra_opts:
-      - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|run|var/lib/docker/.*)($|/)"'
-      - '--collector.systemd'
-      - '--no-collector.zfs'
-
-The version of node_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_node_exporter_version: "0.18.1"
-    prometheus_node_exporter_src_version: "v0.18.1"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9100:
-
-    prometheus_node_exporter_host: "0.0.0.0"
-    prometheus_node_exporter_port: 9100
-
-Node exporter textfiles scripts can be installed into the 'prometheus_script_directory' directory (/opt/prometheus/scripts by default) using the following parameters:
-
-    prometheus_script_directory: '/opt/prometheus/scripts'
-    # S.M.A.R.T. monitoring script
-    prometheus_script_smartmon: true
-
-Node exporter textfiles scripts will generally need to be run via cron and ideally via [sponge](https://github.com/prometheus-community/node-exporter-textfile-collector-scripts/blob/master/README.md), for instance:
-
-    hosts: prometheus_clients
-    vars:
-      prometheus_components:
-       - node_exporter
-      prometheus_script_directory: /opt/prometheus/scripts'
-      prometheus_script_smartmon: true
-      prometheus_node_exporter_textfiles_directory: /opt/prometheus/etc/node_exporter_textfiles
-    roles:
-      - mesaguy.prometheus
-    tasks:
-      - name: Setup cronjob to run smartmon.sh
-        become: true
-        copy:
-          dest: /etc/cron.d/smartmon
-          # Requires 'sponge' be installed:
-          content: "*/5 * * * * root bash {{ prometheus_script_directory }}/smartmon.sh | sponge {{ prometheus_node_exporter_textfiles_directory }}/smartmon.prom\n"
-          mode: '0555'
-          owner: root
-          group: root
-
-### NTP exporter (sapcc) configuration
-
-To enable [ntp_exporter by sapcc](https://github.com/sapcc/ntp_exporter) include role task: ntp_exporter_sapcc
-
-An array of additional flags to pass to the ntp_exporter daemon, the '-ntp.server' variable is manditory:
-
-    prometheus_ntp_exporter_sapcc_extra_opts:
-      - '-ntp.server=time-a-g.nist.gov'
-
-The version of ntp_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_ntp_exporter_sapcc_version: "v1.1.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9559:
-
-    prometheus_ntp_exporter_sapcc_host: "0.0.0.0"
-    prometheus_ntp_exporter_sapcc_port: 9559
-
-### Nvidia CPU exporter (BugRoger) configuration
-
-An array of additional flags to pass to the nvidia_exporter daemon:
-
-    prometheus_nvidia_exporter_bugroger_extra_opts: []
-
-The version of nvidia_exporter to install. As there is no release, the version is a git commit hash:
-
-    prometheus_nvidia_exporter_bugroger_version: "f38931eea308b265477dc64a86594cc288bf270b"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9401:
-
-    prometheus_nvidia_exporter_bugroger_host: "0.0.0.0"
-    prometheus_nvidia_exporter_bugroger_port: 9401
-
-### Nvidia GPU exporter (mindprince) configuration
-
-An array of additional flags to pass to the nvidia_gpu_exporter daemon:
-
-    prometheus_nvidia_gpu_exporter_mindprince_extra_opts: []
-
-The version of nvidia_gpu_exporter to install. As there is no release, the version is a git commit hash:
-
-    prometheus_nvidia_gpu_exporter_mindprince_version: "3897bdad246f3bc0e7105805d4442b9c9c7b06d2"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9445:
-
-    prometheus_nvidia_gpu_exporter_mindprince_host: "0.0.0.0"
-    prometheus_nvidia_gpu_exporter_mindprince_port: 9445
-
-### OpenLDAP exporter (tomcz) configuration
-
-To enable [openldap_exporter by tomcz](https://github.com/tomcz/openldap_exporter) include role task: openldap_exporter_tomcz
-
-An array of additional flags to pass to the openldap_exporter daemon (ie):
-
-    prometheus_openldap_exporter_tomcz_extra_opts: []
-
-The version of openldap_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_openldap_exporter_tomcz_version: "1.0"
-    prometheus_openldap_exporter_tomcz_src_version: "v1.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9330:
-
-    prometheus_openldap_exporter_tomcz_host: "0.0.0.0"
-    prometheus_openldap_exporter_tomcz_port: 9330
-
-### OpenVPN exporter (kumina) configuration
-
-To enable [openvpn_exporter by kumina](https://github.com/kumina/openvpn_exporter) include role task: openvpn_exporter_kumina
-
-An array of additional flags to pass to the openvpn_exporter daemon (ie):
-
-    prometheus_openvpn_exporter_kumina_extra_opts: []
-
-The version of openvpn_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_openvpn_exporter_kumina_version: "0.2.1"
-    prometheus_openvpn_exporter_kumina_src_version: "v0.2.1"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9176:
-
-    prometheus_openvpn_exporter_kumina_host: "0.0.0.0"
-    prometheus_openvpn_exporter_kumina_port: 9176
-
-### Ping exporter (czerwonk) configuration
-
-To enable [ping_exporter by czerwonk](https://github.com/czerwonk/ping_exporter) include role task: ping_exporter_czerwonk
-
-The ping_exporter can be configured by defining the prometheus_ping_exporter_czerwonk_cfg variable:
-
-    prometheus_ping_exporter_czerwonk_cfg:
-      - 8.8.8.8
-      - 8.8.4.4
-      - 2001:4860:4860::8888
-      - 2001:4860:4860::8844
-
-An array of additional flags to pass to the ping_exporter daemon (ie):
-
-    prometheus_ping_exporter_czerwonk_extra_opts: []
-
-The version of ping_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_ping_exporter_czerwonk_version: "0.4.4"
-    prometheus_ping_exporter_czerwonk_src_version: "0.44"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9427:
-
-    prometheus_ping_exporter_czerwonk_host: "0.0.0.0"
-    prometheus_ping_exporter_czerwonk_port: 9427
-
-### Postgres exporter (wrouesnel) configuration
-
-To enable [postgres_exporter by wrouesnel](https://github.com/wrouesnel/postgres_exporter) include role task: postgres_exporter_wrouesnel
-
-The [postgres_exporter](https://github.com/wrouesnel/postgres_exporter) requires configuration before use! You must grant permissions for this exporter to read select data from PostgreSQL.
-
-Environmental variables to pass to the postgres_exporter_wrouesnel exporter. These environmental variables are used as a primary method of configuring the exporter:
-
-    prometheus_postgres_exporter_wrouesnel_env_vars:
-      DATA_SOURCE_NAME: 'postgresql://postgres_exporter:password@localhost:5432/postgres?sslmode=disable'
-
-To avoid putting credentials in environmental variables, one can use the URI method of connection. After creating a file containing the connection password, configure as follows:
-
-    prometheus_postgres_exporter_wrouesnel_env_vars:
-      DATA_SOURCE_PASS_FILE: /opt/prometheus/etc/postgres_exporter.password
-      DATA_SOURCE_URI: "127.0.0.1:5432/postgres?sslmode=disable"
-      DATA_SOURCE_USER: postgres_exporter
-
-An array of additional flags to pass to the postgres_exporter daemon:
-
-    prometheus_postgres_exporter_wrouesnel_extra_opts: []
-
-The version of postgres_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_postgres_exporter_wrouesnel_version: "0.8.0"
-    prometheus_postgres_exporter_wrouesnel_src_version: "v0.8.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9187:
-
-    prometheus_postgres_exporter_wrouesnel_host: "0.0.0.0"
-    prometheus_postgres_exporter_wrouesnel_port: 9187
-
-### Process exporter (ncabatoff) configuration
-
-To enable [process-exporter](https://github.com/ncabatoff/process-exporter) include role task: process-exporter_ncabatoff
-
-This task has been configured to be capable of installing and managing multiple instances of process-exporter. Since process-exporter reads from /proc, only root and the user who owns each process may lookup metrics for each process. You can run a single process-exporter as root and monitor all system processes, but doing so is likely a security risk. It is safest to run one unprivileged instance of process-exporter for each user's processes you wish to monitor.
-
-The configuration content. The example below utilizes a variables specifying the name of the service (name), the user that process-exporter should run as (user), and the configuration content (data). In this example configuration file there are two instances of process-exporter configured to run. See [process-exporter](https://github.com/ncabatoff/process-exporter) documentation for configuration details.
-
-```yaml
-    prometheus_process_exporter_ncabatoff_cfgs:
-      - name: prometheus
-        user: prometheus
-        port: 9256
-        data:
-          process_names:
-            - comm:
-                - bash
-            - exe:
-                - sshd
-      - name: apache
-        user: apache
-        port: 9257
-        data:
-          process_names:
-            - comm:
-                - bash
-            - exe:
-                - apache
-```
-
-An array of additional flags to pass to the process_exporter daemon:
-
-    prometheus_process_exporter_ncabatoff_extra_opts: []
-
-The version of process_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_process_exporter_ncabatoff_version: "0.6.0"
-    prometheus_process_exporter_ncabatoff_src_version: "v0.6.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9256. This is the default port and can/should be overridden using the configuration as exampled above in this section:
-
-    prometheus_process_exporter_ncabatoff_host: "0.0.0.0"
-    prometheus_process_exporter_ncabatoff_port: 9256
-
-### ProxySQL exporter (percona) configuration
-
-To enable [proxysql_exporter by percona](https://github.com/percona/proxysql_exporter) include role task: proxysql_exporter_percona
-
-An array of additional flags to pass to the proxysql_exporter daemon:
-
-    prometheus_proxysql_exporter_percona_extra_opts: []
-
-The version of proxysql_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_proxysql_exporter_percona_version: "1.1.0"
-    prometheus_proxysql_exporter_percona_src_version: "v1.1.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 42004:
-
-    prometheus_proxysql_exporter_percona_host: "0.0.0.0"
-    prometheus_proxysql_exporter_percona_port: 42004
-
-### Powerdns exporter (ledgr) configuration
-
-To enable [powerdns_exporter_ledgr](https://github.com/ledgr/powerdns_exporter), include the role task: `powerdns_exporter_ledgr`
-
-Powerdns setup requires webserver and API options to be set, see README in that repo.
-
-The following options are configurable for the api_url and api_key needed to connect to the powerdns api. 
-
-    prometheus_powerdns_exporter_ledgr_api_url: '{{prometheus_powerdns_exporter_ledgr_api_url | default("http://localhost:8081/api/v1/") }}'
-    prometheus_powerdns_exporter_ledgr_api_key: '{{prometheus_powerdns_exporter_ledgr_api_key | default("") }}'
-
-### RabbitMQ exporter (kbudde) configuration
-
-To enable [rabbitmq_exporter by kbudde](https://github.com/kbudde/rabbitmq_exporter) include role task: rabbitmq_exporter_kbudde
-
-Environmental variables to pass to the rabbitmq_exporter exporter. These environmental variables are used as a primary method of configuring the exporter:
-
-    prometheus_rabbitmq_exporter_kbudde_env_vars:
-      RABBIT_URL: http://localhost:15672
-
-An array of additional flags to pass to the rabbitmq_exporter daemon:
-
-    prometheus_rabbitmq_exporter_kbudde_extra_opts: []
-
-The version of rabbitmq_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_rabbitmq_exporter_kbudde_version: "0.28.0"
-    prometheus_rabbitmq_exporter_kbudde_src_version: "v0.28.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9419:
-
-    prometheus_rabbitmq_exporter_kbudde_host: "0.0.0.0"
-    prometheus_rabbitmq_exporter_kbudde_port: 9419
-
-### Redis exporter (kbudde) configuration
-
-To enable [redis_exporter by oliver006](https://github.com/oliver006/redis_exporter) include role task: redis_exporter_oliver006
-
-An array of additional flags to pass to the redis_exporter daemon:
-
-    prometheus_redis_exporter_oliver006_extra_opts: []
-
-The version of redis_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_redis_exporter_oliver006_version: "1.3.5"
-    prometheus_redis_exporter_oliver006_src_version: "v1.3.5"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9121:
-
-    prometheus_redis_exporter_oliver006_host: "0.0.0.0"
-    prometheus_redis_exporter_oliver006_port: 9121
-
-### Script exporter (adhocteam) configuration
-
-To enable [script_exporter by adhocteam](https://github.com/adhocteam/script_exporter) include role task: script_exporter_adhocteam
-
-This task has been configured to be capable of installing and managing multiple instances of script-exporter. You can run a single script-exporter as root and run commands without privilege considerations, but doing so is likely a security risk. It is safest to run one unprivileged instance of script-exporter for each user's processes you wish to monitor.
-
-The configuration content. The example below utilizes a variables specifying the name of the service (name), the user that script-exporter should run as (user), and the configuration content (data). In this example configuration file there are two instances of script-exporter configured to run. See [script-exporter](https://github.com/adhocteam/script_exporter) documentation for configuration details.
-
-```yaml
-    prometheus_script_exporter_adhocteam_cfgs:
-      - name: TEST
-        user: prometheus
-        port: 19172
-        data:
-          scripts:
-            - name: success
-              script: sleep 5
-      - name: TEST2
-        user: nobody
-        port: 29172
-        data:
-          scripts:
-            - name: failure
-              script: sleep 2 && exit 1
-```
-
-An array of additional flags to pass to the script_exporter daemon (ie):
-
-    prometheus_script_exporter_adhocteam_extra_opts: []
-
-The version of script_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_script_exporter_adhocteam_version: "1.0.2"
-    prometheus_script_exporter_adhocteam_src_version: "v1.0.2"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9172:
-
-    prometheus_script_exporter_adhocteam_host: "0.0.0.0"
-    prometheus_script_exporter_adhocteam_port: 9172
-
-### Smokeping exporter (SuperQ) configuration
-
-To enable [smokeping_exporter by SuperQ](https://github.com/SuperQ/smokeping_prober) include role task: smokeping_exporter_superq
-
-An array of additional flags to pass to the smokeping_exporter daemon. You must specify a list of IPs and DNS names to ping:
-
-    prometheus_smokeping_exporter_superq_extra_opts:
-    - 'localhost'
-    - '8.8.4.4'
-
-The version of smokeping_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_smokeping_exporter_superq_version: "0.1.0"
-    prometheus_smokeping_exporter_superq_src_version: "v0.1.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9374:
-
-    prometheus_smokeping_exporter_superq_host: "0.0.0.0"
-    prometheus_smokeping_exporter_superq_port: 9374
-
-### SNMP exporter configuration
-
-To enable [snmp_exporter](https://github.com/prometheus/snmp_exporter) include role task: snmp_exporter
-
-The configuration content. The example below utilizes a file named 'snmp_exporter.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
-
-    prometheus_snmp_exporter_yml: ../files/snmp_exporter.yml
-
-An array of additional flags to pass to the snmp_exporter daemon:
-
-    prometheus_snmp_exporter_extra_opts: []
-
-The version of snmp_exporter to install. The source version defines the version as specified in version control:
-    prometheus_snmp_exporter_version: "0.16.1"
-    prometheus_snmp_exporter_src_version: "v0.16.1"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9116:
-
-    prometheus_snmp_exporter_host: "0.0.0.0"
-    prometheus_snmp_exporter_port: 9116
-
-### SQL exporter (free) configuration
-
-To enable [sql_exporter by free](https://github.com/free/sql_exporter) include role task: sql_exporter_free
-
-The configuration content. The example below utilizes a file named 'sql_exporter_free.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
-
-    prometheus_sql_exporter_free_cfg: '{{ lookup("file", "../files/sql_exporter_free.yml") | from_yaml }}'
-
-Alternatively, the configuration file can be defined directly:
-
-    prometheus_sql_exporter_free_cfg:
-      global:
-        # Subtracted from Prometheus' scrape_timeout to give us some headroom and prevent Prometheus from
-        # timing out first.
-        scrape_timeout_offset: 500ms
-        # Minimum interval between collector runs: by default (0s) collectors are executed on every scrape.
-        min_interval: 0s
-        # Maximum number of open connections to any one target. Metric queries will run concurrently on
-        # multiple connections.
-        max_connections: 3
-        # Maximum number of idle connections to any one target.
-        max_idle_connections: 3
-
-      # The target to monitor and the list of collectors to execute on it.
-      target:
-        # Data source name always has a URI schema that matches the driver name. In some cases (e.g. MySQL)
-        # the schema gets dropped or replaced to match the driver expected DSN format.
-        data_source_name: 'sqlserver://prom_user:prom_password@dbserver1.example.com:1433'
-
-An array of additional flags to pass to the sql_exporter daemon:
-
-    prometheus_sql_exporter_free_extra_opts: []
-
-The version of sql_exporter to install. The source version defines the version as specified in version control:
-
-    prometheus_sql_exporter_free_version: "0.5"
-    prometheus_sql_exporter_free_src_version: "0.5"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9399:
-
-    prometheus_sql_exporter_free_host: "0.0.0.0"
-    prometheus_sql_exporter_free_port: 9399
-
-### Squid exporter (boynux) configuration
-
-To enable [squid_exporter by boynux](https://github.com/boynux/squid-exporter) include role task: squid_exporter_boynux
-
-An array of additional flags to pass to the squid_exporter daemon:
-
-    prometheus_squid_exporter_boynux_extra_opts:
-      - '-squid-hostname="localhost"'
-      - '-squid-port=3128'
-
-The version of squid_exporter to install:
-
-    prometheus_squid_exporter_boynux_version: "1.8.2"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9301:
-
-    prometheus_squid_exporter_boynux_host: "0.0.0.0"
-    prometheus_squid_exporter_boynux_port: 9301
-
-### SSL exporter (ribbybibby) configuration
-
-To enable [ssl_exporter by ribbybibby](https://github.com/ribbybibby/ssl_exporter) include role task: ssl_exporter_ribbybibby
-
-An array of additional flags to pass to the ssl_exporter daemon:
-
-    prometheus_ssl_exporter_ribbybibby_extra_opts: []
-
-The version of ssl_exporter to install:
-
-    prometheus_ssl_exporter_ribbybibby_version: "0.6.0"
-    prometheus_ssl_exporter_ribbybibby_src_version: "0.6.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9219:
-
-    prometheus_ssl_exporter_ribbybibby_host: "0.0.0.0"
-    prometheus_ssl_exporter_ribbybibby_port: 9219
-
-### Statsd exporter configuration
-
-To enable [statsd_exporter](https://github.com/prometheus/statsd_exporter) include role task: statsd_exporter
-
-The configuration content. The example below utilizes a file named 'statsd_exporter.yml' in your Ansible root directory's 'files' directory. If no configuration content is defined, a default configuration file is utilized. You will want to customize your configuration file content!:
-
-    prometheus_statsd_exporter_cfg: '{{ lookup("file", "../files/statsd_exporter.yml") | from_yaml }}'
-
-Alternatively, the configuration file can be defined directly:
-
-    prometheus_statsd_exporter_cfg:
-      - match: test.dispatcher.*.*.*
-        name: dispatcher_events_total
-        labels:
-          action: $2
-          job: test_dispatcher
-          outcome: $3
-          processor: $1
-
-An array of additional flags to pass to the statsd_exporter daemon:
-
-    prometheus_statsd_exporter_extra_opts:
-        --statsd.listen-udp=":9125"
-
-The version of statsd_exporter to install. The source version defines the version as specified in version control:
-    prometheus_statsd_exporter_version: "0.13.0"
-    prometheus_statsd_exporter_src_version: "v0.13.0"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9102:
-
-    prometheus_statsd_exporter_host: "0.0.0.0"
-    prometheus_statsd_exporter_port: 9102
-
-### Zookeeper exporter (infonova) configuration
-
-To enable [zookeeper_exporter](https://github.com/infonova/zookeeper_exporter) include role task: zookeeper_exporter
-
-No binaries exist for zookeeper_exporter, so you must set either:
-
-    # zookeeper_exporter only
-    prometheus_zookeeper_exporter_infonova_fallback_to_build: true
-
-    # Globally allow building where binaries fail to download or install
-    prometheus_fallback_to_build: true
-
-An array of additional flags to pass to the zookeeper_exporter daemon:
-
-    prometheus_zookeeper_exporter_infonova_extra_opts: []
-
-The version of zookeeper_exporter to install:
-    prometheus_zookeeper_exporter_infonova_version: "1.1"
-
-Port and IP to listen on. Defaults to listening on all available IPs on port 9114:
-
-    prometheus_zookeeper_exporter_infonova_host: "0.0.0.0"
-    prometheus_zookeeper_exporte_infonovar_port: 9114
 
 ## Example Playbook
 
@@ -1629,5 +595,4 @@ See the [LICENSE](https://github.com/mesaguy/ansible-prometheus/blob/master/LICE
 
 ## Author Information
 Mesaguy
- - https://mesaguy.com
- - https://github.com/mesaguy/ansible-prometheus
+ - https://github.com/mesaguy

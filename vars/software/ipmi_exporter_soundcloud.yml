@@ -1,0 +1,142 @@
+---
+defaults:
+  port: 9290
+  tgroup: ipmi
+software:
+  name: soundcloud/ipmi_exporter
+  release: v1.3.1
+  prerelease: null
+  url: https://github.com/soundcloud/ipmi_exporter
+  source: https://github.com/soundcloud/ipmi_exporter.git
+  updated: '2021-02-18T00:45:21.274383'
+  master:
+    commit:
+      sha: a138b9ae59f7bcfabca73d774ca4b010009d4996
+      timestamp: '2021-02-12T15:21:28'
+    files: []
+  releases:
+    - name: v1.1.0
+      commit: null
+      timestamp: '2020-02-14T14:28:20'
+      prerelease: false
+      files:
+        - name: ipmi_exporter-v1.1.0.darwin-amd64.tar.gz
+          commit: null
+          size: 6843252
+          sha256: sha256:a22b1fedd4d7a6e57263db6896adbb43581b7fcbfe8dd76d7f3efe339f9f178b
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.1.0/ipmi_exporter-v1.1.0.darwin-amd64.tar.gz
+        - name: ipmi_exporter-v1.1.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 6932508
+          sha256: sha256:50a4782792be7726280c52736ea4b633f27979b6089d46019ec31359558967aa
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.1.0/ipmi_exporter-v1.1.0.freebsd-amd64.tar.gz
+        - name: ipmi_exporter-v1.1.0.linux-amd64.tar.gz
+          commit: null
+          size: 6942537
+          sha256: sha256:fc59dbb000015ce8186171fd04afa40c395bdecddf72ebb145b6595b1d1aa282
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.1.0/ipmi_exporter-v1.1.0.linux-amd64.tar.gz
+        - name: ipmi_exporter-v1.1.0.linux-arm64.tar.gz
+          commit: null
+          size: 6462856
+          sha256: sha256:a978708ce9a144fc418c1a870696a868a57b81a5f9c140c5c86afb8692931787
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.1.0/ipmi_exporter-v1.1.0.linux-arm64.tar.gz
+    - name: v1.0.0
+      commit: null
+      timestamp: '2019-10-18T13:22:37'
+      prerelease: false
+      files:
+        - name: ipmi_exporter-v1.0.0.darwin-amd64.tar.gz
+          commit: null
+          size: 6762387
+          sha256: sha256:2f5a579a635a4c1948afa3b8571baa13a180e78e7a7e4acf8654a51c1b1177bd
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.0.0/ipmi_exporter-v1.0.0.darwin-amd64.tar.gz
+        - name: ipmi_exporter-v1.0.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 6846126
+          sha256: sha256:2d9058865603da3561eca764ff9ba698256ba6cc8e0520ffba9a08abd4ca18e2
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.0.0/ipmi_exporter-v1.0.0.freebsd-amd64.tar.gz
+        - name: ipmi_exporter-v1.0.0.linux-amd64.tar.gz
+          commit: null
+          size: 6854713
+          sha256: sha256:61bc386fd0f15486bac2debdaedb75bd190ea966896d711369a479f781597845
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.0.0/ipmi_exporter-v1.0.0.linux-amd64.tar.gz
+        - name: ipmi_exporter-v1.0.0.linux-arm64.tar.gz
+          commit: null
+          size: 6379996
+          sha256: sha256:6c07eccd0c3dbe44fce6730e66832ce9461ad45982db938d9828d866fc722415
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.0.0/ipmi_exporter-v1.0.0.linux-arm64.tar.gz
+    - name: v1.2.0
+      commit: null
+      timestamp: '2020-04-22T21:17:40'
+      prerelease: false
+      files:
+        - name: ipmi_exporter-v1.2.0.darwin-amd64.tar.gz
+          commit: null
+          size: 7507881
+          sha256: sha256:9b4e58124446501e2f25c24e932c991143e9175a8013153e45fd6db75bf9edab
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.2.0/ipmi_exporter-v1.2.0.darwin-amd64.tar.gz
+        - name: ipmi_exporter-v1.2.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 7600570
+          sha256: sha256:972ee6a6a29ec24aa98a79b4abe5725642da2e2b3348024819ee1e8c34074bd6
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.2.0/ipmi_exporter-v1.2.0.freebsd-amd64.tar.gz
+        - name: ipmi_exporter-v1.2.0.linux-amd64.tar.gz
+          commit: null
+          size: 7613894
+          sha256: sha256:3781cc9976d1232c4d6ae5d83a8a59cc8a4dff08d6ed597a538a6e9ff425ccfe
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.2.0/ipmi_exporter-v1.2.0.linux-amd64.tar.gz
+        - name: ipmi_exporter-v1.2.0.linux-arm64.tar.gz
+          commit: null
+          size: 7098069
+          sha256: sha256:f742abeec47c404bd1f52a0ee79db23a32b6f25d9b591b93a665fb15bfb4b432
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.2.0/ipmi_exporter-v1.2.0.linux-arm64.tar.gz
+    - name: v1.3.0
+      commit: null
+      timestamp: '2020-07-26T16:03:42'
+      prerelease: false
+      files:
+        - name: ipmi_exporter-v1.3.0.darwin-amd64.tar.gz
+          commit: null
+          size: 7560324
+          sha256: sha256:30d6bee89474d1aa02579574e82668b95b28a8851eca3b6cfe92c5dc92f3c572
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.3.0/ipmi_exporter-v1.3.0.darwin-amd64.tar.gz
+        - name: ipmi_exporter-v1.3.0.freebsd-amd64.tar.gz
+          commit: null
+          size: 7653527
+          sha256: sha256:fcc784f02046ccbb415cd21ef336d6410bdff21eacf6db6eacfe17ba45c3fb64
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.3.0/ipmi_exporter-v1.3.0.freebsd-amd64.tar.gz
+        - name: ipmi_exporter-v1.3.0.linux-amd64.tar.gz
+          commit: null
+          size: 7678956
+          sha256: sha256:d5d3d82271f9619ab2ab446c88a17a009f041546e1928d41ea88a844a450d8f0
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.3.0/ipmi_exporter-v1.3.0.linux-amd64.tar.gz
+        - name: ipmi_exporter-v1.3.0.linux-arm64.tar.gz
+          commit: null
+          size: 7145679
+          sha256: sha256:ee4a63163bbce4b51475dc9a87b95faf4763a516d765a14e0a5773a58416d394
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.3.0/ipmi_exporter-v1.3.0.linux-arm64.tar.gz
+    - name: v1.3.1
+      commit: null
+      timestamp: '2020-10-22T16:25:21'
+      prerelease: false
+      files:
+        - name: ipmi_exporter-v1.3.1.darwin-amd64.tar.gz
+          commit: null
+          size: 7560686
+          sha256: sha256:505ef1ad72020e72a318ebf0f0ffc6019202c008a1852c0245fc3c4e79b305ea
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.3.1/ipmi_exporter-v1.3.1.darwin-amd64.tar.gz
+        - name: ipmi_exporter-v1.3.1.freebsd-amd64.tar.gz
+          commit: null
+          size: 7652585
+          sha256: sha256:fe1eda9b6a629760063b09719f06c9514f5f6be1cfe5af723371ab693e22b9b2
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.3.1/ipmi_exporter-v1.3.1.freebsd-amd64.tar.gz
+        - name: ipmi_exporter-v1.3.1.linux-amd64.tar.gz
+          commit: null
+          size: 7675362
+          sha256: sha256:03f8a5a90c9f2b5fa9d577ba72e30b7d57c1281ab6ec747345b7de22e8a2b50e
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.3.1/ipmi_exporter-v1.3.1.linux-amd64.tar.gz
+        - name: ipmi_exporter-v1.3.1.linux-arm64.tar.gz
+          commit: null
+          size: 7150143
+          sha256: sha256:3e5d72d41773ac1a35fd8d6c51c09d39f40231a8b5c2b20f0de93203fd719014
+          url: https://github.com/soundcloud/ipmi_exporter/releases/download/v1.3.1/ipmi_exporter-v1.3.1.linux-arm64.tar.gz

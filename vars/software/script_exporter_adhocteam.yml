@@ -1,0 +1,72 @@
+---
+defaults:
+  port: 9172
+  tgroup: script
+software:
+  name: adhocteam/script_exporter
+  release: v1.2.0
+  prerelease: null
+  url: https://github.com/adhocteam/script_exporter
+  source: https://github.com/adhocteam/script_exporter.git
+  updated: '2020-04-10T04:44:37.479278'
+  master:
+    commit:
+      sha: 75665b8246d2a597ca4d801887c6ddc8948e9b13
+      timestamp: '2020-03-31T22:37:50'
+    files: []
+  releases:
+    - name: v1.1.0
+      commit: null
+      timestamp: '2019-10-11T16:43:28'
+      prerelease: false
+      files:
+        - name: script_exporter-1.1.0.linux-amd64.tar.gz
+          commit: null
+          size: 6863381
+          sha256: sha256:c729629af0f442a0c91fc087a4e6cd83b95ae13803ccb47f68be4cb6c253a678
+          url: https://github.com/adhocteam/script_exporter/releases/download/v1.1.0/script_exporter-1.1.0.linux-amd64.tar.gz
+    - name: v1.0.2
+      commit: null
+      timestamp: '2017-01-09T17:05:41'
+      prerelease: false
+      files:
+        - name: script_exporter-1.0.2.linux-amd64.tar.gz
+          commit: null
+          size: 3700072
+          sha256: sha256:6837b4f89a4da3eea7f045e03670e36872520ad8d33b37c71a2480dd690ed881
+          url: https://github.com/adhocteam/script_exporter/releases/download/v1.0.2/script_exporter-1.0.2.linux-amd64.tar.gz
+    - name: v1.0.1
+      commit: null
+      timestamp: '2016-12-28T19:52:11'
+      prerelease: false
+      files:
+        - name: script_exporter-1.0.1.linux-amd64.tar.gz
+          commit: null
+          size: 3700250
+          sha256: sha256:af7b6306f058c572656d2e933ddc424ab25ae7b8f9408b2de81e101deb21f758
+          url: https://github.com/adhocteam/script_exporter/releases/download/v1.0.1/script_exporter-1.0.1.linux-amd64.tar.gz
+    - name: v0.0.1
+      commit: null
+      timestamp: '2016-11-16T19:06:31'
+      prerelease: false
+      files:
+        - name: script_exporter-0.0.1.linux-amd64.tar.gz
+          commit: null
+          size: 3693228
+          sha256: sha256:d0878b3ccadc431eedfcc5728ae1317dd788184224a3e80d8493ee42d4a08369
+          url: https://github.com/adhocteam/script_exporter/releases/download/v0.0.1/script_exporter-0.0.1.linux-amd64.tar.gz
+    - name: v1.2.0
+      commit: null
+      timestamp: '2020-03-31T22:43:39'
+      prerelease: false
+      files:
+        - name: script_exporter-1.2.0.darwin-amd64.tar.gz
+          commit: null
+          size: 6701868
+          sha256: sha256:8837d8a06dd0e41ccb5dfa0cbb7bc090ace0da3550a13bb5e12f757bc1bff370
+          url: https://github.com/adhocteam/script_exporter/releases/download/v1.2.0/script_exporter-1.2.0.darwin-amd64.tar.gz
+        - name: script_exporter-1.2.0.linux-amd64.tar.gz
+          commit: null
+          size: 6824354
+          sha256: sha256:86409b93177afa7b707f15f6b520aef958f98d9a03afddb928ad72b286eb5f01
+          url: https://github.com/adhocteam/script_exporter/releases/download/v1.2.0/script_exporter-1.2.0.linux-amd64.tar.gz

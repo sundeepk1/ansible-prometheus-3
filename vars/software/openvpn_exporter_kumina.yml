@@ -1,0 +1,53 @@
+---
+defaults:
+  port: 9176
+  tgroup: openvpn
+software:
+  name: kumina/openvpn_exporter
+  release: v0.3.0
+  prerelease: null
+  url: https://github.com/kumina/openvpn_exporter
+  source: https://github.com/kumina/openvpn_exporter.git
+  updated: '2020-07-17T01:33:36.896893'
+  master:
+    commit:
+      sha: 9d468c00154aa5b3f921573e2b0354b6a7c5699f
+      timestamp: '2020-06-29T12:16:40'
+    files: []
+  releases:
+    - name: v0.2.2
+      commit:
+        sha: f353ceb1dc8363174e5e11caf3f98f75d139331e
+        timestamp: '2018-11-21T15:05:46'
+      timestamp: '2018-11-21T15:06:49'
+      prerelease: false
+      files: []
+    - name: 0.2.1
+      commit:
+        sha: 8ae1b58a57653d98c26340ed414059a0245ed2cb
+        timestamp: '2018-04-06T12:35:15'
+      timestamp: '2018-04-06T12:35:15'
+      prerelease: false
+      files: []
+    - name: v0.2.1
+      commit: null
+      timestamp: '2018-04-06T14:43:42'
+      prerelease: false
+      files: []
+    - name: v0.2
+      commit:
+        sha: 01168ec98f27a08986cd76893cb2b15a37fafcf5
+        timestamp: '2017-04-14T09:16:06'
+      timestamp: '2017-04-14T09:16:06'
+      prerelease: false
+      files: []
+    - name: v0.1
+      commit: null
+      timestamp: '2017-04-03T07:52:17'
+      prerelease: false
+      files: []
+    - name: v0.3.0
+      commit: null
+      timestamp: '2020-06-29T15:36:57'
+      prerelease: false
+      files: []

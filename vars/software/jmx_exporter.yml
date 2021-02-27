@@ -1,0 +1,97 @@
+---
+defaults:
+  port: 1234
+  tgroup: jmx
+software:
+  name: prometheus/jmx_exporter
+  release: parent-0.15.0
+  prerelease: null
+  url: https://github.com/prometheus/jmx_exporter
+  source: https://github.com/prometheus/jmx_exporter.git
+  updated: '2021-02-07T17:04:05.674151'
+  master:
+    commit:
+      sha: c8a1a06cd43fd09c676f8879f5648708c0ba6c1e
+      timestamp: '2021-02-02T12:21:29'
+    files: []
+  releases:
+    - name: parent-0.12.0
+      commit: null
+      timestamp: '2019-07-05T10:10:52'
+      prerelease: false
+      files: []
+    - name: parent-0.11.0
+      commit: null
+      timestamp: '2019-01-17T19:50:43'
+      prerelease: false
+      files: []
+    - name: parent-0.3.1
+      commit: null
+      timestamp: '2018-05-10T12:55:07'
+      prerelease: false
+      files: []
+    - name: parent-0.3.0
+      commit: null
+      timestamp: '2018-03-02T12:27:40'
+      prerelease: false
+      files: []
+    - name: parent-0.2.0
+      commit: null
+      timestamp: '2018-01-08T13:39:47'
+      prerelease: false
+      files: []
+    - name: parent-0.1.0
+      commit: null
+      timestamp: '2017-10-26T15:19:17'
+      prerelease: false
+      files: []
+    - name: parent-0.10
+      commit: null
+      timestamp: '2017-07-31T14:19:44'
+      prerelease: false
+      files: []
+    - name: parent-0.9
+      commit: null
+      timestamp: '2017-03-21T13:50:10'
+      prerelease: false
+      files: []
+    - name: parent-0.8
+      commit: null
+      timestamp: '2017-02-24T15:26:27'
+      prerelease: false
+      files: []
+    - name: parent-0.7
+      commit: null
+      timestamp: '2016-10-27T09:29:50'
+      prerelease: false
+      files: []
+    - name: parent-0.6
+      commit: null
+      timestamp: '2016-02-04T20:22:53'
+      prerelease: false
+      files: []
+    - name: parent-0.5
+      commit: null
+      timestamp: '2015-10-22T10:05:08'
+      prerelease: false
+      files: []
+    - name: parent-0.4
+      commit: null
+      timestamp: '2015-09-16T08:51:17'
+      prerelease: false
+      files: []
+    - name: parent-0.13.0
+      commit: null
+      timestamp: '2020-05-12T14:17:16'
+      prerelease: false
+      files: []
+    - name: parent-0.14.0
+      commit: null
+      timestamp: '2020-09-04T12:47:33'
+      prerelease: false
+      files: []
+    - name: parent-0.15.0
+      commit: null
+      timestamp: '2021-01-25T16:48:58'
+      prerelease: false
+      files: []

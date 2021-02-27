@@ -1,0 +1,256 @@
+---
+defaults:
+  port: 9219
+  tgroup: ssl
+software:
+  name: ribbybibby/ssl_exporter
+  release: v2.2.0
+  prerelease: v1.0.0-test-tag2
+  url: https://github.com/ribbybibby/ssl_exporter
+  source: https://github.com/ribbybibby/ssl_exporter.git
+  updated: '2020-12-08T06:15:55.960213'
+  master:
+    commit:
+      sha: 5d3ac12e65adb103fe839ecd482fad7dce50cf26
+      timestamp: '2020-12-07T20:18:38'
+    files: []
+  releases:
+    - name: v1.0.0-rc.0
+      commit: null
+      timestamp: '2020-02-25T08:53:41'
+      prerelease: false
+      files:
+        - name: ssl_exporter-1.0.0-rc.0.darwin-amd64.tar.gz
+          commit: null
+          size: 6510380
+          sha256: sha256:b76d6bf7a17add1c4705478fb995d641f384da29e75fc8991e5364a19f92cb94
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v1.0.0-rc.0/ssl_exporter-1.0.0-rc.0.darwin-amd64.tar.gz
+        - name: ssl_exporter-1.0.0-rc.0.linux-amd64.tar.gz
+          commit: null
+          size: 6523019
+          sha256: sha256:6909d882f3814e41920ed789aa2ee5412339188f3446fa940eed175cc371b8f2
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v1.0.0-rc.0/ssl_exporter-1.0.0-rc.0.linux-amd64.tar.gz
+    - name: v0.6.0
+      commit: null
+      timestamp: '2019-09-21T09:59:09'
+      prerelease: false
+      files:
+        - name: ssl_exporter-0.6.0.darwin-amd64.tar.gz
+          commit: null
+          size: 6542091
+          sha256: sha256:0cffbc271d40aee36091d25e4ed5fd088076798208ede543c9b4f917543b091e
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v0.6.0/ssl_exporter-0.6.0.darwin-amd64.tar.gz
+        - name: ssl_exporter-0.6.0.linux-amd64.tar.gz
+          commit: null
+          size: 6512068
+          sha256: sha256:34b78cd0f9a31fdf2fd66bfb34b30a0989d1a74acdd759e9858692572eee1acf
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v0.6.0/ssl_exporter-0.6.0.linux-amd64.tar.gz
+    - name: v0.5.0
+      commit: null
+      timestamp: '2019-03-27T10:08:44'
+      prerelease: false
+      files:
+        - name: ssl_exporter-0.5.0.linux-amd64.tar.gz
+          commit: null
+          size: 5763368
+          sha256: sha256:42951a229e6714cf4ef15876ed6b56db4e2d2383fccf11d3446e301c3ecb1506
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v0.5.0/ssl_exporter-0.5.0.linux-amd64.tar.gz
+    - name: v0.4.0
+      commit: null
+      timestamp: '2019-03-19T14:14:36'
+      prerelease: false
+      files:
+        - name: ssl_exporter-0.4.0.linux-amd64.tar.gz
+          commit: null
+          size: 5549557
+          sha256: sha256:1ab4960c5004ef5417c39e12c7cd93570aeb6befbed02fcfa749560038df1757
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v0.4.0/ssl_exporter-0.4.0.linux-amd64.tar.gz
+    - name: v0.3.0
+      commit: null
+      timestamp: '2019-02-13T16:20:20'
+      prerelease: false
+      files:
+        - name: ssl_exporter-0.3.0.linux-amd64.tar.gz
+          commit: null
+          size: 5587005
+          sha256: sha256:1ac7414c223d819e694c77c6d2da22cd9f42e60108c363dde6b13a2f3cfedabe
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v0.3.0/ssl_exporter-0.3.0.linux-amd64.tar.gz
+    - name: v0.2.0
+      commit: null
+      timestamp: '2017-12-03T12:52:34'
+      prerelease: false
+      files:
+        - name: ssl_exporter-0.2.0.linux-amd64.tar.gz
+          commit: null
+          size: 3471174
+          sha256: sha256:7e3f63537dc617a2d2b916d84c09662bbcd134a2e004137e46b557c59ad8c7f6
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v0.2.0/ssl_exporter-0.2.0.linux-amd64.tar.gz
+    - name: v0.1.0
+      commit: null
+      timestamp: '2017-11-06T15:01:08'
+      prerelease: false
+      files:
+        - name: ssl_exporter-0.1.0.linux-amd64.tar.gz
+          commit: null
+          size: 3474889
+          sha256: sha256:0a2e9d5f71c133bc21ee57f9aa3aea8d975f0420ec6ba32ab8b7fe0b0bfbe142
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v0.1.0/ssl_exporter-0.1.0.linux-amd64.tar.gz
+    - name: v1.0.0-test-tag2
+      commit:
+        sha: 80765ab97d53ea37ae57cb7b22374a55907eb581
+        timestamp: '2020-03-08T18:04:43'
+      timestamp: '2020-03-08T18:04:43'
+      prerelease: true
+      files: []
+    - name: v1.0.0-test-tag
+      commit:
+        sha: 80765ab97d53ea37ae57cb7b22374a55907eb581
+        timestamp: '2020-03-08T18:04:43'
+      timestamp: '2020-03-08T18:04:43'
+      prerelease: true
+      files: []
+    - name: v1.0.0
+      commit: null
+      timestamp: '2020-03-17T18:21:07'
+      prerelease: false
+      files:
+        - name: ssl_exporter_1.0.0_checksums.txt
+          commit: null
+          size: 414
+          sha256: sha256:a882611f7f899b311db17295b715bae4805368fc659d1ebfdc6a5090978e79ad
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v1.0.0/ssl_exporter_1.0.0_checksums.txt
+        - name: ssl_exporter_1.0.0_darwin_386.tar.gz
+          commit: null
+          size: 3843036
+          sha256: sha256:f945bc64a7b14b8f814e958190bed7aee5581a263d3e4bcf52e432cdde2ac931
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v1.0.0/ssl_exporter_1.0.0_darwin_386.tar.gz
+        - name: ssl_exporter_1.0.0_darwin_amd64.tar.gz
+          commit: null
+          size: 3989368
+          sha256: sha256:bdda4e4cb86bc98134da0dbfb3c9463d19b8a5aa9ac486fa14f7f26bad68dea4
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v1.0.0/ssl_exporter_1.0.0_darwin_amd64.tar.gz
+        - name: ssl_exporter_1.0.0_linux_386.tar.gz
+          commit: null
+          size: 3635947
+          sha256: sha256:a75f057f99aad3d8a5480980d8d046d7e0337aa2dc95c90a1bbf8d9f18aa8735
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v1.0.0/ssl_exporter_1.0.0_linux_386.tar.gz
+        - name: ssl_exporter_1.0.0_linux_amd64.tar.gz
+          commit: null
+          size: 3794515
+          sha256: sha256:7b7b79ed74218d81042d04fd1df0f5db79fd79dec8b8995ba0e7f236b0004389
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v1.0.0/ssl_exporter_1.0.0_linux_amd64.tar.gz
+    - name: v1.0.1
+      commit: null
+      timestamp: '2020-06-16T16:26:27'
+      prerelease: false
+      files:
+        - name: ssl_exporter_1.0.1_checksums.txt
+          commit: null
+          size: 209
+          sha256: sha256:c054f033d2a2681717620319971e0759637dfeda69af2f4d3489db77fa03b799
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v1.0.1/ssl_exporter_1.0.1_checksums.txt
+        - name: ssl_exporter_1.0.1_darwin_amd64.tar.gz
+          commit: null
+          size: 6628909
+          sha256: sha256:ab38fd8c53b4129d1d75ab2e246bbe273d672780521b038be588455f8f14860a
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v1.0.1/ssl_exporter_1.0.1_darwin_amd64.tar.gz
+        - name: ssl_exporter_1.0.1_linux_amd64.tar.gz
+          commit: null
+          size: 6646022
+          sha256: sha256:973ec49d26aae03eacacd04379edb866d4ab370e0629ecb9ee3106d0f867a20c
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v1.0.1/ssl_exporter_1.0.1_linux_amd64.tar.gz
+    - name: v2.0.0
+      commit: null
+      timestamp: '2020-06-22T16:39:35'
+      prerelease: false
+      files:
+        - name: ssl_exporter_2.0.0_checksums.txt
+          commit: null
+          size: 209
+          sha256: sha256:5f0067f08d5b08df7724efe780bbde1b9d8cd7c7c87e878d8529ced870f134dd
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v2.0.0/ssl_exporter_2.0.0_checksums.txt
+        - name: ssl_exporter_2.0.0_darwin_amd64.tar.gz
+          commit: null
+          size: 7903374
+          sha256: sha256:6b4bae5bd6c56d52737e5f2becd5695440d924f4322731dc0ce997583104c0e2
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v2.0.0/ssl_exporter_2.0.0_darwin_amd64.tar.gz
+        - name: ssl_exporter_2.0.0_linux_amd64.tar.gz
+          commit: null
+          size: 7942024
+          sha256: sha256:2761d58ac9d281e6e2594ce0aacb3ff0ff5ae2bdf80f09e0cac1586ec8495262
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v2.0.0/ssl_exporter_2.0.0_linux_amd64.tar.gz
+    - name: v2.1.0
+      commit: null
+      timestamp: '2020-09-11T18:27:50'
+      prerelease: false
+      files:
+        - name: ssl_exporter_2.1.0_checksums.txt
+          commit: null
+          size: 315
+          sha256: sha256:1bf7729faeb441a2c6ede11d275813d0e76a3e4d943fcec63d9eb8bcc2a961a6
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v2.1.0/ssl_exporter_2.1.0_checksums.txt
+        - name: ssl_exporter_2.1.0_darwin_amd64.tar.gz
+          commit: null
+          size: 7916364
+          sha256: sha256:082ea58ade5ab0286c7703946622fa0ad50192f6dc17c3285b72aa22f050e182
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v2.1.0/ssl_exporter_2.1.0_darwin_amd64.tar.gz
+        - name: ssl_exporter_2.1.0_linux_amd64.tar.gz
+          commit: null
+          size: 7959191
+          sha256: sha256:3997bb643a150287d2623d9cea8741d76d550e8c19bf7c88f3b1cf745ed28663
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v2.1.0/ssl_exporter_2.1.0_linux_amd64.tar.gz
+        - name: ssl_exporter_2.1.0_windows_amd64.tar.gz
+          commit: null
+          size: 7866252
+          sha256: sha256:a5fba4e7f6d871e45d399f3b91ec4d2d299b0e42d968d48dca8c9b3985524cac
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v2.1.0/ssl_exporter_2.1.0_windows_amd64.tar.gz
+    - name: v2.1.1
+      commit: null
+      timestamp: '2020-09-22T17:22:21'
+      prerelease: false
+      files:
+        - name: ssl_exporter_2.1.1_checksums.txt
+          commit: null
+          size: 315
+          sha256: sha256:5daed15df09389282e9d44f1ce8f491dfa60e212a31edb2f9644c6fe903dea23
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v2.1.1/ssl_exporter_2.1.1_checksums.txt
+        - name: ssl_exporter_2.1.1_darwin_amd64.tar.gz
+          commit: null
+          size: 7916360
+          sha256: sha256:d8d34e67ce395bbb044d4946a0cd9808b5eac5876c01d50360dad43bf9c733ca
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v2.1.1/ssl_exporter_2.1.1_darwin_amd64.tar.gz
+        - name: ssl_exporter_2.1.1_linux_amd64.tar.gz
+          commit: null
+          size: 7959206
+          sha256: sha256:c3ec4704a375096f59e94c3303b3a7dcc3143c3bb0f0205e388ff7c32b606c1a
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v2.1.1/ssl_exporter_2.1.1_linux_amd64.tar.gz
+        - name: ssl_exporter_2.1.1_windows_amd64.tar.gz
+          commit: null
+          size: 7866241
+          sha256: sha256:a8dac2975c326940e06885fe42e243204c4d27fa0f58f19a9eed842b08b68037
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v2.1.1/ssl_exporter_2.1.1_windows_amd64.tar.gz
+    - name: v2.2.0
+      commit: null
+      timestamp: '2020-12-07T20:27:09'
+      prerelease: false
+      files:
+        - name: ssl_exporter_2.2.0_checksums.txt
+          commit: null
+          size: 315
+          sha256: sha256:a628b91db8681e66d0d380f644bc54d4cf00c554159b916b647298f69923840f
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v2.2.0/ssl_exporter_2.2.0_checksums.txt
+        - name: ssl_exporter_2.2.0_darwin_amd64.tar.gz
+          commit: null
+          size: 17361885
+          sha256: sha256:3ce4e881e82f4442a2a3ef93026fc7158dea12adc4073586eeee5ef1c95d6e7c
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v2.2.0/ssl_exporter_2.2.0_darwin_amd64.tar.gz
+        - name: ssl_exporter_2.2.0_linux_amd64.tar.gz
+          commit: null
+          size: 17470799
+          sha256: sha256:3ce38d064780b521ac82a33099a9e65b35943920a8a502c5412a91592a608c49
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v2.2.0/ssl_exporter_2.2.0_linux_amd64.tar.gz
+        - name: ssl_exporter_2.2.0_windows_amd64.tar.gz
+          commit: null
+          size: 17536842
+          sha256: sha256:080d459e11fc35830305224b5cc64f62aafd42bda515f5849b1145fbafbd538e
+          url: https://github.com/ribbybibby/ssl_exporter/releases/download/v2.2.0/ssl_exporter_2.2.0_windows_amd64.tar.gz

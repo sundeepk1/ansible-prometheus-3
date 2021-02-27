@@ -1,0 +1,10 @@
+---
+- name: 'Create textfile directory: {{ prometheus_node_exporter_textfiles_dir }}'
+  become: true
+  file:
+    path: '{{ prometheus_node_exporter_textfiles_dir }}'
+    owner: '{{ prometheus_user }}'
+    group: '{{ prometheus_group }}'
+    mode: 0775
+    state: directory
+  register: prometheus_create_textfile_directory

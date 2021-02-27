@@ -2,6 +2,8 @@
 prometheus_shell: /usr/bin/nologin
 prometheus_capabilites_packages:
  - libcap2-bin
+prometheus_gnu_time_packages:
+ - time
 prometheus_go_compile_tools:
  - build-essential
  - curl
@@ -15,6 +17,7 @@ prometheus_prerequisite_packages:
  - openssl
  - unzip
 prometheus_sponge_packages:
- - moreutils  # For 'sponge'
+ - moreutils
 prometheus_testing_packages:
+ - cron
  - net-tools

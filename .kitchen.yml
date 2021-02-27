@@ -13,7 +13,7 @@ driver_config:
     - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
 
 verifier:
-  name: inspec
+  name: <%= ENV['KITCHEN_INSPEC_VERIFIER'] || 'inspec' %>
   sudo: false
 
 suites:
@@ -30,7 +30,7 @@ provisioner:
   chef_bootstrap_url: nil
   require_chef_omnibus: false
   ansible_version: latest
-  raw_arguments: "-i tests/inventory"
+  raw_arguments: "--timeout 30 --inventory tests/inventory <% if ENV.has_key? 'PROMETHEUS_DEBUG' %>--tags debug,all -vvvv<% end %>"
   idempotency_test: <%= ENV['KITCHEN_IDEMPOTENY_TEST'] || true %>
   environment_vars:
     ANSIBLE_PIPELINING: "true"
@@ -101,6 +101,13 @@ platforms:
           - DOCKER_IMAGE_NAME=mesaguy/alpine-3.10-kitchen-ansible-x86_64:latest
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
+  - name: alpine-3.11
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/alpine-3.10-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+
   - name: alpine-edge
     driver_config:
       build_options:
@@ -122,66 +129,6 @@ platforms:
           - DOCKER_IMAGE_NAME=mesaguy/amazonlinux-2-kitchen-ansible-x86_64:latest
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
-
-  - name: amazonlinux-2.0.20180622.1
-    driver_config:
-      build_options:
-        build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/amazonlinux-2.0.20180622.1-kitchen-ansible-x86_64:latest
-          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
-      run_command: /usr/lib/systemd/systemd
-
-  - name: amazonlinux-2.0.20180827
-    driver_config:
-      build_options:
-        build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/amazonlinux-2.0.20180827-kitchen-ansible-x86_64:latest
-          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
-      run_command: /usr/lib/systemd/systemd
-
-  - name: amazonlinux-2.0.20181010
-    driver_config:
-      build_options:
-        build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/amazonlinux-2.0.20181010-kitchen-ansible-x86_64:latest
-          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
-      run_command: /usr/lib/systemd/systemd
-
-  - name: amazonlinux-2016.09
-    driver_config:
-      build_options:
-        build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/amazonlinux-2016.09-kitchen-ansible-x86_64:latest
-          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
-
-  - name: amazonlinux-2017.03
-    driver_config:
-      build_options:
-        build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/amazonlinux-2017.03-kitchen-ansible-x86_64:latest
-          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
-
-  - name: amazonlinux-2017.09
-    driver_config:
-      build_options:
-        build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/amazonlinux-2017.09-kitchen-ansible-x86_64:latest
-          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
-
-  - name: amazonlinux-2017.12
-    driver_config:
-      build_options:
-        build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/amazonlinux-2017.12-kitchen-ansible-x86_64:latest
-          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
-      run_command: /usr/lib/systemd/systemd
-
-  - name: amazonlinux-2018.03
-    driver_config:
-      build_options:
-        build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/amazonlinux-2018.03-kitchen-ansible-x86_64:latest
-          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
 
   - name: archlinux
     driver_config:
@@ -298,6 +245,14 @@ platforms:
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /usr/lib/systemd/systemd
 
+  - name: centos-8.1
+    driver_config:
+      build_options:
+        build-arg:
+          - DOCKER_IMAGE_NAME=mesaguy/centos-8.1-kitchen-ansible-x86_64:latest
+          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
+      run_command: /usr/lib/systemd/systemd
+
   - name: debian-9
     driver_config:
       build_options:
@@ -331,7 +286,6 @@ platforms:
       run_command: /usr/lib/systemd/systemd
       volume:
         - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-        - '/sys/fs/selinux:/sys/fs/selinux:ro'
 
   - name: fedora-22
     driver_config:
@@ -342,7 +296,6 @@ platforms:
       run_command: /usr/lib/systemd/systemd
       volume:
         - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-        - '/sys/fs/selinux:/sys/fs/selinux:ro'
 
   - name: fedora-23
     driver_config:
@@ -353,7 +306,6 @@ platforms:
       run_command: /usr/lib/systemd/systemd
       volume:
         - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-        - '/sys/fs/selinux:/sys/fs/selinux:ro'
 
   - name: fedora-24
     driver_config:
@@ -364,7 +316,6 @@ platforms:
       run_command: /usr/lib/systemd/systemd
       volume:
         - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-        - '/sys/fs/selinux:/sys/fs/selinux:ro'
 
   - name: fedora-25
     driver_config:
@@ -375,7 +326,6 @@ platforms:
       run_command: /usr/lib/systemd/systemd
       volume:
         - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-        - '/sys/fs/selinux:/sys/fs/selinux:ro'
 
   - name: fedora-26
     driver_config:
@@ -386,7 +336,6 @@ platforms:
       run_command: /usr/lib/systemd/systemd
       volume:
         - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-        - '/sys/fs/selinux:/sys/fs/selinux:ro'
 
   - name: fedora-27
     driver_config:
@@ -587,14 +536,6 @@ platforms:
       build_options:
         build-arg:
           - DOCKER_IMAGE_NAME=mesaguy/ubuntu-18.04-kitchen-ansible-x86_64:latest
-          - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
-      run_command: /lib/systemd/systemd
-
-  - name: ubuntu-18.10
-    driver_config:
-      build_options:
-        build-arg:
-          - DOCKER_IMAGE_NAME=mesaguy/ubuntu-18.10-kitchen-ansible-x86_64:latest
           - SSH_KEY=<%= File.read('.kitchen/docker_id_rsa.pub') %>
       run_command: /lib/systemd/systemd
 

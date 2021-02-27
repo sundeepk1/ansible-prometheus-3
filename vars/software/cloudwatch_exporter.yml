@@ -1,0 +1,74 @@
+---
+defaults:
+  port: 9106
+  tgroup: cloudwatch
+software:
+  name: prometheus/cloudwatch_exporter
+  release: cloudwatch_exporter-0.10.0
+  prerelease: cloudwatch_exporter-0.1
+  url: https://github.com/prometheus/cloudwatch_exporter
+  source: https://github.com/prometheus/cloudwatch_exporter.git
+  updated: '2021-02-07T17:04:01.901925'
+  master:
+    commit:
+      sha: 803e5785d1f719b25d7228d42ce27be6bec6a36a
+      timestamp: '2021-02-01T22:02:55'
+    files: []
+  releases:
+    - name: cloudwatch_exporter-0.8.0
+      commit: null
+      timestamp: '2020-02-17T10:04:26'
+      prerelease: false
+      files: []
+    - name: cloudwatch_exporter-0.7.0
+      commit: null
+      timestamp: '2019-11-27T12:20:52'
+      prerelease: false
+      files: []
+    - name: cloudwatch_exporter-0.6.0
+      commit: null
+      timestamp: '2019-09-24T15:40:32'
+      prerelease: false
+      files: []
+    - name: cloudwatch_exporter-0.5.0
+      commit: null
+      timestamp: '2018-08-16T09:18:06'
+      prerelease: false
+      files: []
+    - name: cloudwatch_exporter-0.1.0
+      commit: null
+      timestamp: '2018-01-02T12:47:22'
+      prerelease: false
+      files: []
+    - name: cloudwatch_exporter-0.4
+      commit: null
+      timestamp: '2017-04-10T11:55:23'
+      prerelease: false
+      files: []
+    - name: cloudwatch_exporter-0.3
+      commit: null
+      timestamp: '2017-03-24T16:40:54'
+      prerelease: false
+      files: []
+    - name: cloudwatch_exporter-0.2
+      commit: null
+      timestamp: '2016-10-27T12:00:48'
+      prerelease: false
+      files: []
+    - name: cloudwatch_exporter-0.1
+      commit:
+        sha: 3605714bf8ad264338e0367246bb839ae7045a2f
+        timestamp: '2015-09-10T13:12:05'
+      timestamp: '2015-09-10T13:12:07'
+      prerelease: true
+      files: []
+    - name: cloudwatch_exporter-0.9.0
+      commit: null
+      timestamp: '2020-08-26T12:43:37'
+      prerelease: false
+      files: []
+    - name: cloudwatch_exporter-0.10.0
+      commit: null
+      timestamp: '2021-01-25T16:27:31'
+      prerelease: false
+      files: []

@@ -1,0 +1,1738 @@
+---
+defaults:
+  port: 9256
+  tgroup: process
+software:
+  name: ncabatoff/process-exporter
+  release: v0.7.5
+  prerelease: v0.3.11
+  url: https://github.com/ncabatoff/process-exporter
+  source: https://github.com/ncabatoff/process-exporter.git
+  updated: '2020-11-09T06:02:48.109592'
+  master:
+    commit:
+      sha: c4dd4988f23d2c078e3db748c7a8ae136c7c1553
+      timestamp: '2020-11-05T12:41:15'
+    files: []
+  releases:
+    - name: v0.7.5
+      commit: null
+      timestamp: '2020-11-05T12:44:37'
+      prerelease: false
+      files:
+        - name: checksums.txt
+          commit: null
+          size: 1908
+          sha256: sha256:92a62531bd52081bba743b56381c657327f9feb533fa485d019e7649c583f33e
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/checksums.txt
+        - name: process-exporter-0.7.5.linux-386.tar.gz
+          commit: null
+          size: 3596596
+          sha256: sha256:3a25416bcf5f3ea34c0c7859c2a7b9f82b27a6847388ae3e164cb08f353b0772
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter-0.7.5.linux-386.tar.gz
+        - name: process-exporter-0.7.5.linux-amd64.tar.gz
+          commit: null
+          size: 3788527
+          sha256: sha256:27f133596205654a67b4a3e3af11db640f7d4609a457f48c155901835bd349c6
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter-0.7.5.linux-amd64.tar.gz
+        - name: process-exporter-0.7.5.linux-arm64.tar.gz
+          commit: null
+          size: 3433379
+          sha256: sha256:13fbc0329bc81587361fb51ba7067926820a071ebc4980acf0e9bf8b26ebfc0c
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter-0.7.5.linux-arm64.tar.gz
+        - name: process-exporter-0.7.5.linux-armv6.tar.gz
+          commit: null
+          size: 3528474
+          sha256: sha256:a884cdd292193ab3b3ef63a83beecdcb021a6c1b4f16f3325c4e9951532384cb
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter-0.7.5.linux-armv6.tar.gz
+        - name: process-exporter-0.7.5.linux-ppc64.tar.gz
+          commit: null
+          size: 3352304
+          sha256: sha256:e21f7d146fd5e942b8d4578259211d900e4567fcb632b48eba2cf8dff3b0daec
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter-0.7.5.linux-ppc64.tar.gz
+        - name: process-exporter-0.7.5.linux-ppc64le.tar.gz
+          commit: null
+          size: 3339202
+          sha256: sha256:165830e2e67ce9726ff7146b77306264dc6908f4d647736b83d6dca6cef173a4
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter-0.7.5.linux-ppc64le.tar.gz
+        - name: process-exporter_0.7.5_linux_386.deb
+          commit: null
+          size: 3595712
+          sha256: sha256:ad8d632a4ca198213778f7c89b8d1fefab7ca89dc3fece4022b2b78b5143251e
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter_0.7.5_linux_386.deb
+        - name: process-exporter_0.7.5_linux_386.rpm
+          commit: null
+          size: 3590756
+          sha256: sha256:e656f1565369a189c4416706a1b4d6fb95244d0dfde49385f54630f62435ff24
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter_0.7.5_linux_386.rpm
+        - name: process-exporter_0.7.5_linux_amd64.deb
+          commit: null
+          size: 3795788
+          sha256: sha256:0b00698f97ff5d6e0e3dd7a7c1f2f8c8d832f6f0cf4bfff9bfb8f5dfb5ababaf
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter_0.7.5_linux_amd64.deb
+        - name: process-exporter_0.7.5_linux_amd64.rpm
+          commit: null
+          size: 3782284
+          sha256: sha256:266c6f5a59a9125cf68a3652ab4accd9ed10c09b19462f9b8a73eae4917374ac
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter_0.7.5_linux_amd64.rpm
+        - name: process-exporter_0.7.5_linux_arm64.deb
+          commit: null
+          size: 3437756
+          sha256: sha256:128b4fe70c9949ff0c2afadd20168b9a749dd8d3fea54187a6c52b0f8c156fdb
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter_0.7.5_linux_arm64.deb
+        - name: process-exporter_0.7.5_linux_arm64.rpm
+          commit: null
+          size: 3429985
+          sha256: sha256:bc89ef7d26ba9798339440c94948a19d0c1fceb39896bf055702ad8a35180edf
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter_0.7.5_linux_arm64.rpm
+        - name: process-exporter_0.7.5_linux_armv6.deb
+          commit: null
+          size: 3529676
+          sha256: sha256:aef2f5255e7cc07650804cf3b040f6ccc104b2e15106a5d10a8197739b132058
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter_0.7.5_linux_armv6.deb
+        - name: process-exporter_0.7.5_linux_armv6.rpm
+          commit: null
+          size: 3527266
+          sha256: sha256:0b322a9537d7b5caa5524b499d10eacbee5a6ddef2335888e5b9e963fddb77a3
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter_0.7.5_linux_armv6.rpm
+        - name: process-exporter_0.7.5_linux_ppc64.deb
+          commit: null
+          size: 3370590
+          sha256: sha256:a4370459cbbe7674aeff9517f6d3c97dd26b1d6f2858b23352224d28450aacbd
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter_0.7.5_linux_ppc64.deb
+        - name: process-exporter_0.7.5_linux_ppc64.rpm
+          commit: null
+          size: 3347585
+          sha256: sha256:ee1d9a015b494f7e893ba41f114ba073b3cb8865fd228cd12d26fadb34c6b28f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter_0.7.5_linux_ppc64.rpm
+        - name: process-exporter_0.7.5_linux_ppc64le.deb
+          commit: null
+          size: 3341830
+          sha256: sha256:8c80e2a62fd0fc9550df66956b19c87de828cb4e596b405529928a5eb3b56969
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter_0.7.5_linux_ppc64le.deb
+        - name: process-exporter_0.7.5_linux_ppc64le.rpm
+          commit: null
+          size: 3333453
+          sha256: sha256:5dd470ff9ed9ccfae93ba86a57f417e435cc0d80ce1d649c776ac9c964e6f9f8
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.5/process-exporter_0.7.5_linux_ppc64le.rpm
+    - name: v0.3.11
+      commit: null
+      timestamp: '2018-09-01T00:28:55'
+      prerelease: true
+      files:
+        - name: process-exporter-0.3.11.linux-386.tar.gz
+          commit: null
+          size: 2782415
+          sha256: sha256:5539c18cefffdcfc9f224e7b2e9e061ab0167c376615efb352d148f34cb3956f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter-0.3.11.linux-386.tar.gz
+        - name: process-exporter-0.3.11.linux-amd64.tar.gz
+          commit: null
+          size: 2889921
+          sha256: sha256:063b0fc6cda7269543618e320bb469d63bd0aee4647c389ade900de1e63cab00
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter-0.3.11.linux-amd64.tar.gz
+        - name: process-exporter-0.3.11.linux-arm64.tar.gz
+          commit: null
+          size: 2683076
+          sha256: sha256:d5daa2e1a917758421908b867539158281a677fd55b7730a3cc49c7e37bc85d2
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter-0.3.11.linux-arm64.tar.gz
+        - name: process-exporter-0.3.11.linux-armv6.tar.gz
+          commit: null
+          size: 2748375
+          sha256: sha256:49da97b9113b028efb136422200b77cdb0485765cb9674ad2e9fa1cf890092c2
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter-0.3.11.linux-armv6.tar.gz
+        - name: process-exporter-0.3.11.linux-ppc64.tar.gz
+          commit: null
+          size: 2682253
+          sha256: sha256:6471e2127e5d079526beff8469a70902b2b25c4a50074365f7174270be4a15e7
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter-0.3.11.linux-ppc64.tar.gz
+        - name: process-exporter-0.3.11.linux-ppc64le.tar.gz
+          commit: null
+          size: 2657951
+          sha256: sha256:4589b7f14c5e35f11723097b9f3556606219585ccd2d29e4c52f4d4779440396
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter-0.3.11.linux-ppc64le.tar.gz
+        - name: process-exporter_0.3.11_checksums.txt
+          commit: null
+          size: 1926
+          sha256: sha256:7e6c452bb224ab15c0cf512c9a453de38c369c2be72e3a8a7a62a6b43970374c
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter_0.3.11_checksums.txt
+        - name: process-exporter_0.3.11_linux_386.deb
+          commit: null
+          size: 2776554
+          sha256: sha256:152a6433ca1c78184a356c895d83a6f9c01bba08790fad30ad78ca60c530b3ae
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter_0.3.11_linux_386.deb
+        - name: process-exporter_0.3.11_linux_386.rpm
+          commit: null
+          size: 2686519
+          sha256: sha256:156163a00690796cbf54eab3e45b8cd78b0ed8eebdbb75593d661f8bd51aa637
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter_0.3.11_linux_386.rpm
+        - name: process-exporter_0.3.11_linux_amd64.deb
+          commit: null
+          size: 2886230
+          sha256: sha256:ac75768f7337c42f8221c705a6a406c4bf3a05eb1365e7f0a11432c5f1670218
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter_0.3.11_linux_amd64.deb
+        - name: process-exporter_0.3.11_linux_amd64.rpm
+          commit: null
+          size: 2816889
+          sha256: sha256:8d7080d99c44c59ef27f19cc7ff8c7f02523b3e433f17b7fc8634ce3ce3dde54
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter_0.3.11_linux_amd64.rpm
+        - name: process-exporter_0.3.11_linux_arm64.deb
+          commit: null
+          size: 2676752
+          sha256: sha256:c9f5a0a6283331ab4f39c12a0ec7362b450128909252b4a5c4dd25a4a8a75638
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter_0.3.11_linux_arm64.deb
+        - name: process-exporter_0.3.11_linux_arm64.rpm
+          commit: null
+          size: 2602303
+          sha256: sha256:1ce409435a7e062687775840ee86486ef43c4f713dc2c85f8ca3743175e22234
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter_0.3.11_linux_arm64.rpm
+        - name: process-exporter_0.3.11_linux_armv6.deb
+          commit: null
+          size: 2744658
+          sha256: sha256:b88d7b9536aa785d2632b9967570d9bd8c9d350bb542cf7d913ae824d7b85325
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter_0.3.11_linux_armv6.deb
+        - name: process-exporter_0.3.11_linux_armv6.rpm
+          commit: null
+          size: 2641727
+          sha256: sha256:bf293f2bca8e3a43d1759546888f9cc132510cf461708d1c36a8289caa64f7ee
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter_0.3.11_linux_armv6.rpm
+        - name: process-exporter_0.3.11_linux_ppc64.deb
+          commit: null
+          size: 2675026
+          sha256: sha256:fcdcf1beb3567bc6251f6b14bcbda3a187e5ee4935418a9a795091e32eafb6e5
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter_0.3.11_linux_ppc64.deb
+        - name: process-exporter_0.3.11_linux_ppc64.rpm
+          commit: null
+          size: 2602625
+          sha256: sha256:ce56ba219f7caa24f7ec8b8d12f10c752ae0044d2949053d1553b1b08c8abbf1
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter_0.3.11_linux_ppc64.rpm
+        - name: process-exporter_0.3.11_linux_ppc64le.deb
+          commit: null
+          size: 2652862
+          sha256: sha256:6b8c22749a3d641fc1ed8f8b89140e3aa3e138022635dbdc4d2168c7dd49cfb7
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter_0.3.11_linux_ppc64le.deb
+        - name: process-exporter_0.3.11_linux_ppc64le.rpm
+          commit: null
+          size: 2590422
+          sha256: sha256:9aaf6d104f40c0a32bee681672fbc66589fd88ddc2c46d254f9ec855daad1bb3
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.11/process-exporter_0.3.11_linux_ppc64le.rpm
+    - name: v0.7.4
+      commit: null
+      timestamp: '2020-11-05T00:24:53'
+      prerelease: false
+      files:
+        - name: checksums.txt
+          commit: null
+          size: 1908
+          sha256: sha256:8d20dd0d29050cd93e0216e2e5378fda4c23fc26d31fa4f79fc30b0ec5d134ef
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/checksums.txt
+        - name: process-exporter-0.7.4.linux-386.tar.gz
+          commit: null
+          size: 3594458
+          sha256: sha256:83095c09892fab291ff84035eb4be6e1aae7236cfcc8383e0057fedf7edbf7e4
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter-0.7.4.linux-386.tar.gz
+        - name: process-exporter-0.7.4.linux-amd64.tar.gz
+          commit: null
+          size: 3785840
+          sha256: sha256:675b3384625057aad4bd1fc9e028a7357ca99bcf2caa6e967ca0e400180c8b83
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter-0.7.4.linux-amd64.tar.gz
+        - name: process-exporter-0.7.4.linux-arm64.tar.gz
+          commit: null
+          size: 3429962
+          sha256: sha256:edc611773179f005a730a14ce9f2b8f184bfb37eea9f1eb8243dbd27a9b9b624
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter-0.7.4.linux-arm64.tar.gz
+        - name: process-exporter-0.7.4.linux-armv6.tar.gz
+          commit: null
+          size: 3527419
+          sha256: sha256:b34258fdbe723448dfc468b2495fd247c2a06b91150a3e3e56b4f6371b2d7c59
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter-0.7.4.linux-armv6.tar.gz
+        - name: process-exporter-0.7.4.linux-ppc64.tar.gz
+          commit: null
+          size: 3350059
+          sha256: sha256:5648eeea714745a33f9f9779a5906a9c1b57fe2e3854b8e2e67c3d529e8589f1
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter-0.7.4.linux-ppc64.tar.gz
+        - name: process-exporter-0.7.4.linux-ppc64le.tar.gz
+          commit: null
+          size: 3336270
+          sha256: sha256:d2f98b7725e9e8ee404ec4e65b5ae16a0ff2ca6c8b65bdd9a30942d906db1876
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter-0.7.4.linux-ppc64le.tar.gz
+        - name: process-exporter_0.7.4_linux_386.deb
+          commit: null
+          size: 3593554
+          sha256: sha256:866863e6c0306836432c0ea90488d252e15d51fa3a01cf6cf6601364cb0d136e
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter_0.7.4_linux_386.deb
+        - name: process-exporter_0.7.4_linux_386.rpm
+          commit: null
+          size: 3588740
+          sha256: sha256:986061f7b702fda0867b9005937e19a3d3c2ee0b2546d2aaf1068aa7d0f1c40a
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter_0.7.4_linux_386.rpm
+        - name: process-exporter_0.7.4_linux_amd64.deb
+          commit: null
+          size: 3793666
+          sha256: sha256:15a0782a12de6105e2de3ae62d110bf9dd4a34a6dbc1b2c9200a04782781ed4f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter_0.7.4_linux_amd64.deb
+        - name: process-exporter_0.7.4_linux_amd64.rpm
+          commit: null
+          size: 3778865
+          sha256: sha256:89206b7cd5a4158c4e0afcd6af33e450f9c7499586289036246f54f507aefd0b
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter_0.7.4_linux_amd64.rpm
+        - name: process-exporter_0.7.4_linux_arm64.deb
+          commit: null
+          size: 3434914
+          sha256: sha256:613aaa76722b96a7b5478de400883c4fb4edec4f3a43a6a3ef8775560dd076b3
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter_0.7.4_linux_arm64.deb
+        - name: process-exporter_0.7.4_linux_arm64.rpm
+          commit: null
+          size: 3426729
+          sha256: sha256:80081b376a17ba14a32726296426b6e428bcb2a878baf74f44ca848aea8ad970
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter_0.7.4_linux_arm64.rpm
+        - name: process-exporter_0.7.4_linux_armv6.deb
+          commit: null
+          size: 3527356
+          sha256: sha256:c0f8c08ebf412a5e5183d252ce680ced6db7968f273b224e994fdc49cb9e7767
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter_0.7.4_linux_armv6.deb
+        - name: process-exporter_0.7.4_linux_armv6.rpm
+          commit: null
+          size: 3524876
+          sha256: sha256:53ff82c41a6f80dd285ac9190dd37e99a8d6f2aaf832e1867642c31881e3fd2c
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter_0.7.4_linux_armv6.rpm
+        - name: process-exporter_0.7.4_linux_ppc64.deb
+          commit: null
+          size: 3368044
+          sha256: sha256:1d8c8f7a50f91baf0f155358c7bda763d1e827c2e5cfa53ed155cc46106c378f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter_0.7.4_linux_ppc64.deb
+        - name: process-exporter_0.7.4_linux_ppc64.rpm
+          commit: null
+          size: 3345421
+          sha256: sha256:1204e9784faea344e7e9eebdbdf24c6474e7d79445ad8c0cfd4354c6f2f0d146
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter_0.7.4_linux_ppc64.rpm
+        - name: process-exporter_0.7.4_linux_ppc64le.deb
+          commit: null
+          size: 3338792
+          sha256: sha256:67c7beff89d88203eff86f1469a56f2ff12b913967a172a10fcb21d3ff9c7017
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter_0.7.4_linux_ppc64le.deb
+        - name: process-exporter_0.7.4_linux_ppc64le.rpm
+          commit: null
+          size: 3329438
+          sha256: sha256:aca8af454e9d968f931dc13ef079a50ce255b4c4dabb488be965e09470e80ceb
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.4/process-exporter_0.7.4_linux_ppc64le.rpm
+    - name: v0.7.3
+      commit: null
+      timestamp: '2020-11-03T15:49:16'
+      prerelease: false
+      files:
+        - name: process-exporter-0.7.3.linux-386.tar.gz
+          commit: null
+          size: 3594458
+          sha256: sha256:9b87d9e38af6eb7e01718c9cb542ea8696b05be66afbcccc25d562ccfff74901
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter-0.7.3.linux-386.tar.gz
+        - name: process-exporter-0.7.3.linux-amd64.tar.gz
+          commit: null
+          size: 3785837
+          sha256: sha256:49d01e0b022c24c2262a6622897aff50605a457f733807bc59349ffeed93f268
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter-0.7.3.linux-amd64.tar.gz
+        - name: process-exporter-0.7.3.linux-arm64.tar.gz
+          commit: null
+          size: 3429961
+          sha256: sha256:a9ae4e7dcdd83ec7e0635129565354a2f91ea6a1f25c10e1ec90f622fac6aa6f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter-0.7.3.linux-arm64.tar.gz
+        - name: process-exporter-0.7.3.linux-armv6.tar.gz
+          commit: null
+          size: 3527423
+          sha256: sha256:7d20a055672e2dff0e3f061be80e99a675593e164f42dc8cee17326030f0c7be
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter-0.7.3.linux-armv6.tar.gz
+        - name: process-exporter-0.7.3.linux-ppc64.tar.gz
+          commit: null
+          size: 3350051
+          sha256: sha256:10300b9e19921f5316f214984f0b39b3ccf28a1661f604720971ccf7aa4b2fa1
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter-0.7.3.linux-ppc64.tar.gz
+        - name: process-exporter-0.7.3.linux-ppc64le.tar.gz
+          commit: null
+          size: 3336267
+          sha256: sha256:a7a8f5c276634633df91b1e20790911fe5ed40d7432d4988e5c70a1feabcbf29
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter-0.7.3.linux-ppc64le.tar.gz
+        - name: process-exporter_0.7.3_checksums.txt
+          commit: null
+          size: 1908
+          sha256: sha256:a44de78cb4222655d8084bdc821e2793707cfdc3f2610c10c678a8598a640cc1
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter_0.7.3_checksums.txt
+        - name: process-exporter_0.7.3_linux_386.deb
+          commit: null
+          size: 3593508
+          sha256: sha256:e7a6d8f54dd4d4942355ec8eb861a6517c3bc1ce721c4d3ecba9c93d2c260569
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter_0.7.3_linux_386.deb
+        - name: process-exporter_0.7.3_linux_386.rpm
+          commit: null
+          size: 3588576
+          sha256: sha256:651231741fd0a0c8b1387015b23dc6904ee20b91e94f89097aaa41583546f2c8
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter_0.7.3_linux_386.rpm
+        - name: process-exporter_0.7.3_linux_amd64.deb
+          commit: null
+          size: 3793438
+          sha256: sha256:07df6b120e46fde6bf15588ee293f6303d07c9c8da4b814b93deba901e621750
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter_0.7.3_linux_amd64.deb
+        - name: process-exporter_0.7.3_linux_amd64.rpm
+          commit: null
+          size: 3778669
+          sha256: sha256:bfa9153a63ed442fff1866165e0753ffece05bf0bff4f857a1cac076f15ad860
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter_0.7.3_linux_amd64.rpm
+        - name: process-exporter_0.7.3_linux_arm64.deb
+          commit: null
+          size: 3434796
+          sha256: sha256:84d17c23b2eb48e276b4e43e9b342181986b7ef083a6d1b2155a4e40931d4e86
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter_0.7.3_linux_arm64.deb
+        - name: process-exporter_0.7.3_linux_arm64.rpm
+          commit: null
+          size: 3426531
+          sha256: sha256:b9b3576f539e9806417fa2cafc8dca3b154ad628963e7b9bb976e37d8d10ac0e
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter_0.7.3_linux_arm64.rpm
+        - name: process-exporter_0.7.3_linux_armv6.deb
+          commit: null
+          size: 3527200
+          sha256: sha256:bfb3c9b89054d45098f633fb1b8ee575900472ace8a9dd86fb33291109fca13f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter_0.7.3_linux_armv6.deb
+        - name: process-exporter_0.7.3_linux_armv6.rpm
+          commit: null
+          size: 3524651
+          sha256: sha256:9ef602b1ea70f7242901c3158df908b77813676393cb2ce0be240e77d34dd32e
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter_0.7.3_linux_armv6.rpm
+        - name: process-exporter_0.7.3_linux_ppc64.deb
+          commit: null
+          size: 3367880
+          sha256: sha256:bdf72cd1870621830bd1de656a7866fc43ec5f8fc765a20f4f6987cc3821b42d
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter_0.7.3_linux_ppc64.deb
+        - name: process-exporter_0.7.3_linux_ppc64.rpm
+          commit: null
+          size: 3345223
+          sha256: sha256:251255f4671c005103911709483656524952f97602be899ca8f0016a41aff00f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter_0.7.3_linux_ppc64.rpm
+        - name: process-exporter_0.7.3_linux_ppc64le.deb
+          commit: null
+          size: 3338710
+          sha256: sha256:9ba8fe65682eb78e385e2349177688f5ca03f877e056db714dc6ad2451b57e04
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter_0.7.3_linux_ppc64le.deb
+        - name: process-exporter_0.7.3_linux_ppc64le.rpm
+          commit: null
+          size: 3329181
+          sha256: sha256:c9ba7de331fa4a48f390bfeba0faadd7d3f7e56f84d80aba4cfca6c5ebf6c2b4
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.3/process-exporter_0.7.3_linux_ppc64le.rpm
+    - name: v0.7.2
+      commit: null
+      timestamp: '2020-08-05T00:44:56'
+      prerelease: false
+      files:
+        - name: process-exporter-0.7.2.linux-386.tar.gz
+          commit: null
+          size: 3646041
+          sha256: sha256:2ea22b347592b51b134c3e05688d90ff98781337746b1b2fabba85f331e46562
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter-0.7.2.linux-386.tar.gz
+        - name: process-exporter-0.7.2.linux-amd64.tar.gz
+          commit: null
+          size: 3806219
+          sha256: sha256:2ca646c6d6ec88a3d94fee99707e0270dcf6185fbb20ff540399cf38160b02fd
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter-0.7.2.linux-amd64.tar.gz
+        - name: process-exporter-0.7.2.linux-arm64.tar.gz
+          commit: null
+          size: 3497900
+          sha256: sha256:96922a8f1457e672946c7b6b39559f4fd0b1c52b5849ab4ba9597b2ad7684ff4
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter-0.7.2.linux-arm64.tar.gz
+        - name: process-exporter-0.7.2.linux-armv6.tar.gz
+          commit: null
+          size: 3582767
+          sha256: sha256:e090211581eae99bee74e17c9635a86f6e1e69d86d3eaa0ff9001149f10bbfb5
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter-0.7.2.linux-armv6.tar.gz
+        - name: process-exporter-0.7.2.linux-ppc64.tar.gz
+          commit: null
+          size: 3458684
+          sha256: sha256:33b78a575cc69d941e5b92099efb66dea275cfe1175f4384514601fc8d72161c
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter-0.7.2.linux-ppc64.tar.gz
+        - name: process-exporter-0.7.2.linux-ppc64le.tar.gz
+          commit: null
+          size: 3447165
+          sha256: sha256:04a87de61bbe419b3bcdf82c1f8fb237c3d078a4dd08b1bdf2a950c8b3c722c1
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter-0.7.2.linux-ppc64le.tar.gz
+        - name: process-exporter_0.7.2_checksums.txt
+          commit: null
+          size: 1908
+          sha256: sha256:bcfb2d84ff62dd5fa3b141b2012cba83c27f9a7fe766a3917f143dcf33f02afd
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter_0.7.2_checksums.txt
+        - name: process-exporter_0.7.2_linux_386.deb
+          commit: null
+          size: 3645880
+          sha256: sha256:f3a4d2c7a3a06c2f09e6afb419f4571498171bdf871838203ef1a54684e78559
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter_0.7.2_linux_386.deb
+        - name: process-exporter_0.7.2_linux_386.rpm
+          commit: null
+          size: 3641976
+          sha256: sha256:679af078a83c9cd380d131b537abda8aa6c2cf832e07f0c8428684592f8ec205
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter_0.7.2_linux_386.rpm
+        - name: process-exporter_0.7.2_linux_amd64.deb
+          commit: null
+          size: 3813030
+          sha256: sha256:b8b6554290274b183da73cffb1f7f287deb85401e3eb411e9573c9007ab1d35c
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter_0.7.2_linux_amd64.deb
+        - name: process-exporter_0.7.2_linux_amd64.rpm
+          commit: null
+          size: 3801491
+          sha256: sha256:ab635e83e3b44d2746840c7553ad348fab6577164e9fbcf470bf307ebc134a85
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter_0.7.2_linux_amd64.rpm
+        - name: process-exporter_0.7.2_linux_arm64.deb
+          commit: null
+          size: 3502520
+          sha256: sha256:e0c346e0c5b98c8339e58a711b3610743c417a181373d07f62305a66e13e82c4
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter_0.7.2_linux_arm64.deb
+        - name: process-exporter_0.7.2_linux_arm64.rpm
+          commit: null
+          size: 3493644
+          sha256: sha256:34add8a83ce770e1c042683d65b646fcd058cd00139702aa4e4be3ba090420e6
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter_0.7.2_linux_arm64.rpm
+        - name: process-exporter_0.7.2_linux_armv6.deb
+          commit: null
+          size: 3582072
+          sha256: sha256:bba777a7ae8274bd950f97ec3829177d83fa2d4632e68dcb00e2fa05ce9ce65b
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter_0.7.2_linux_armv6.deb
+        - name: process-exporter_0.7.2_linux_armv6.rpm
+          commit: null
+          size: 3579356
+          sha256: sha256:976041a2b779bca444d2bd7c051ef2e7f9940f8a0bbc5325b68f5a160c57a90f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter_0.7.2_linux_armv6.rpm
+        - name: process-exporter_0.7.2_linux_ppc64.deb
+          commit: null
+          size: 3479136
+          sha256: sha256:fe4c1e94f4a0b66e5835048498649103c60b3d67c40ca7b9231df8fac2ff60f3
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter_0.7.2_linux_ppc64.deb
+        - name: process-exporter_0.7.2_linux_ppc64.rpm
+          commit: null
+          size: 3456176
+          sha256: sha256:2e996f25610c8f10cc15c719bf791b787b55b040abc631514aaf3f255b847f75
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter_0.7.2_linux_ppc64.rpm
+        - name: process-exporter_0.7.2_linux_ppc64le.deb
+          commit: null
+          size: 3452040
+          sha256: sha256:3f4d322724538dda4193b5c02f7822aafd6dd29af80b5892c187856e09c64b1e
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter_0.7.2_linux_ppc64le.deb
+        - name: process-exporter_0.7.2_linux_ppc64le.rpm
+          commit: null
+          size: 3442744
+          sha256: sha256:b0c3e3918865572a9d3945cce59ee226f841bb3d77e724e11c97d85c8707705b
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.7.2/process-exporter_0.7.2_linux_ppc64le.rpm
+    - name: v0.7.1
+      commit:
+        sha: 11b257440b10f20eb7c7d846047fc177c55fcfa0
+        timestamp: '2020-05-18T21:07:45'
+      timestamp: '2020-05-18T21:07:45'
+      prerelease: false
+      files: []
+    - name: v0.7.0
+      commit:
+        sha: 1ed3f1e37e42c586c522933d38fec9d6e43b4f7e
+        timestamp: '2020-05-18T20:56:28'
+      timestamp: '2020-05-18T20:56:28'
+      prerelease: false
+      files: []
+    - name: v0.6.0
+      commit: null
+      timestamp: '2020-01-01T15:57:54'
+      prerelease: false
+      files:
+        - name: process-exporter-0.6.0.linux-386.tar.gz
+          commit: null
+          size: 3608127
+          sha256: sha256:a2547875b12c414ab250cc5f9a3313ba8a88b575f70d7fe67946aef63152b920
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter-0.6.0.linux-386.tar.gz
+        - name: process-exporter-0.6.0.linux-amd64.tar.gz
+          commit: null
+          size: 3768821
+          sha256: sha256:ae0aea4a8ebd7baa0ae434be555a7e0672235b175725f4f6ff8f029136c95f73
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter-0.6.0.linux-amd64.tar.gz
+        - name: process-exporter-0.6.0.linux-arm64.tar.gz
+          commit: null
+          size: 3464851
+          sha256: sha256:219dc0eb0fccd7f2ee4a3f171df6ab068dd32ba6a71d4bf147acf5e1f417cf8b
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter-0.6.0.linux-arm64.tar.gz
+        - name: process-exporter-0.6.0.linux-armv6.tar.gz
+          commit: null
+          size: 3543292
+          sha256: sha256:f03ca0d07922ace5209931ecd21a479c248629dbb970aad36ebaca28a0cf69d0
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter-0.6.0.linux-armv6.tar.gz
+        - name: process-exporter-0.6.0.linux-ppc64.tar.gz
+          commit: null
+          size: 3444249
+          sha256: sha256:910a7f6feb9b5273135dd2cc20bbc39208ca187c3e94c162e81b51165e07677b
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter-0.6.0.linux-ppc64.tar.gz
+        - name: process-exporter-0.6.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 3414454
+          sha256: sha256:6e2794fb8aa52f17fe4c7b2c65ed4c8f7d0b63ba93b74a998a37493e8699887f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter-0.6.0.linux-ppc64le.tar.gz
+        - name: process-exporter_0.6.0_checksums.txt
+          commit: null
+          size: 1908
+          sha256: sha256:67361bd5a8a20449cd044cbae88c5a85da1fc462f74334509ddf20c23a07e40b
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter_0.6.0_checksums.txt
+        - name: process-exporter_0.6.0_linux_386.deb
+          commit: null
+          size: 3601420
+          sha256: sha256:64f9c334fe0f3d6598c813dfd4e22d8612dd561cdedd08af2b55e53405b29ae2
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter_0.6.0_linux_386.deb
+        - name: process-exporter_0.6.0_linux_386.rpm
+          commit: null
+          size: 3596616
+          sha256: sha256:666d569f977d3a0f4e96286ca24770cfbfbf4c15e64389ed72ac5188467836c7
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter_0.6.0_linux_386.rpm
+        - name: process-exporter_0.6.0_linux_amd64.deb
+          commit: null
+          size: 3764718
+          sha256: sha256:85ecae0f195930c66ea3e99b32825ebfa6b8dc7a839157451c6483792f7e2892
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter_0.6.0_linux_amd64.deb
+        - name: process-exporter_0.6.0_linux_amd64.rpm
+          commit: null
+          size: 3751666
+          sha256: sha256:668aad90edf5fd0bf6079cc43f2c0a5c086cf529562d61dd2498606d5fed9789
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter_0.6.0_linux_amd64.rpm
+        - name: process-exporter_0.6.0_linux_arm64.deb
+          commit: null
+          size: 3459568
+          sha256: sha256:879902de9f0c167192cc56ae9e04b3dfdf21fc9488674eb7d5af40200365ad70
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter_0.6.0_linux_arm64.deb
+        - name: process-exporter_0.6.0_linux_arm64.rpm
+          commit: null
+          size: 3453054
+          sha256: sha256:fa6c7798d444be9b604512b17ab9f8775651d1764b47deda1e2fbcd23e78a2b8
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter_0.6.0_linux_arm64.rpm
+        - name: process-exporter_0.6.0_linux_armv6.deb
+          commit: null
+          size: 3538334
+          sha256: sha256:b985ca341735c302a4ad0b154df0eb0944d0b1531cd9f2ebf4524f50aca2bd02
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter_0.6.0_linux_armv6.deb
+        - name: process-exporter_0.6.0_linux_armv6.rpm
+          commit: null
+          size: 3535985
+          sha256: sha256:41f6f1ca8b4ba96ef33b3a149ba31c727a09f47db09c8ced8a61eba419425abd
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter_0.6.0_linux_armv6.rpm
+        - name: process-exporter_0.6.0_linux_ppc64.deb
+          commit: null
+          size: 3439154
+          sha256: sha256:aeb79f57500367c47acf51bb34c9a73922acdf298d2d1d8d6dbe99c3490f10a8
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter_0.6.0_linux_ppc64.deb
+        - name: process-exporter_0.6.0_linux_ppc64.rpm
+          commit: null
+          size: 3416242
+          sha256: sha256:6c10aa9978f2bd3ad8ceae25cdf27e17073f9f0f7c94d4da9fe064c0d3dcfc83
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter_0.6.0_linux_ppc64.rpm
+        - name: process-exporter_0.6.0_linux_ppc64le.deb
+          commit: null
+          size: 3410108
+          sha256: sha256:9e2bf43ccf5a0f48f21493d7bf17649043f9b881468a470f04eca70495b257d0
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter_0.6.0_linux_ppc64le.deb
+        - name: process-exporter_0.6.0_linux_ppc64le.rpm
+          commit: null
+          size: 3401614
+          sha256: sha256:60b16d8cc9b9ab4803cb1c7e9b72510d5eb193698e180ec30d77f1597f00c363
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.6.0/process-exporter_0.6.0_linux_ppc64le.rpm
+    - name: v0.5.0
+      commit: null
+      timestamp: '2019-04-20T10:54:27'
+      prerelease: false
+      files:
+        - name: process-exporter-0.5.0.linux-386.tar.gz
+          commit: null
+          size: 2771703
+          sha256: sha256:ff667a81b7056f680d38d60b9d50d061be582e97b50311d7f64dd0651f69b3df
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter-0.5.0.linux-386.tar.gz
+        - name: process-exporter-0.5.0.linux-amd64.tar.gz
+          commit: null
+          size: 2883611
+          sha256: sha256:1b422f5f26ebefc0928b56fbefc08d0aab3cc7a636627d7d57b200af84e91bb9
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter-0.5.0.linux-amd64.tar.gz
+        - name: process-exporter-0.5.0.linux-arm64.tar.gz
+          commit: null
+          size: 2672355
+          sha256: sha256:7262ff10919fabc01c648815d7022e7d2c1d22ac752fb3ff53e7b3f6c84b004b
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter-0.5.0.linux-arm64.tar.gz
+        - name: process-exporter-0.5.0.linux-armv6.tar.gz
+          commit: null
+          size: 2740495
+          sha256: sha256:03cdd6ea87be07e6a049563056e04db654809f716ccbed4e372bba6107215c42
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter-0.5.0.linux-armv6.tar.gz
+        - name: process-exporter-0.5.0.linux-ppc64.tar.gz
+          commit: null
+          size: 2672227
+          sha256: sha256:e626e75bbd53d6f23c4f8e352b31af664407b6af5db7dc3b1007fba36af87d2b
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter-0.5.0.linux-ppc64.tar.gz
+        - name: process-exporter-0.5.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 2649853
+          sha256: sha256:048b46475a33327753c79ce062c48f8e50628551307295c4b12b53082de26e72
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter-0.5.0.linux-ppc64le.tar.gz
+        - name: process-exporter_0.5.0_checksums.txt
+          commit: null
+          size: 1908
+          sha256: sha256:309da927e99f854c972168d2c832d13e48c261689c004466218a1ee530cef9e6
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter_0.5.0_checksums.txt
+        - name: process-exporter_0.5.0_linux_386.deb
+          commit: null
+          size: 2767100
+          sha256: sha256:e0ee1b26a14569b24238fec102ff14c09497d9f2fe126b6a2cf0d0c7a618b513
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter_0.5.0_linux_386.deb
+        - name: process-exporter_0.5.0_linux_386.rpm
+          commit: null
+          size: 2675036
+          sha256: sha256:cffe75f4284a9e7c75138beee7eef0876b2e46a8aa820d00952af7b07a6baf2f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter_0.5.0_linux_386.rpm
+        - name: process-exporter_0.5.0_linux_amd64.deb
+          commit: null
+          size: 2877314
+          sha256: sha256:e88105dc11009b175e8df8978a5245c863543120b27da352dcd487eac3ce3857
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter_0.5.0_linux_amd64.deb
+        - name: process-exporter_0.5.0_linux_amd64.rpm
+          commit: null
+          size: 2809958
+          sha256: sha256:70b3025d02856b6a1320c6c7c67300c5a3fa2d1405d37d4427384175fb08bda0
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter_0.5.0_linux_amd64.rpm
+        - name: process-exporter_0.5.0_linux_arm64.deb
+          commit: null
+          size: 2666774
+          sha256: sha256:054ccff0bfb92eb4a33d80ebc9eba6fba839e08c27821fdf24db7e179f5c4850
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter_0.5.0_linux_arm64.deb
+        - name: process-exporter_0.5.0_linux_arm64.rpm
+          commit: null
+          size: 2594775
+          sha256: sha256:041e8bc70c85c066fc674ab27996d39f42ab34105ab60d011e2dd9db8cf86926
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter_0.5.0_linux_arm64.rpm
+        - name: process-exporter_0.5.0_linux_armv6.deb
+          commit: null
+          size: 2734012
+          sha256: sha256:60dcbfb6bce933d82dd51d3e105c3b9232d18dbfcd66ff6512068c6e2921889a
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter_0.5.0_linux_armv6.deb
+        - name: process-exporter_0.5.0_linux_armv6.rpm
+          commit: null
+          size: 2634647
+          sha256: sha256:b61142c99592ef69f14885279b08cc341e7509209b19f3fd4b734b91eccc6c7f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter_0.5.0_linux_armv6.rpm
+        - name: process-exporter_0.5.0_linux_ppc64.deb
+          commit: null
+          size: 2667756
+          sha256: sha256:4a5bc8480910166fd860d8781c55ff513fe486b392529d94c49a02727f29bfbd
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter_0.5.0_linux_ppc64.deb
+        - name: process-exporter_0.5.0_linux_ppc64.rpm
+          commit: null
+          size: 2594013
+          sha256: sha256:f9e977b49606c739977946f865388c84192d3b3e2b50b6f2f6a1e1535b375dec
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter_0.5.0_linux_ppc64.rpm
+        - name: process-exporter_0.5.0_linux_ppc64le.deb
+          commit: null
+          size: 2644410
+          sha256: sha256:cd18dec431811c01a993ab102c46b1f84483aed28c64d4554a7e04789e33c18a
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter_0.5.0_linux_ppc64le.deb
+        - name: process-exporter_0.5.0_linux_ppc64le.rpm
+          commit: null
+          size: 2582918
+          sha256: sha256:66a58041734ba78595326b740d64dd6c49fe617ee9c98f0815d72c03f6fa6f8e
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.5.0/process-exporter_0.5.0_linux_ppc64le.rpm
+    - name: v0.4.0
+      commit: null
+      timestamp: '2018-09-05T00:44:47'
+      prerelease: false
+      files:
+        - name: process-exporter-0.4.0.linux-386.tar.gz
+          commit: null
+          size: 2784338
+          sha256: sha256:005dda24b5b373c0e53cb62f356c8d4eeaf198472e8dda26510ecc98e25028c2
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter-0.4.0.linux-386.tar.gz
+        - name: process-exporter-0.4.0.linux-amd64.tar.gz
+          commit: null
+          size: 2893685
+          sha256: sha256:668b1b2c9069888ec36db0c2eb6edfd7509ca2f200f708c624d9c27fc9c5dfc1
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter-0.4.0.linux-amd64.tar.gz
+        - name: process-exporter-0.4.0.linux-arm64.tar.gz
+          commit: null
+          size: 2684899
+          sha256: sha256:70e8799d589ae4c6f8e7b3a1444a9e69d0106a0dfdd92b7c3d922f1d28c208ce
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter-0.4.0.linux-arm64.tar.gz
+        - name: process-exporter-0.4.0.linux-armv6.tar.gz
+          commit: null
+          size: 2750679
+          sha256: sha256:04d7b24b2851293d140b7adbcdfcc6375356a4976e65c92c360e54eb6d55a2cf
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter-0.4.0.linux-armv6.tar.gz
+        - name: process-exporter-0.4.0.linux-ppc64.tar.gz
+          commit: null
+          size: 2684772
+          sha256: sha256:809600ccfcc205f20fa6e4d12d882228123cc3197d4106092df793cd6c577c5d
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter-0.4.0.linux-ppc64.tar.gz
+        - name: process-exporter-0.4.0.linux-ppc64le.tar.gz
+          commit: null
+          size: 2660312
+          sha256: sha256:32c679d4d8455c99c535dd465e2095bcc3caa023401a4cc2bb34f2cea573c2ba
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter-0.4.0.linux-ppc64le.tar.gz
+        - name: process-exporter_0.4.0_checksums.txt
+          commit: null
+          size: 1908
+          sha256: sha256:df5b1641aea67a7ceaafaa0859e766e78f1e0011f00b29a2676cad2cadc9a74b
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter_0.4.0_checksums.txt
+        - name: process-exporter_0.4.0_linux_386.deb
+          commit: null
+          size: 2778612
+          sha256: sha256:83145402311e5f95e6208a2268ceeb5da4294f43ada98674f3c535a359d48a75
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter_0.4.0_linux_386.deb
+        - name: process-exporter_0.4.0_linux_386.rpm
+          commit: null
+          size: 2688882
+          sha256: sha256:5d392ef04e0b8b0b395abd34df40cabf5878b4a0b241b4eb2330997a10a1ca7a
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter_0.4.0_linux_386.rpm
+        - name: process-exporter_0.4.0_linux_amd64.deb
+          commit: null
+          size: 2889454
+          sha256: sha256:d46979b2537249d5a38277f0197b305c936cf9569b41d9e9be3c5ae4496ae9e3
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter_0.4.0_linux_amd64.deb
+        - name: process-exporter_0.4.0_linux_amd64.rpm
+          commit: null
+          size: 2819888
+          sha256: sha256:950bad0439f7b682a3ba3730943150d1d27cab9d133c342fdf6e39c2d5a47e03
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter_0.4.0_linux_amd64.rpm
+        - name: process-exporter_0.4.0_linux_arm64.deb
+          commit: null
+          size: 2678846
+          sha256: sha256:39d4b447bfed03fe0efd1209059f53165b4551989b16e42f4e9999de01bb10e3
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter_0.4.0_linux_arm64.deb
+        - name: process-exporter_0.4.0_linux_arm64.rpm
+          commit: null
+          size: 2604520
+          sha256: sha256:acab38a348da7f4a1e81f3af9fad0cd9bf068597a767c6da036acb71c1284f24
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter_0.4.0_linux_arm64.rpm
+        - name: process-exporter_0.4.0_linux_armv6.deb
+          commit: null
+          size: 2747052
+          sha256: sha256:fef0d5a4134b2b5e01d010a755a85f189cb873debbdc1c085a22fc8098513d0e
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter_0.4.0_linux_armv6.deb
+        - name: process-exporter_0.4.0_linux_armv6.rpm
+          commit: null
+          size: 2644119
+          sha256: sha256:dd598bb0f43d1276c46fc004f449ce5886f0143d80c9c85627390ce2b7fd004d
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter_0.4.0_linux_armv6.rpm
+        - name: process-exporter_0.4.0_linux_ppc64.deb
+          commit: null
+          size: 2678320
+          sha256: sha256:a4b7cb31f72398a404a06afa31ecb4019031c7d8b1b3ab24477fb3d4fc61974f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter_0.4.0_linux_ppc64.deb
+        - name: process-exporter_0.4.0_linux_ppc64.rpm
+          commit: null
+          size: 2605108
+          sha256: sha256:0c2d6fb0030ad5b5331f0c176d4ef07f503d948fe3e51f61aa8d81710ea0ee72
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter_0.4.0_linux_ppc64.rpm
+        - name: process-exporter_0.4.0_linux_ppc64le.deb
+          commit: null
+          size: 2655602
+          sha256: sha256:03efdb418c77b26062a65dca3ab11779e97ca377b10bf51da9baf0d8d01dbfa7
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter_0.4.0_linux_ppc64le.deb
+        - name: process-exporter_0.4.0_linux_ppc64le.rpm
+          commit: null
+          size: 2593354
+          sha256: sha256:08e44a6a2954954fac6be3cd5c28233f598a670a5fd7e940f89383d2ccbaec21
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.4.0/process-exporter_0.4.0_linux_ppc64le.rpm
+    - name: 0.3.11
+      commit:
+        sha: da1de8152f3ecf8d5a356f12fd59d2c0e153dfed
+        timestamp: '2018-08-31T00:22:31'
+      timestamp: '2018-08-31T00:22:31'
+      prerelease: false
+      files: []
+    - name: v0.3.10
+      commit: null
+      timestamp: '2018-08-31T00:14:17'
+      prerelease: false
+      files:
+        - name: process-exporter-0.3.10.linux-386.tar.gz
+          commit: null
+          size: 2782280
+          sha256: sha256:6772729c36b9afd1fdb5e290940ed4ab18db07c60cc7c59e04684eacdf236115
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter-0.3.10.linux-386.tar.gz
+        - name: process-exporter-0.3.10.linux-amd64.tar.gz
+          commit: null
+          size: 2889765
+          sha256: sha256:62218582c51bd17f864f892150eeb5adcfb38fa5016831f423af9bbace9b9e11
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter-0.3.10.linux-amd64.tar.gz
+        - name: process-exporter-0.3.10.linux-arm64.tar.gz
+          commit: null
+          size: 2682894
+          sha256: sha256:df95149b145dd674d6d9f89485bf9a3d1497722d56ebe5ed39acdd948a1bb4d1
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter-0.3.10.linux-arm64.tar.gz
+        - name: process-exporter-0.3.10.linux-armv6.tar.gz
+          commit: null
+          size: 2748207
+          sha256: sha256:000d94e9a561f2810b8a45c39fa67e1ade7d09b589dfad11ccf19aa2f2d72ffc
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter-0.3.10.linux-armv6.tar.gz
+        - name: process-exporter-0.3.10.linux-ppc64.tar.gz
+          commit: null
+          size: 2682237
+          sha256: sha256:829a20aa5556562fcd78d371b0a50ee80dfa04b6c8f008d00aa0d4ce96bcfb42
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter-0.3.10.linux-ppc64.tar.gz
+        - name: process-exporter-0.3.10.linux-ppc64le.tar.gz
+          commit: null
+          size: 2657757
+          sha256: sha256:806e2a349bb6472dbf442b787efc6f211a1787c1b70729c58ceb2beaaf0f3c75
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter-0.3.10.linux-ppc64le.tar.gz
+        - name: process-exporter_0.3.10_checksums.txt
+          commit: null
+          size: 1926
+          sha256: sha256:edf61e1e705b1982bac9d626332cd03ff93acadc45eb835535e311c29f22e8e2
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter_0.3.10_checksums.txt
+        - name: process-exporter_0.3.10_linux_386.deb
+          commit: null
+          size: 2776426
+          sha256: sha256:a1119596abb5866e5b8f1c88a7c08c282b021d0ce787488bcdb3354ef01d69d8
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter_0.3.10_linux_386.deb
+        - name: process-exporter_0.3.10_linux_386.rpm
+          commit: null
+          size: 2686341
+          sha256: sha256:70618b75737e4c6e81e5a8779c6de14df1c7475fa1fe026dc66cf80c4de54be7
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter_0.3.10_linux_386.rpm
+        - name: process-exporter_0.3.10_linux_amd64.deb
+          commit: null
+          size: 2885972
+          sha256: sha256:77423256e812b699059a86a66b4a4d9fd7ad8a535c262302889cd6f14b1e5a9d
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter_0.3.10_linux_amd64.deb
+        - name: process-exporter_0.3.10_linux_amd64.rpm
+          commit: null
+          size: 2816736
+          sha256: sha256:89f1c3d96dfd3a0fcaab3688c204b47ee2e57f258c42c0f4df190ab8156f948a
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter_0.3.10_linux_amd64.rpm
+        - name: process-exporter_0.3.10_linux_arm64.deb
+          commit: null
+          size: 2676526
+          sha256: sha256:7d226af78d502b02c9d150a26fe04bd4ab964069fe1ecced39badff17335209f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter_0.3.10_linux_arm64.deb
+        - name: process-exporter_0.3.10_linux_arm64.rpm
+          commit: null
+          size: 2602163
+          sha256: sha256:f19e58905c16401c144afbff8316baa3579c8581386abbfeb772e89933f84b1d
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter_0.3.10_linux_arm64.rpm
+        - name: process-exporter_0.3.10_linux_armv6.deb
+          commit: null
+          size: 2744412
+          sha256: sha256:ebbc7f1ccf3265044a4e7d5449428e8e928a60160bf2d4033a5bff7737a93005
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter_0.3.10_linux_armv6.deb
+        - name: process-exporter_0.3.10_linux_armv6.rpm
+          commit: null
+          size: 2641483
+          sha256: sha256:e9d73335c70bdc5b5c4d742045e66e8ec5a6f3b778ca8ff78a2e0e4b1ea7a1b2
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter_0.3.10_linux_armv6.rpm
+        - name: process-exporter_0.3.10_linux_ppc64.deb
+          commit: null
+          size: 2675018
+          sha256: sha256:247e0ed352535a33e227c54345d87b2d8542b9bf358c69bf2cb992ab9387419c
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter_0.3.10_linux_ppc64.deb
+        - name: process-exporter_0.3.10_linux_ppc64.rpm
+          commit: null
+          size: 2602654
+          sha256: sha256:a9952a34f6756ae3be926034dd6078ce922980bdd714255269b3a0ffb8d4a448
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter_0.3.10_linux_ppc64.rpm
+        - name: process-exporter_0.3.10_linux_ppc64le.deb
+          commit: null
+          size: 2652656
+          sha256: sha256:dabe6a781db8d31773db545bfb1b98fbc34fba02afccd448330f5858713ada45
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter_0.3.10_linux_ppc64le.deb
+        - name: process-exporter_0.3.10_linux_ppc64le.rpm
+          commit: null
+          size: 2590281
+          sha256: sha256:49608ace0103a69dd5a214cd6509f93faa29329c005dcbdfabd29292e5df6f0a
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.10/process-exporter_0.3.10_linux_ppc64le.rpm
+    - name: v0.3.9
+      commit: null
+      timestamp: '2018-08-27T00:01:55'
+      prerelease: false
+      files:
+        - name: process-exporter-0.3.9.linux-386.tar.gz
+          commit: null
+          size: 2782366
+          sha256: sha256:998583e81879a5a33c7bcf2ca651c31e23af18fcac8aaac6e36bb8551b53f9d9
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter-0.3.9.linux-386.tar.gz
+        - name: process-exporter-0.3.9.linux-amd64.tar.gz
+          commit: null
+          size: 2889998
+          sha256: sha256:9335fcc83f31a48f06ea74a77fae331c56638dec763d9faafcd7f4150a7e9341
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter-0.3.9.linux-amd64.tar.gz
+        - name: process-exporter-0.3.9.linux-arm64.tar.gz
+          commit: null
+          size: 2682826
+          sha256: sha256:b0c67dd14e927ae73d53141dc125119bd90c1dee78306a118c1612dbd7fbc958
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter-0.3.9.linux-arm64.tar.gz
+        - name: process-exporter-0.3.9.linux-armv6.tar.gz
+          commit: null
+          size: 2748351
+          sha256: sha256:3b2fc76089cd11e9e1d144ba9de12333422cf45534fc7af693fd445b0d9d51ae
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter-0.3.9.linux-armv6.tar.gz
+        - name: process-exporter-0.3.9.linux-ppc64.tar.gz
+          commit: null
+          size: 2682429
+          sha256: sha256:94b315fca3b2fff0d53b1eb34ca454b6eb2227e5505a2155a221735fa308d708
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter-0.3.9.linux-ppc64.tar.gz
+        - name: process-exporter-0.3.9.linux-ppc64le.tar.gz
+          commit: null
+          size: 2657707
+          sha256: sha256:886974eaa561e66c51d3c317ef1955eb6e6243fb59d479e959d75dd3f2054983
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter-0.3.9.linux-ppc64le.tar.gz
+        - name: process-exporter_0.3.9_checksums.txt
+          commit: null
+          size: 1908
+          sha256: sha256:e73fecafb6b0b0b0ebdf713085205b6c8037f903a2baf4dcc180b82baf4b4921
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter_0.3.9_checksums.txt
+        - name: process-exporter_0.3.9_linux_386.deb
+          commit: null
+          size: 2776636
+          sha256: sha256:06598efa266f693d2c74c3bece9949fae58a25f73fb4cd8a503545c3984d0dbb
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter_0.3.9_linux_386.deb
+        - name: process-exporter_0.3.9_linux_386.rpm
+          commit: null
+          size: 2686369
+          sha256: sha256:c1194190ae5a664c31c58bd29fd4ad01791c0c35c0cf1f1062556303988df272
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter_0.3.9_linux_386.rpm
+        - name: process-exporter_0.3.9_linux_amd64.deb
+          commit: null
+          size: 2886292
+          sha256: sha256:6fa55529cf27ec308b92181c6db22a70b264abeadf9c2ff0e8deaed7b872be01
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter_0.3.9_linux_amd64.deb
+        - name: process-exporter_0.3.9_linux_amd64.rpm
+          commit: null
+          size: 2817115
+          sha256: sha256:da19770340345dcc7cc6134b4a2d0328a54f02d77c37eca7afd550c3c1b63c6d
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter_0.3.9_linux_amd64.rpm
+        - name: process-exporter_0.3.9_linux_arm64.deb
+          commit: null
+          size: 2676484
+          sha256: sha256:fdc80b95b12ce2aabe7ec5c94e785bce3d574cfae52e52d7ccc80aaa0b22963c
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter_0.3.9_linux_arm64.deb
+        - name: process-exporter_0.3.9_linux_arm64.rpm
+          commit: null
+          size: 2602079
+          sha256: sha256:876fa5e2fdc4087507d8e7d4a81596e82da59cce407acb5860a316846dfb6111
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter_0.3.9_linux_arm64.rpm
+        - name: process-exporter_0.3.9_linux_armv6.deb
+          commit: null
+          size: 2744582
+          sha256: sha256:9397f5b06db69e119c07ea94fa13c90cec859b9ef173cdcb3053130893c1eded
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter_0.3.9_linux_armv6.deb
+        - name: process-exporter_0.3.9_linux_armv6.rpm
+          commit: null
+          size: 2641519
+          sha256: sha256:60801edfae7d3c19ccd2e6ff051b4885bb2d4946f7c8df250b673ea46c5d750c
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter_0.3.9_linux_armv6.rpm
+        - name: process-exporter_0.3.9_linux_ppc64.deb
+          commit: null
+          size: 2675168
+          sha256: sha256:013a81bf20aed7cc5c817a8c23bd6df8b853cecb291a9735df5ca50788657684
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter_0.3.9_linux_ppc64.deb
+        - name: process-exporter_0.3.9_linux_ppc64.rpm
+          commit: null
+          size: 2602716
+          sha256: sha256:07712bb38400df0ae15273ebaad98559634a571cfaa1d069c8244b758783038b
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter_0.3.9_linux_ppc64.rpm
+        - name: process-exporter_0.3.9_linux_ppc64le.deb
+          commit: null
+          size: 2652576
+          sha256: sha256:a5812619555d7ff5ee99b339bef6f9e67c380212b794bae865185ddb7da91285
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter_0.3.9_linux_ppc64le.deb
+        - name: process-exporter_0.3.9_linux_ppc64le.rpm
+          commit: null
+          size: 2590240
+          sha256: sha256:1e23b1a5cdfcb972a404efe10278f0df313c0469379b7b72d863364df487ba23
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.9/process-exporter_0.3.9_linux_ppc64le.rpm
+    - name: v0.3.8
+      commit: null
+      timestamp: '2018-08-26T22:49:21'
+      prerelease: true
+      files:
+        - name: process-exporter-0.3.8.linux-386.tar.gz
+          commit: null
+          size: 2782201
+          sha256: sha256:9806711bd6c8f502d082ccafe009dfcbf7305ba7e7d009fbcb7406945ba42fda
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter-0.3.8.linux-386.tar.gz
+        - name: process-exporter-0.3.8.linux-amd64.tar.gz
+          commit: null
+          size: 2890359
+          sha256: sha256:af82d8431b027ff48e43bbe758e365df75df971642e1b8df5af5628f9e7a4efc
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter-0.3.8.linux-amd64.tar.gz
+        - name: process-exporter-0.3.8.linux-arm64.tar.gz
+          commit: null
+          size: 2682999
+          sha256: sha256:5b0221e04a2980fb6151085b7badfedf4a8f47f6893175c9177eb4fcf68ecbbf
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter-0.3.8.linux-arm64.tar.gz
+        - name: process-exporter-0.3.8.linux-armv6.tar.gz
+          commit: null
+          size: 2748421
+          sha256: sha256:57dce554a851abfa10413d3c068c43299d97032b97ff983030f38ef4f05bb91e
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter-0.3.8.linux-armv6.tar.gz
+        - name: process-exporter-0.3.8.linux-ppc64.tar.gz
+          commit: null
+          size: 2682862
+          sha256: sha256:c01de33785173b39c458a5edbc31a8bf539cff4bc8fad592a6f2524438249526
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter-0.3.8.linux-ppc64.tar.gz
+        - name: process-exporter-0.3.8.linux-ppc64le.tar.gz
+          commit: null
+          size: 2657902
+          sha256: sha256:cae2c53a334fdac6c160f30a58c50b868e79951eadbeac1701cff70b6a691b84
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter-0.3.8.linux-ppc64le.tar.gz
+        - name: process-exporter_0.3.8_checksums.txt
+          commit: null
+          size: 1908
+          sha256: sha256:2fe7c4689341eda3f2ec8c0469425b67608c8f5a4513b7176d3e784c194bcab1
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter_0.3.8_checksums.txt
+        - name: process-exporter_0.3.8_linux_386.deb
+          commit: null
+          size: 2776358
+          sha256: sha256:847ae26bbd7203a880fbb4f56bb2dd1d458e6f7c081786a07285e971ff120361
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter_0.3.8_linux_386.deb
+        - name: process-exporter_0.3.8_linux_386.rpm
+          commit: null
+          size: 2682261
+          sha256: sha256:3e751bec189b2c0abe4f20ed56e479aeca430ca994b9afb75b60aaad86d53418
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter_0.3.8_linux_386.rpm
+        - name: process-exporter_0.3.8_linux_amd64.deb
+          commit: null
+          size: 2886526
+          sha256: sha256:a2bbb9e996cd86e3de6cff31d6e00cd656f627a5d946f89d88cb94c28e755129
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter_0.3.8_linux_amd64.deb
+        - name: process-exporter_0.3.8_linux_amd64.rpm
+          commit: null
+          size: 2813260
+          sha256: sha256:a6cb8a7d789a71415508ccf402cfe82a86a8498dd915cf729a1c164165a96ae9
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter_0.3.8_linux_amd64.rpm
+        - name: process-exporter_0.3.8_linux_arm64.deb
+          commit: null
+          size: 2676682
+          sha256: sha256:7bb487da68bed6c3b157af23fec08f8b003a62efa1f376e4b2590655223023f8
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter_0.3.8_linux_arm64.deb
+        - name: process-exporter_0.3.8_linux_arm64.rpm
+          commit: null
+          size: 2598318
+          sha256: sha256:a073b668ea6ea833b6d3a6e7d638072607cd3fb5a2d61a9f45e94d7a1fb26c1c
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter_0.3.8_linux_arm64.rpm
+        - name: process-exporter_0.3.8_linux_armv6.deb
+          commit: null
+          size: 2744656
+          sha256: sha256:0701fff611f39074355c778c8ba63256d55ab5c6debe59163d5b9263b7ddd901
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter_0.3.8_linux_armv6.deb
+        - name: process-exporter_0.3.8_linux_armv6.rpm
+          commit: null
+          size: 2637670
+          sha256: sha256:27a139538d0086026551bef4edd05dcca2a5dc508c488cb43075b1ad60894de8
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter_0.3.8_linux_armv6.rpm
+        - name: process-exporter_0.3.8_linux_ppc64.deb
+          commit: null
+          size: 2675470
+          sha256: sha256:7ffb40a4559d13295729e986f35b9b4dfb0929b3fbd128118156976b2e142ad6
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter_0.3.8_linux_ppc64.deb
+        - name: process-exporter_0.3.8_linux_ppc64.rpm
+          commit: null
+          size: 2599023
+          sha256: sha256:81c4d937986a4e09281024ddc803088ec68014f70728c58eec944b04fca5f6b0
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter_0.3.8_linux_ppc64.rpm
+        - name: process-exporter_0.3.8_linux_ppc64le.deb
+          commit: null
+          size: 2652762
+          sha256: sha256:e699b41f136fdc81c662b38f467ee9c807cf4263510405c633d8cdd49992af0b
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter_0.3.8_linux_ppc64le.deb
+        - name: process-exporter_0.3.8_linux_ppc64le.rpm
+          commit: null
+          size: 2586445
+          sha256: sha256:717284b9b87919337a1c290550182837b46c6cf33bd8324514943c1fc6ce9ceb
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.8/process-exporter_0.3.8_linux_ppc64le.rpm
+    - name: v0.3.7
+      commit: null
+      timestamp: '2018-08-12T16:19:44'
+      prerelease: true
+      files:
+        - name: process-exporter-0.3.7.linux-386.tar.gz
+          commit: null
+          size: 2780301
+          sha256: sha256:0f27845f3f6eb3400fbdcc2e68862134f1bd09bb34b690aee707908f4ee6ed2c
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter-0.3.7.linux-386.tar.gz
+        - name: process-exporter-0.3.7.linux-amd64.tar.gz
+          commit: null
+          size: 2888872
+          sha256: sha256:a1d1d5e731a6ad095efd1ddfbce81a5a6802f65d2ecc677f9e26eb8aba506422
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter-0.3.7.linux-amd64.tar.gz
+        - name: process-exporter-0.3.7.linux-arm64.tar.gz
+          commit: null
+          size: 2681052
+          sha256: sha256:8ec58da6cefeffe82289bf5955c25afb89d82cb9ff8a302a1fb938b86182c31a
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter-0.3.7.linux-arm64.tar.gz
+        - name: process-exporter-0.3.7.linux-armv6.tar.gz
+          commit: null
+          size: 2746726
+          sha256: sha256:858547e53e88b9a426f2df85bf5d08ae9d71b70de3abfe8014691dafb3c481f8
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter-0.3.7.linux-armv6.tar.gz
+        - name: process-exporter-0.3.7.linux-ppc64.tar.gz
+          commit: null
+          size: 2681135
+          sha256: sha256:d4a25a4812ed8e8fb11a3595caf6e4f72975f707ecd6549894956b20c2c9ba1b
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter-0.3.7.linux-ppc64.tar.gz
+        - name: process-exporter-0.3.7.linux-ppc64le.tar.gz
+          commit: null
+          size: 2656079
+          sha256: sha256:4601080af3ae539520c3ebfa608590a761656a89f9a7048420f1b8142fd34c0e
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter-0.3.7.linux-ppc64le.tar.gz
+        - name: process-exporter_0.3.7_checksums.txt
+          commit: null
+          size: 1908
+          sha256: sha256:923dac54a8fbe1e09ecb612be1c51a44f68b91d3c7f42063a7774ca29afc27db
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter_0.3.7_checksums.txt
+        - name: process-exporter_0.3.7_linux_386.deb
+          commit: null
+          size: 2774544
+          sha256: sha256:5caa088cfcdbfc3d984a1249478992b65b7cd086d62da3f352183d83107afbec
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter_0.3.7_linux_386.deb
+        - name: process-exporter_0.3.7_linux_386.rpm
+          commit: null
+          size: 2680090
+          sha256: sha256:2808c6533d4fe71211f1c4361261d24c633a9a5acc5082ff0dc055620e37ddb9
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter_0.3.7_linux_386.rpm
+        - name: process-exporter_0.3.7_linux_amd64.deb
+          commit: null
+          size: 2885012
+          sha256: sha256:3c5d2f78e308d7a1a3b60332ea4fce4a3257b871a8793660ce5473f3bf7f8b0d
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter_0.3.7_linux_amd64.deb
+        - name: process-exporter_0.3.7_linux_amd64.rpm
+          commit: null
+          size: 2811747
+          sha256: sha256:1bf6fbd5b538a9cc18ed1739e5abf20f38773866b3f39e627481d4ef35091c64
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter_0.3.7_linux_amd64.rpm
+        - name: process-exporter_0.3.7_linux_arm64.deb
+          commit: null
+          size: 2674262
+          sha256: sha256:34f69dc7199fbc8ce43eb8c4dde116e296dd0401a059f3874ff9c3f459ebb72d
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter_0.3.7_linux_arm64.deb
+        - name: process-exporter_0.3.7_linux_arm64.rpm
+          commit: null
+          size: 2596176
+          sha256: sha256:e54714edff5b49e2e443a95f576cb53a76509b4aa2a1ac019a7c41593289dd70
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter_0.3.7_linux_arm64.rpm
+        - name: process-exporter_0.3.7_linux_armv6.deb
+          commit: null
+          size: 2742620
+          sha256: sha256:0cf662e6fea6cd6c55378d48e3d075bd778b56b2d8708e5c8095f0004e314699
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter_0.3.7_linux_armv6.deb
+        - name: process-exporter_0.3.7_linux_armv6.rpm
+          commit: null
+          size: 2635842
+          sha256: sha256:12686d42f597d8e4ae40ec91431daab16b067e84797fc018e35463e87c6c6207
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter_0.3.7_linux_armv6.rpm
+        - name: process-exporter_0.3.7_linux_ppc64.deb
+          commit: null
+          size: 2673916
+          sha256: sha256:a9ec97091a40c5fcb73753023bc72cf00acd64811e28e2b0f8925d53f3566903
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter_0.3.7_linux_ppc64.deb
+        - name: process-exporter_0.3.7_linux_ppc64.rpm
+          commit: null
+          size: 2597272
+          sha256: sha256:e4868146feea3a5283d85d999cbb2b5ee63cad3abd0b10dc87bb4bbd39249a59
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter_0.3.7_linux_ppc64.rpm
+        - name: process-exporter_0.3.7_linux_ppc64le.deb
+          commit: null
+          size: 2651208
+          sha256: sha256:e4549756e5968aac92d67c6c91d3c4224b454e160e7a1d78543ef343590e25f5
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter_0.3.7_linux_ppc64le.deb
+        - name: process-exporter_0.3.7_linux_ppc64le.rpm
+          commit: null
+          size: 2584902
+          sha256: sha256:72d3fca83cbdab5269d6d56f6f97dd56d855d59c04b779bac410d5ef1ea8a421
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.7/process-exporter_0.3.7_linux_ppc64le.rpm
+    - name: v0.3.6
+      commit: null
+      timestamp: '2018-08-11T02:25:18'
+      prerelease: true
+      files:
+        - name: process-exporter-0.3.6.linux-386.tar.gz
+          commit: null
+          size: 2775869
+          sha256: sha256:fa05f2f8570aaf8eef74c4b86e33c38891ad42fef74d6aee84c17d061dc52140
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter-0.3.6.linux-386.tar.gz
+        - name: process-exporter-0.3.6.linux-amd64.tar.gz
+          commit: null
+          size: 2886452
+          sha256: sha256:ffe8894954fb83c067d84f66e668eaee3570fe5545d556ffa6049ede8d788bdb
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter-0.3.6.linux-amd64.tar.gz
+        - name: process-exporter-0.3.6.linux-arm64.tar.gz
+          commit: null
+          size: 2678085
+          sha256: sha256:90d7d808f84da73c24fd00dcd9238df4538eb2fceea29c311f05591f012befa4
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter-0.3.6.linux-arm64.tar.gz
+        - name: process-exporter-0.3.6.linux-armv6.tar.gz
+          commit: null
+          size: 2744443
+          sha256: sha256:0cf3a84fd0b7413741cc0406648c2eed293ec3e1d296514b1da58337775f5856
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter-0.3.6.linux-armv6.tar.gz
+        - name: process-exporter-0.3.6.linux-ppc64.tar.gz
+          commit: null
+          size: 2677172
+          sha256: sha256:414ad46c5a81410bcb837a8b33051e028aec930507b50e43e18326df8257ead8
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter-0.3.6.linux-ppc64.tar.gz
+        - name: process-exporter-0.3.6.linux-ppc64le.tar.gz
+          commit: null
+          size: 2653201
+          sha256: sha256:320ce057bd6b5f4d6bf4faab2072b64435e5d3ee90ee3cb926d44598d3f5d761
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter-0.3.6.linux-ppc64le.tar.gz
+        - name: process-exporter_0.3.6_checksums.txt
+          commit: null
+          size: 1908
+          sha256: sha256:db7cae394f6b6e23fd63ec845444a37b0dc0cbd802f316eb53ac7ff4a748ced5
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter_0.3.6_checksums.txt
+        - name: process-exporter_0.3.6_linux_386.deb
+          commit: null
+          size: 2770982
+          sha256: sha256:5905d8d78542f2af5c19e488daf82e19bf00d69ef8cfbf2df016b14cccd2a1e1
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter_0.3.6_linux_386.deb
+        - name: process-exporter_0.3.6_linux_386.rpm
+          commit: null
+          size: 2676217
+          sha256: sha256:07a6c9d2346b3875a8446d79733b28d34d49fbdc53f49ca28792b23f893ba599
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter_0.3.6_linux_386.rpm
+        - name: process-exporter_0.3.6_linux_amd64.deb
+          commit: null
+          size: 2880356
+          sha256: sha256:1cee6402238dcacb257fbcdf97069999eedc4a847fba404f2dcd7140d71620b4
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter_0.3.6_linux_amd64.deb
+        - name: process-exporter_0.3.6_linux_amd64.rpm
+          commit: null
+          size: 2808138
+          sha256: sha256:ee125b15440693add359e9f19d4966a93afd2deea7d3adb79b49eaa0b22c2403
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter_0.3.6_linux_amd64.rpm
+        - name: process-exporter_0.3.6_linux_arm64.deb
+          commit: null
+          size: 2671738
+          sha256: sha256:f2d8fe0ca211f14794c0dae20c7c2eae4e990093fd2628392380d748f287c20f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter_0.3.6_linux_arm64.deb
+        - name: process-exporter_0.3.6_linux_arm64.rpm
+          commit: null
+          size: 2594049
+          sha256: sha256:fa638510117ec48fe74078487b5f186e5611b5dd5c60619e7f2638a019b09c59
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter_0.3.6_linux_arm64.rpm
+        - name: process-exporter_0.3.6_linux_armv6.deb
+          commit: null
+          size: 2739248
+          sha256: sha256:c117f01d7ca2b73cba7c66db1811a6a6694e86ae4c60fdc0d85333c963653991
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter_0.3.6_linux_armv6.deb
+        - name: process-exporter_0.3.6_linux_armv6.rpm
+          commit: null
+          size: 2632926
+          sha256: sha256:bdce05f1e7613a1f781d88d25f48529da1e5385657ad91cffc5f29ee64b3d66f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter_0.3.6_linux_armv6.rpm
+        - name: process-exporter_0.3.6_linux_ppc64.deb
+          commit: null
+          size: 2670582
+          sha256: sha256:6d0d3d7b524b49eeb9d7877e458e98de7761a350108004ac689e80c1114b5c0c
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter_0.3.6_linux_ppc64.deb
+        - name: process-exporter_0.3.6_linux_ppc64.rpm
+          commit: null
+          size: 2593746
+          sha256: sha256:4872be52c8f391e1580f0565520cb467e594ee8a32ba7bef51b56a79a50a491f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter_0.3.6_linux_ppc64.rpm
+        - name: process-exporter_0.3.6_linux_ppc64le.deb
+          commit: null
+          size: 2647980
+          sha256: sha256:9c4e9e8fd631132c2003835b1a865a5e23ce2def817e80e9beb967ada1cad182
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter_0.3.6_linux_ppc64le.deb
+        - name: process-exporter_0.3.6_linux_ppc64le.rpm
+          commit: null
+          size: 2582116
+          sha256: sha256:e2a46368c8a8a198bfa373576a8e868bfb34c8a419eed882aecef0c658d9e56e
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.6/process-exporter_0.3.6_linux_ppc64le.rpm
+    - name: v0.3.2
+      commit: null
+      timestamp: '2018-08-07T23:13:48'
+      prerelease: true
+      files:
+        - name: process-exporter-0.3.2.linux-386.tar.gz
+          commit: null
+          size: 2775866
+          sha256: sha256:6378305747f43613900bfe8b0c689402d208752f097bc4da865ae3f89105e90a
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter-0.3.2.linux-386.tar.gz
+        - name: process-exporter-0.3.2.linux-amd64.tar.gz
+          commit: null
+          size: 2886454
+          sha256: sha256:c60682a1e91785d7018866415435b84309fe6d5611d1aac7f9368395a99a8686
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter-0.3.2.linux-amd64.tar.gz
+        - name: process-exporter-0.3.2.linux-arm64.tar.gz
+          commit: null
+          size: 2678086
+          sha256: sha256:b2b2af0869d1bd57ca71e01f94ccc4cb478f4c4134100052a452bcf1c134e374
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter-0.3.2.linux-arm64.tar.gz
+        - name: process-exporter-0.3.2.linux-armv6.tar.gz
+          commit: null
+          size: 2744441
+          sha256: sha256:e9a60414d7b0dea7c17c1340cea49fe79b1e1b95bb4a65e93bec902f7eab69b7
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter-0.3.2.linux-armv6.tar.gz
+        - name: process-exporter-0.3.2.linux-ppc64.tar.gz
+          commit: null
+          size: 2677165
+          sha256: sha256:9aaa32e038f459a1e4e45b4927a3e67c85388403e1a30319f5dd3a3e0c11dcdc
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter-0.3.2.linux-ppc64.tar.gz
+        - name: process-exporter-0.3.2.linux-ppc64le.tar.gz
+          commit: null
+          size: 2653197
+          sha256: sha256:5735a5c93859cff03ab3557c2c03efbaae542fe26cf84a4b72e65bdd9fdaf3f9
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter-0.3.2.linux-ppc64le.tar.gz
+        - name: process-exporter_0.3.2_checksums.txt
+          commit: null
+          size: 1908
+          sha256: sha256:6bf9e3b099ec0947295e14c36f4f3896ae97bfa5e2d53da3634149f94a8757d0
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter_0.3.2_checksums.txt
+        - name: process-exporter_0.3.2_linux_386.deb
+          commit: null
+          size: 2770990
+          sha256: sha256:c779a8650ae835c76d353681e7f9e7845e8273ddaee67ff46faf85c40f72d982
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter_0.3.2_linux_386.deb
+        - name: process-exporter_0.3.2_linux_386.rpm
+          commit: null
+          size: 2676219
+          sha256: sha256:2a3eb446a05c37d9d46543db755cfbf12e61d1cb446569e9b02157bbab808dcc
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter_0.3.2_linux_386.rpm
+        - name: process-exporter_0.3.2_linux_amd64.deb
+          commit: null
+          size: 2880354
+          sha256: sha256:d3a56ef02b69b87f7ae38eefdfab7302c6035c3cffa73eb5282a9ebc986faa5c
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter_0.3.2_linux_amd64.deb
+        - name: process-exporter_0.3.2_linux_amd64.rpm
+          commit: null
+          size: 2808140
+          sha256: sha256:d18aff870b45fb8d63f35a8899d57abd0ff48c7c36300f0edddc8b10c74f7840
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter_0.3.2_linux_amd64.rpm
+        - name: process-exporter_0.3.2_linux_arm64.deb
+          commit: null
+          size: 2671744
+          sha256: sha256:40fe05f85242998a73f73ecdbe3020b8d19fa383fda573919d67bba4b614b414
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter_0.3.2_linux_arm64.deb
+        - name: process-exporter_0.3.2_linux_arm64.rpm
+          commit: null
+          size: 2594053
+          sha256: sha256:59d5c24dfc85d74d5e786921fa3e265f6cbeedab6c56e67df0f6ea91d90a2806
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter_0.3.2_linux_arm64.rpm
+        - name: process-exporter_0.3.2_linux_armv6.deb
+          commit: null
+          size: 2739242
+          sha256: sha256:adbc44eab9fa2859007112475d3ec7e760f0471472abcafe04af02ff89cc69b2
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter_0.3.2_linux_armv6.deb
+        - name: process-exporter_0.3.2_linux_armv6.rpm
+          commit: null
+          size: 2632927
+          sha256: sha256:0eaaa9261829e2b5b0588a605f3e0ff88cbe405fa53f047292049e2f5050e0b7
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter_0.3.2_linux_armv6.rpm
+        - name: process-exporter_0.3.2_linux_ppc64.deb
+          commit: null
+          size: 2670574
+          sha256: sha256:6c13c6ef4c1e682f059ce109c29c68ab50571dffdc82658ffc7d36553a9a2989
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter_0.3.2_linux_ppc64.deb
+        - name: process-exporter_0.3.2_linux_ppc64.rpm
+          commit: null
+          size: 2593745
+          sha256: sha256:8da7cf3a8663b681587a3457ea9a29636251f51bd6b067e065923d013f3d4c52
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter_0.3.2_linux_ppc64.rpm
+        - name: process-exporter_0.3.2_linux_ppc64le.deb
+          commit: null
+          size: 2647978
+          sha256: sha256:b23bc5b0600e520f691addffe6fa1358087e1ecb8bb181d6c399c33cbea8a204
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter_0.3.2_linux_ppc64le.deb
+        - name: process-exporter_0.3.2_linux_ppc64le.rpm
+          commit: null
+          size: 2582117
+          sha256: sha256:d872e494165bd0710c90f79d7a16811240f926dc6fcfc9f6552048db4399933e
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.2/process-exporter_0.3.2_linux_ppc64le.rpm
+    - name: v0.3.1
+      commit: null
+      timestamp: '2018-08-05T15:19:07'
+      prerelease: true
+      files:
+        - name: process-exporter-0.3.1.linux-386.tar.gz
+          commit: null
+          size: 2775835
+          sha256: sha256:566cc2e80c9cadfabe16f62e8120998e2917b8bb35fc697339d1dae4812f89a6
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter-0.3.1.linux-386.tar.gz
+        - name: process-exporter-0.3.1.linux-amd64.tar.gz
+          commit: null
+          size: 2886582
+          sha256: sha256:7ad1a79ecf32469930e4f0de194047f4e0e8a49618ed7add4eee64d51dc71dc4
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter-0.3.1.linux-amd64.tar.gz
+        - name: process-exporter-0.3.1.linux-arm64.tar.gz
+          commit: null
+          size: 2678655
+          sha256: sha256:8fd252035cc50e2d843da66244d7dc7308757fd3daff5254923d896bdc673e5e
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter-0.3.1.linux-arm64.tar.gz
+        - name: process-exporter-0.3.1.linux-armv6.tar.gz
+          commit: null
+          size: 2744760
+          sha256: sha256:ab479c4b2607d9ceda7614e17d38bcb81a88f4e2a53719c1bbaf4b77a3eb4c03
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter-0.3.1.linux-armv6.tar.gz
+        - name: process-exporter-0.3.1.linux-ppc64.tar.gz
+          commit: null
+          size: 2677745
+          sha256: sha256:0cd40911e60d2e3c428cc7945e16564580dc5723bd932a82047641c1a3742d3a
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter-0.3.1.linux-ppc64.tar.gz
+        - name: process-exporter-0.3.1.linux-ppc64le.tar.gz
+          commit: null
+          size: 2653207
+          sha256: sha256:093e5fda25340577039da18ccc8e129cb16963cf352d9d18cb81db73c419da87
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter-0.3.1.linux-ppc64le.tar.gz
+        - name: process-exporter_0.3.1_checksums.txt
+          commit: null
+          size: 1908
+          sha256: sha256:0a8fd28d67592e361ac1f8420895a330bafd5c9c14abe1c010775cdfeadd3dda
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter_0.3.1_checksums.txt
+        - name: process-exporter_0.3.1_linux_386.deb
+          commit: null
+          size: 2771064
+          sha256: sha256:c1c3c8acb4ec5db8a05899ad9343a9fddce584d436830eb7c4581f4b6a662534
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter_0.3.1_linux_386.deb
+        - name: process-exporter_0.3.1_linux_386.rpm
+          commit: null
+          size: 2676336
+          sha256: sha256:571de2e3560c8d259e407ccde0e01b3001f3f8127198d9e1637036a0d3d80449
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter_0.3.1_linux_386.rpm
+        - name: process-exporter_0.3.1_linux_amd64.deb
+          commit: null
+          size: 2880524
+          sha256: sha256:826b130013be1c07ee40dfa60bdeda42e0aa1237407dca537524c19f0ba0a464
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter_0.3.1_linux_amd64.deb
+        - name: process-exporter_0.3.1_linux_amd64.rpm
+          commit: null
+          size: 2808324
+          sha256: sha256:6c93905241c20328c22aa96b7d51f640ebb1d9b3cbf7967a2c950dd0b3855f3e
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter_0.3.1_linux_amd64.rpm
+        - name: process-exporter_0.3.1_linux_arm64.deb
+          commit: null
+          size: 2672140
+          sha256: sha256:c3bcdf9b583da5f689cb926f9a803f01c2e2b33f5e361d1a4e0e13d5ac5d3c6c
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter_0.3.1_linux_arm64.deb
+        - name: process-exporter_0.3.1_linux_arm64.rpm
+          commit: null
+          size: 2594332
+          sha256: sha256:ad435014db1c1b67642fac205d99ab6fc0967cddd334d3280213601da092e6cb
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter_0.3.1_linux_arm64.rpm
+        - name: process-exporter_0.3.1_linux_armv6.deb
+          commit: null
+          size: 2739654
+          sha256: sha256:91c17c58ef7763932d0e632029170612e95ce6235e0a7e1a68963e02e9e91c49
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter_0.3.1_linux_armv6.deb
+        - name: process-exporter_0.3.1_linux_armv6.rpm
+          commit: null
+          size: 2633201
+          sha256: sha256:5d437e494769537dbe88fbf0c7c320d8910401f12834ed9d7b67ddca7cf5a956
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter_0.3.1_linux_armv6.rpm
+        - name: process-exporter_0.3.1_linux_ppc64.deb
+          commit: null
+          size: 2671190
+          sha256: sha256:0835d7dde43e27e7e04935cb20701f434154d47baadf45c26b94a03245e221f4
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter_0.3.1_linux_ppc64.deb
+        - name: process-exporter_0.3.1_linux_ppc64.rpm
+          commit: null
+          size: 2594218
+          sha256: sha256:6d820bfde8959ffa82d78d0d41705efaf0ce9775c77c4976b87b8bc8abaa385f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter_0.3.1_linux_ppc64.rpm
+        - name: process-exporter_0.3.1_linux_ppc64le.deb
+          commit: null
+          size: 2647998
+          sha256: sha256:d228e095e3e0ba804fe6ddfd372b53c06da74fae01ff1871945d68bac5ae98b7
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter_0.3.1_linux_ppc64le.deb
+        - name: process-exporter_0.3.1_linux_ppc64le.rpm
+          commit: null
+          size: 2582339
+          sha256: sha256:2b1a1e2acc8a35610fdba4e5f2910407383f383ac20eaab6bcb9fd204bb63c61
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.3.1/process-exporter_0.3.1_linux_ppc64le.rpm
+    - name: v0.2.12
+      commit: null
+      timestamp: '2018-08-04T22:44:07'
+      prerelease: false
+      files:
+        - name: process-exporter-0.2.12.linux-386.tar.gz
+          commit: null
+          size: 2595447
+          sha256: sha256:f53f49a7b9055738c227b0d5e5add4435a018632eb4facfddab6099e2c1eb139
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter-0.2.12.linux-386.tar.gz
+        - name: process-exporter-0.2.12.linux-amd64.tar.gz
+          commit: null
+          size: 2695455
+          sha256: sha256:b62b3b63eea2690681327f639e2254d9a596290310b62addaaa5b9b0a3aecf5f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter-0.2.12.linux-amd64.tar.gz
+        - name: process-exporter-0.2.12.linux-arm64.tar.gz
+          commit: null
+          size: 2512576
+          sha256: sha256:32fff24a88b5e3cbc0a035bd6351e96ed2781a205044f65bec2468f0c46de5a8
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter-0.2.12.linux-arm64.tar.gz
+        - name: process-exporter-0.2.12.linux-armv6.tar.gz
+          commit: null
+          size: 2569057
+          sha256: sha256:888bcc5cf5e205b009e0f19fda62709a00978ca768059efdc4c3436d8ab60304
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter-0.2.12.linux-armv6.tar.gz
+        - name: process-exporter-0.2.12.linux-ppc64.tar.gz
+          commit: null
+          size: 2510703
+          sha256: sha256:c0acba020bcf3c416669f38472b85ad1fd64afbccd48ed58994372425a455caa
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter-0.2.12.linux-ppc64.tar.gz
+        - name: process-exporter-0.2.12.linux-ppc64le.tar.gz
+          commit: null
+          size: 2493683
+          sha256: sha256:4daf3a203e3971b106e7cfb6733eb317c3da96de11732579f033c7ccfe0cf716
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter-0.2.12.linux-ppc64le.tar.gz
+        - name: process-exporter_0.2.12_checksums.txt
+          commit: null
+          size: 1926
+          sha256: sha256:75ec39c2bfe4768b81021a5abb6730f551db206141999339f46973594273b843
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter_0.2.12_checksums.txt
+        - name: process-exporter_0.2.12_linux_386.deb
+          commit: null
+          size: 2591452
+          sha256: sha256:0bb49eacb146baffaa7c11d157246a67fcd5134b302b824b6a274a1f969d8999
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter_0.2.12_linux_386.deb
+        - name: process-exporter_0.2.12_linux_386.rpm
+          commit: null
+          size: 2501082
+          sha256: sha256:c793eb75448f3bd5cc156ec348951f59a9292ced613d0794bad0c16d1b4e0444
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter_0.2.12_linux_386.rpm
+        - name: process-exporter_0.2.12_linux_amd64.deb
+          commit: null
+          size: 2691204
+          sha256: sha256:a38a22db11099bb0bcc4a17270b484838f094182cd3aea5636162233e5a160ef
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter_0.2.12_linux_amd64.deb
+        - name: process-exporter_0.2.12_linux_amd64.rpm
+          commit: null
+          size: 2624897
+          sha256: sha256:b9591c46fe2f2469ece2efd1f2d94dd1efec5dbeeb18b700fe99896da46aa4d3
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter_0.2.12_linux_amd64.rpm
+        - name: process-exporter_0.2.12_linux_arm64.deb
+          commit: null
+          size: 2509192
+          sha256: sha256:ee6417ca777b27d1660fbdc86f121545c05ad3273d5cc031cf3fdea799ac1b32
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter_0.2.12_linux_arm64.deb
+        - name: process-exporter_0.2.12_linux_arm64.rpm
+          commit: null
+          size: 2436330
+          sha256: sha256:ff6a1422f044222edce7a9340d58be9e0a73a8fd50df44dde365907f050de402
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter_0.2.12_linux_arm64.rpm
+        - name: process-exporter_0.2.12_linux_armv6.deb
+          commit: null
+          size: 2565956
+          sha256: sha256:69611912ee55ba00820e0f38a271b2d6377c3ba6f936c2f29c0a04533febc9fb
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter_0.2.12_linux_armv6.deb
+        - name: process-exporter_0.2.12_linux_armv6.rpm
+          commit: null
+          size: 2466372
+          sha256: sha256:46a6a241cb8f5d8872522606c9992ebafbb30fd7a59575ceada366b564912a1f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter_0.2.12_linux_armv6.rpm
+        - name: process-exporter_0.2.12_linux_ppc64.deb
+          commit: null
+          size: 2506652
+          sha256: sha256:787a0d09aac3f32bb6a7ac66fba6bc1d166a874f9db4fc98323d20c3fc9475c8
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter_0.2.12_linux_ppc64.deb
+        - name: process-exporter_0.2.12_linux_ppc64.rpm
+          commit: null
+          size: 2435025
+          sha256: sha256:9947f78240b6a4d6a590a79b424498be12d420fc5ddf79392da414461a61b014
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter_0.2.12_linux_ppc64.rpm
+        - name: process-exporter_0.2.12_linux_ppc64le.deb
+          commit: null
+          size: 2487034
+          sha256: sha256:fd3d9644a44f3b64bc0f4f1176df3e44b1b501a97318b818e71463c8a233f6d9
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter_0.2.12_linux_ppc64le.deb
+        - name: process-exporter_0.2.12_linux_ppc64le.rpm
+          commit: null
+          size: 2426822
+          sha256: sha256:612af35c012de193f0b43e73ac601d3f66d0c8342baec3a46b45497c11871e4a
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.12/process-exporter_0.2.12_linux_ppc64le.rpm
+    - name: v0.2.11
+      commit: null
+      timestamp: '2018-05-19T16:17:52'
+      prerelease: false
+      files:
+        - name: process-exporter_0.2.11_checksums.txt
+          commit: null
+          size: 1926
+          sha256: sha256:4f3a372b7c50847b21d8cd20edb29560855a6cf9f5883d892327d668f52cc244
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_checksums.txt
+        - name: process-exporter_0.2.11_linux_386.deb
+          commit: null
+          size: 2592422
+          sha256: sha256:8227caee6ffae26d35f7a511f1ee0eee5060ac335af5d1765f2b3ee04555e08f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_386.deb
+        - name: process-exporter_0.2.11_linux_386.rpm
+          commit: null
+          size: 2502197
+          sha256: sha256:9d33b4ec958f704f50497b8c34f22bb1d13af1713ff1a10037f8e962f83062dd
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_386.rpm
+        - name: process-exporter_0.2.11_linux_386.tar.gz
+          commit: null
+          size: 2594391
+          sha256: sha256:60dcb1f19105e47e639314120ff6b293e8aaa8f495885170b738ab51cee30317
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_386.tar.gz
+        - name: process-exporter_0.2.11_linux_amd64.deb
+          commit: null
+          size: 2692004
+          sha256: sha256:3e4a1c77201ef5633a794b155a8d44290774d7d3da79b30b1bb6769c248c5886
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_amd64.deb
+        - name: process-exporter_0.2.11_linux_amd64.rpm
+          commit: null
+          size: 2625589
+          sha256: sha256:40ec325135aba75c55349e2744f936996dd340ac4184bbb6100b49dbf7a92337
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_amd64.rpm
+        - name: process-exporter_0.2.11_linux_amd64.tar.gz
+          commit: null
+          size: 2693714
+          sha256: sha256:66af67b6c13bef1fb396d11f8d76800ccccbb1cd54e8834cea47ec200ae51924
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_amd64.tar.gz
+        - name: process-exporter_0.2.11_linux_arm64.deb
+          commit: null
+          size: 2510014
+          sha256: sha256:d88e1009234bfa476147fc0486be7b46ea6b30eea4a44b0d667ad45ed50732b1
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_arm64.deb
+        - name: process-exporter_0.2.11_linux_arm64.rpm
+          commit: null
+          size: 2437258
+          sha256: sha256:62df61ed4d6eaa7ade0b07cc2cc48424b90e99e314b6b4821f87d295fafa254c
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_arm64.rpm
+        - name: process-exporter_0.2.11_linux_arm64.tar.gz
+          commit: null
+          size: 2510686
+          sha256: sha256:10286cdaf8671d88d27b7f2e02ca5c416e8ee222877a9f1b0e310a619fdaebd2
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_arm64.tar.gz
+        - name: process-exporter_0.2.11_linux_armv6.deb
+          commit: null
+          size: 2566698
+          sha256: sha256:0611ba397dbd03043ea742900990e702949db3064961afcb1c28ef9c017af5ee
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_armv6.deb
+        - name: process-exporter_0.2.11_linux_armv6.rpm
+          commit: null
+          size: 2467466
+          sha256: sha256:6845ce7e83b19b0fea5e9723a6c22fa9ab36273ae02b0604d901e04a4b83d956
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_armv6.rpm
+        - name: process-exporter_0.2.11_linux_armv6.tar.gz
+          commit: null
+          size: 2567991
+          sha256: sha256:2aa6d55b4ce0490e7ee028c12271c0b575ca153428bbbc35a85d8e3d92b3e10e
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_armv6.tar.gz
+        - name: process-exporter_0.2.11_linux_ppc64.deb
+          commit: null
+          size: 2507224
+          sha256: sha256:cf72955fbc3da484e1447e62995f17de94e8370cc468d6176b45b54e99dcaefa
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_ppc64.deb
+        - name: process-exporter_0.2.11_linux_ppc64.rpm
+          commit: null
+          size: 2436131
+          sha256: sha256:0b7f7e088024b7495d98be0bbfb2ae86550b9c3d9026674465474ab710296d7f
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_ppc64.rpm
+        - name: process-exporter_0.2.11_linux_ppc64.tar.gz
+          commit: null
+          size: 2508865
+          sha256: sha256:763c4a05bb20017e49427deb224670a40317d2db57676d42eb032c88ab797cf9
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_ppc64.tar.gz
+        - name: process-exporter_0.2.11_linux_ppc64le.deb
+          commit: null
+          size: 2488046
+          sha256: sha256:7aaad270b0b2101564d5637735dc2aae003173ef7a2bd38d87252e95ce5b7ec7
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_ppc64le.deb
+        - name: process-exporter_0.2.11_linux_ppc64le.rpm
+          commit: null
+          size: 2427500
+          sha256: sha256:8faab1e03755327800f4a7291ddc403c1d5cd26b6a54c53cc9d69c12819af847
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_ppc64le.rpm
+        - name: process-exporter_0.2.11_linux_ppc64le.tar.gz
+          commit: null
+          size: 2491975
+          sha256: sha256:50282fed0469c1e1647b41eb713f2e37b94699f1c6b9f3f6c84ae96379c2dadd
+          url: https://github.com/ncabatoff/process-exporter/releases/download/v0.2.11/process-exporter_0.2.11_linux_ppc64le.tar.gz

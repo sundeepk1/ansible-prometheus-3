@@ -24,27 +24,21 @@ describe file('/opt/prometheus/alertmanager/active/amtool') do
     its('group') { should eq 'prometheus' }
 end
 
-describe command('/opt/prometheus/alertmanager/active/amtool check-config /opt/prometheus/etc/alertmanager.yml') do
+describe command('sudo /opt/prometheus/alertmanager/active/amtool check-config /opt/prometheus/etc/alertmanager.yml') do
   its('exit_status') { should eq 0 }
 end
 
-describe command('/opt/prometheus/alertmanager/active/amtool check-config /etc/prometheus/alertmanager.yml') do
+describe command('sudo /opt/prometheus/alertmanager/active/amtool check-config /opt/prometheus/etc/alertmanager.yml') do
   its('exit_status') { should eq 0 }
 end
 
-# Verify the 'alertmanager' service is running
-control '01' do
-  impact 1.0
-  title 'Verify alertmanager service'
-  desc 'Ensures alertmanager service is up and running'
-  describe service('alertmanager') do
+describe service('alertmanager') do
     it { should be_enabled }
     it { should be_installed }
     it { should be_running }
-  end
 end
 
-describe processes(Regexp.new("^/opt/prometheus/alertmanager/([0-9.]+|[0-9.]+__go-[0-9.]+)/alertmanager")) do
+describe processes(Regexp.new("^/opt/prometheus/alertmanager/(v)?([0-9.]+|[0-9.]+__go-[0-9.]+)/alertmanager")) do
     it { should exist }
     its('entries.length') { should eq 1 }
     its('users') { should include 'prometheus' }

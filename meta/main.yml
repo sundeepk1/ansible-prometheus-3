@@ -1,9 +1,9 @@
 ---
 galaxy_info:
   role_name: prometheus
-  company: Mesaguy
-  author: Mesaguy
-  description: Installs and manages Prometheus and Prometheus exporters
+  company: mesaguy
+  author: mesaguy
+  description: install and manage prometheus and prometheus exporters
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
@@ -11,7 +11,7 @@ galaxy_info:
 
   license: MIT
 
-  min_ansible_version: 2.5.1
+  min_ansible_version: 2.8.0
 
   # If this a Container Enabled role, provide the minimum Ansible Container version.
   # min_ansible_container_version:
@@ -47,6 +47,9 @@ galaxy_info:
         - 27
         - 28
         - 29
+        - 30
+        - 31
+        - 32
     - name: opensuse
       versions:
         - all
@@ -56,6 +59,8 @@ galaxy_info:
         - artful
         - bionic
         - cuttlefish
+        - eoan
+        - focal
 
   galaxy_tags:
     # Maximum of 20:
@@ -69,12 +74,12 @@ galaxy_info:
     - memcached
     - monitor
     - monitoring
-    - mysqld
     - node
     - prometheus
     - pushgateway
     - snmp
     - statsd
+    - tgroup
 
 # List your role dependencies here, one per line. Be sure to remove the '[]' above,
 # if you add dependencies to this list.

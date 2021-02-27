@@ -4,19 +4,28 @@
 
 - name: Set variables for {{ prometheus_software_name_version }} file install
   set_fact:
-    prometheus_software_binary: '{{ prometheus_software_root_dir }}/{{ prometheus_software_version }}/{{ prometheus_software_binary_name | default(prometheus_software_name, true) }}'
+    prometheus_software_binary: >-
+        {{ prometheus_software_root_dir }}/{{ prometheus_software_version }}/{{ prometheus_software_binary_name | default(prometheus_software_name, true) }}
     prometheus_software_install_dir: '{{ prometheus_software_root_dir }}/{{ prometheus_software_version }}'
 
 - name: Include task to setup directories for {{ prometheus_software_name_version }} installation
   include_tasks: _install_directory.yml
+
+- name: Set variables for {{ prometheus_software_name_version }} file URL from extended metadata
+  set_fact:
+    prometheus_software_url: '{{ prometheus_software_metadata.url }}'
+  when:
+    - not prometheus_disable_metadata
+    - prometheus_software_metadata is defined and prometheus_software_metadata | length > 0
 
 - name: Download {{ prometheus_software_name_version }}
   become: true
   get_url:
     owner: root
     group: '{{ prometheus_group }}'
-    mode: '0755'
-    url: '{{ prometheus_software_file_url }}'
+    mode: 0755
+    url: '{{ prometheus_software_url }}'
+    checksum: '{{ prometheus_software_metadata.sha256 | default(omit) }}'
     dest: '{{ prometheus_software_install_dir }}/{{ prometheus_software_binary_name }}'
   register: prometheus_download
   retries: 5
@@ -25,3 +34,11 @@
 
 - name: Include task to symlink latest {{ prometheus_software_name_version }} directory to an "active" directory
   include_tasks: _install_active_symlink.yml
+
+- name: Include task to setup capabilites for {{ prometheus_software_name_version }} files
+  include_tasks: _setup_capabilities.yml
+  loop_control:
+    loop_var: prometheus_software_capabilities_file
+  with_items: '{{ prometheus_software_capabilities }}'
+  when:
+    - prometheus_software_capabilities is defined and prometheus_software_capabilities
